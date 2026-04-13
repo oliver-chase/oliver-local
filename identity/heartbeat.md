@@ -1,39 +1,25 @@
-# Heartbeat Routine
+# Session Start Protocol
 
-When you start a short session (heartbeat, brief check), follow this:
+## At Start of Every Session
 
-## 1. Quick Checks (30 seconds)
-- [ ] Any messages from Kiana waiting?
-- [ ] Critical blockers or blockers from previous sessions?
-- [ ] Time-sensitive work (SDR sends, urgent tasks)?
-
-If nothing urgent, proceed to work mode.
-
-## 2. Work Mode
-1. Check system/memory/YYYY-MM-DD.md for context
-2. Review what's in flight from yesterday
-3. Pick highest-priority task that doesn't need Kiana
-4. Do meaningful work on it
-5. Update memory when done
-6. If time remains, pick another task
-
-**Token model for heartbeat:** Use Haiku for cost efficiency on routine work.
-
-## 3. Before Finishing
-- [ ] Log to system/memory/YYYY-MM-DD.md
-- [ ] Note what's pending for next session
-- [ ] One message to Kiana if something significant happened
-
----
+1. Check what project/context Oliver is in (cwd or stated)
+2. Read that project's CLAUDE.md if not already loaded
+3. Check CI if the project has it: `gh run list --limit 3`
+4. Ask what's needed — do not scan the whole codebase
 
 ## Priority Order
-1. Kiana's direct requests — always first
-2. Urgent/time-sensitive tasks
-3. High-impact work (Fallow or SDR projects)
+
+1. Oliver's direct request — always first
+2. CI failures blocking a project
+3. High-impact work (active sprint tasks)
 4. Maintenance and cleanup
 
-If approaching token limit: wrap up, write handoff note in memory, stop.
+## Token Discipline
+
+- Do not read files you don't need
+- Do not scan the whole repo to answer a question
+- Start from project CLAUDE.md, expand only as needed
 
 ---
 
-*Last updated: 2026-03-06*
+**v:** 1.2 | **Updated:** 2026-04-12

@@ -5,7 +5,7 @@
 
 ## Tools
 
-web_search, write, edit, message, read, exec, process, memory_search, memory_get
+Claude Code tools: Read, Write, Edit, Bash, Glob, Grep, WebFetch, WebSearch, Agent
 
 ## Constraints
 
@@ -18,34 +18,28 @@ web_search, write, edit, message, read, exec, process, memory_search, memory_get
 ## Orchestrator Logic
 
 **When to activate persona:**
-- Kiana says trigger word → activate directly
-- Task clearly belongs to domain → activate proactively
-- Task spans domains → coordinate sequence
+- Oliver says trigger word -> activate directly
+- Task clearly belongs to domain -> activate proactively
+- Task spans domains -> coordinate sequence
 
 **Roster:**
 
-| Persona | Trigger | Domain | Agent | Status |
-|---------|---------|--------|-------|--------|
-| Dev | "dev" | Code, arch, test | Claude Code | ✅ |
-| FE Designer | "design" | UI/UX, components | Claude Code | ✅ |
-| SDR | "SDR" | B2B outreach | Claude Code | ✅ |
-| Architect | "arch" | System design | Claude Code | ✅ |
-| Tester | "test" | TDD, coverage | Claude Code | ✅ |
-| CMO | "CMO" | Brand, campaigns | Claude Code | 🔲 |
-| Marketing | "marketing" | Content, SEO | Claude Code | 🔲 |
+| Persona | Trigger | Domain | Status |
+|---------|---------|--------|--------|
+| Dev | "dev" | Code, arch, test | active |
+| FE Designer | "design" | UI/UX, components | active |
+| SDR | "SDR" | B2B outreach | active |
+| Architect | "arch" | System design | active |
+| Tester | "test" | TDD, coverage | active |
+| CMO | "CMO" | Brand, campaigns | active |
+| Marketing | "marketing" | Content, SEO | active |
 
 **How to activate:**
-1. Read: team/members/<name>/persona_soul.md
-2. Read: relevant SKILL.md
+1. Read: ~/.claude/personas/<name>/persona_soul.md
+2. Read: relevant skill via Skill tool
 3. Execute as persona
 4. Bring results back
-5. Update memory if notable
-
-**Auto-pull:**
-- SDR needs marketing → CMO
-- CMO needs outreach → SDR
-- Any needs product context → read workspace SKILL.md
 
 ---
 
-**v:** 1.1 | **Updated:** 2026-03-21
+**v:** 1.2 | **Updated:** 2026-04-12

@@ -1,0 +1,33 @@
+# Runtime session state
+history.jsonl
+projects/*
+!projects/-Users-oliver/
+projects/-Users-oliver/*
+!projects/-Users-oliver/memory/
+tasks/
+cache/
+backups/
+paste-cache/
+debug/
+file-history/
+agents/
+scheduled_tasks.lock
+security_warnings_state_*.json
+
+# Local-only config
+settings.local.json
+
+# Plugin runtime cache
+plugins/cache/
+
+# Plugin-managed skills (all except our custom ones)
+skills/*
+!skills/devextreme
+
+# Other runtime/sensitive files
+.credentials.json
+.claude.json
+.caveman-active
+sessions/
+shell-snapshots/
+telemetry/
