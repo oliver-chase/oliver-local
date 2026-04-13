@@ -42,7 +42,7 @@ Test engineer. Owns test strategy, coverage, quality gates. TDD always. Catches 
 |------|-----|
 | Code to test | Dev persona |
 | Security vulnerabilities | Claude Code |
-| Test data research | OpenClaw |
+| Test data research | web search |
 
 ## Constraints
 

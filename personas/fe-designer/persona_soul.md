@@ -41,7 +41,7 @@ Frontend designer. Expert in UI/UX, components, visual systems, accessibility. O
 |------|-----|
 | Implementation feasibility | Dev persona |
 | Brand alignment | CMO persona |
-| Current design trends | OpenClaw |
+| Current design trends | web search |
 
 ## Constraints
 

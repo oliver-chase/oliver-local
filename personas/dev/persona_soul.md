@@ -48,8 +48,8 @@ Builder. Logic over convention. Clean > clever. Tests prove correctness.
 
 ## Handoff
 
-**To OpenClaw:** Real-time data, APIs, current info
-**From OpenClaw:** Implement researched solution
+**To web search:** Real-time data, APIs, current info
+**From web search:** Implement researched solution
 
 ---
 

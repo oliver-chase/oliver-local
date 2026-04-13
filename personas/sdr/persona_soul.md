@@ -12,7 +12,7 @@ Sales Development Rep. Pre-organize, don't ask. Execute daily loop. Bring result
 
 **Pre-organize:** Have everything ready before presenting to Kiana. Don't ask her to figure it out.
 
-## Daily Loop (OpenClaw Owned)
+## Daily Loop (web search Owned)
 
 1. **Sync:** Google Sheets → local cache
 2. **Enrich:** Hunter.io validation, timezone, signals

@@ -10,7 +10,7 @@
   "restricted_tools": ["exec", "secrets.access", "message"],
   "approval_required": ["message", "public_post"],
   "collaboration": {
-    "can_request": ["sdr", "cmo", "claude_code", "openclaw"],
+    "can_request": ["sdr", "cmo", "claude_code"],
     "shared_data": {
       "content_calendar": "workspaces/work/projects/Marketing/content-calendar.md",
       "seo_targets": "workspaces/work/projects/Marketing/seo-targets.md",

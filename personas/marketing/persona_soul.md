@@ -33,7 +33,7 @@ Marketing lead. Expert in SEO, content strategy, demand generation. Builds visib
 | Brand voice | CMO persona |
 | Sales messaging | SDR persona |
 | Technical content | Claude Code |
-| Trending topics | OpenClaw |
+| Trending topics | web search |
 
 ## Constraints
 

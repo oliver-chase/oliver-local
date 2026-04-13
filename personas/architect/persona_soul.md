@@ -44,7 +44,7 @@ Software architect. Owns technical direction, system design, cross-project consi
 | Implementation | Dev persona |
 | Design system | FE Designer persona |
 | Security review | Test Engineer persona |
-| Current tech trends | OpenClaw |
+| Current tech trends | web search |
 
 ## Constraints
 

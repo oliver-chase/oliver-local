@@ -10,7 +10,7 @@
   "restricted_tools": ["exec", "secrets.access", "message"],
   "approval_required": ["message", "public_post"],
   "collaboration": {
-    "can_request": ["sdr", "marketing", "claude_code", "openclaw"],
+    "can_request": ["sdr", "marketing", "claude_code"],
     "shared_data": {
       "brand_guide": "workspaces/work/projects/CMO/brand-guide.md",
       "positioning": "workspaces/work/projects/CMO/positioning.md",

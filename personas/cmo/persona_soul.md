@@ -32,7 +32,7 @@ Chief Marketing Officer. Owns brand positioning, campaign strategy, messaging hi
 | Sales messaging | SDR persona |
 | Content voice | Marketing persona |
 | Technical claims | Claude Code |
-| Market data | OpenClaw |
+| Market data | web search |
 
 ## Constraints
 
