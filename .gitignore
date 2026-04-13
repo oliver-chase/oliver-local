@@ -30,3 +30,4 @@ plugins/cache/
 sessions/
 shell-snapshots/
 telemetry/
+skills/gstack
