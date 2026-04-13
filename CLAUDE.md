@@ -84,7 +84,35 @@ All active projects live in `~/projects/`. Each has its own CLAUDE.md — read t
 | tesknota | saturdaythings/tesknota | tesknota.pages.dev |
 | fallow | saturdaythings/fallow | - |
 
-**Start of every project session:** read the project's CLAUDE.md, check CI, then ask what's needed. Do not scan the full codebase unless the task requires it.
+## Session Startup (all projects)
+
+Complete every step before writing any code.
+
+1. Read the project's CLAUDE.md in full
+2. Check CI:
+   ```sh
+   gh run list --limit 3 --repo <owner>/<repo>
+   ```
+   If the most recent run failed, read it before proceeding.
+3. Read recent git history:
+   ```sh
+   git log --oneline --since=72h
+   ```
+4. Read any project docs called out in the project CLAUDE.md (ARCHITECTURE.md, CONTRIBUTING.md, etc.)
+5. Read the specific file(s) being worked on — do not edit a file you have not read this session
+6. Write a plan: what changes, what gets deleted, what edge cases the spec misses
+
+Do not begin coding without completing this sequence.
+
+## End of Session (all projects)
+
+Before every commit:
+
+1. Update project docs that changed (ARCHITECTURE.md, CONTRIBUTING.md, MEMORY.md) — code and docs commit together, never separately
+2. Run the project's lint/check command if one exists
+3. Commit, push to main, confirm CI picked it up (`gh run list`)
+
+Session is complete when code is pushed and CI is running — not when code is written.
 
 ## Agent and Persona Orchestration
 

@@ -20,9 +20,8 @@ settings.local.json
 # Plugin runtime cache
 plugins/cache/
 
-# Plugin-managed skills (all except our custom ones)
-skills/*
-!skills/devextreme
+# Skills are all tracked (custom + plugin-installed)
+# Add new custom skills to skills/ and commit normally
 
 # Other runtime/sensitive files
 .credentials.json
