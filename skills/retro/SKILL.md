@@ -1,1 +1,0 @@
-/Users/oliver/.claude/skills/gstack/retro/SKILL.md

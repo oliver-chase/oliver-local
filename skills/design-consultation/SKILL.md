@@ -1,1 +1,0 @@
-/Users/oliver/.claude/skills/gstack/design-consultation/SKILL.md

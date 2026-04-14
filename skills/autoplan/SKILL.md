@@ -1,1 +1,0 @@
-/Users/oliver/.claude/skills/gstack/autoplan/SKILL.md

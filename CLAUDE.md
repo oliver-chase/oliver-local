@@ -79,10 +79,10 @@ All active projects live in `~/projects/`. Each has its own CLAUDE.md — read t
 
 | Project | Repo | Live |
 |---------|------|------|
-| ops-dashboard | saturdaythings/ops-dashboard | vtwo-ops.pages.dev/accounts/ |
-| v-two-sdr | saturdaythings/v-two-sdr | - |
-| tesknota | saturdaythings/tesknota | tesknota.pages.dev |
-| fallow | saturdaythings/fallow | - |
+| ops-dashboard | oliver-chase/ops-dashboard | vtwo-ops.pages.dev/accounts/ |
+| v-two-sdr | oliver-chase/v-two-sdr | - |
+| tesknota | oliver-chase/tesknota | tesknota.pages.dev |
+| fallow | oliver-chase/fallow | - |
 
 ## Session Startup (all projects)
 
@@ -138,6 +138,11 @@ Claude operates as sole orchestrator. One agent works at a time — no parallel 
 
 ## gstack
 Use gstack skills for browser and visual work. Never use mcp__claude-in-chrome__* tools.
+
+Canonical source:
+- `~/.claude/skills/gstack` is the upstream toolkit
+- overlapping top-level entries in `~/.claude/skills/` are aliases into `gstack`
+- local-only skills and imported Codex system skills live alongside it at the top level
 
 Key skills:
 - `/browse` — navigate URLs, verify deployments, take screenshots, test UI flows

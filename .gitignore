@@ -11,6 +11,8 @@ paste-cache/
 debug/
 file-history/
 agents/
+!skills/**/agents/
+!skills/**/agents/**
 scheduled_tasks.lock
 security_warnings_state_*.json
 
@@ -19,6 +21,7 @@ settings.local.json
 
 # Plugin runtime cache
 plugins/cache/
+plugins/
 
 # Skills are all tracked (custom + plugin-installed)
 # Add new custom skills to skills/ and commit normally
@@ -27,6 +30,8 @@ plugins/cache/
 .credentials.json
 .claude.json
 .caveman-active
+mcp-needs-auth-cache.json
+projects/
 sessions/
 shell-snapshots/
 telemetry/

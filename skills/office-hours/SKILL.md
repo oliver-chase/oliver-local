@@ -1,1 +1,0 @@
-/Users/oliver/.claude/skills/gstack/office-hours/SKILL.md

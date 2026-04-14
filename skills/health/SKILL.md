@@ -1,1 +1,0 @@
-/Users/oliver/.claude/skills/gstack/health/SKILL.md
