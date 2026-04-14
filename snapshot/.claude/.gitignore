@@ -1,0 +1,38 @@
+# Runtime session state
+history.jsonl
+projects/*
+!projects/-Users-oliver/
+projects/-Users-oliver/*
+!projects/-Users-oliver/memory/
+tasks/
+cache/
+backups/
+paste-cache/
+debug/
+file-history/
+agents/
+!skills/**/agents/
+!skills/**/agents/**
+scheduled_tasks.lock
+security_warnings_state_*.json
+
+# Local-only config
+settings.local.json
+
+# Plugin runtime cache
+plugins/cache/
+plugins/
+
+# Skills are all tracked (custom + plugin-installed)
+# Add new custom skills to skills/ and commit normally
+
+# Other runtime/sensitive files
+.credentials.json
+.claude.json
+.caveman-active
+mcp-needs-auth-cache.json
+projects/
+sessions/
+shell-snapshots/
+telemetry/
+skills/gstack

@@ -1,0 +1,17 @@
+{
+  "v": 1,
+  "at": "claude_code",
+  "rt": "/Users/oliver/.claude",
+  "og": "/Users/oliver/.claude/identity/agent_soul.md",
+  "ins": "/Users/oliver/.claude/identity/default.md",
+  "fb": "none",
+  "m": "claude-sonnet-4-6",
+  "p": {
+    "sk": "/Users/oliver/.claude/skills",
+    "tm": "/Users/oliver/.claude/personas",
+    "mem": "/Users/oliver/.claude/projects/-Users-oliver/memory",
+    "per": "/Users/oliver/.claude/personas",
+    "ws": "/Users/oliver/projects",
+    "sl": "/Users/oliver/.claude/identity"
+  }
+}
