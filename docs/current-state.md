@@ -4,7 +4,7 @@ Last verified: `2026-04-14`
 
 ## Live Paths
 
-- `~/.claude` is the real local checkout of `oliver-chase/OliverRepo`
+- `~/.claude` is the real local checkout of `oliver-chase/oliver-local`
 - `~/.codex` is a separate runtime, not a nested Claude component
 - `~/projects/tesknota` is an active product repo
 - `~/projects/ops-dashboard` is an active product repo

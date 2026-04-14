@@ -28,7 +28,7 @@ These directories contain each agent's local runtime state, caches, sessions, au
 
 ### 3. Orchestration Layer
 
-Tracked by `OliverRepo`, currently checked out at `~/.claude`.
+Tracked by `oliver-local` (`oliver-chase/oliver-local`), currently checked out at `~/.claude`.
 
 This layer defines:
 
@@ -66,8 +66,6 @@ That common material should be written once in tracked files and referenced by b
 `- system/custom skills as needed
 ```
 
-## Recommended Next Step For Codex
+## Codex
 
-When Codex gets a mature custom layer, create a separate tracked Codex-oriented repo or a tracked Codex subtree that can be linked into `~/.codex` without moving the runtime there prematurely.
-
-Do not place `.codex` inside `.claude`.
+Separate runtime at `~/.codex`. Do not place `.codex` inside `.claude`.

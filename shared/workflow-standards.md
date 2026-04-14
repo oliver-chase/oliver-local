@@ -31,7 +31,7 @@ Workflow-adjacent systems also matter:
 ## Orchestration Rules
 
 - Do not duplicate project repos just to expose them to another agent runtime
-- Do not create a second fake checkout of `OliverRepo`
+- Do not create a second fake checkout of `oliver-local`
 - Keep Claude and Codex runtime state separate
 - Put shared metadata and standards in tracked files once
 - Treat the live machine layout as the source of truth over stale cached paths

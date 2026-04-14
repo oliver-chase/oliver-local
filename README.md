@@ -1,35 +1,21 @@
-# OliverRepo
+# oliver-local
 
-`OliverRepo` is the tracked orchestration repo for the Oliver local workspace.
+`oliver-local` is the tracked orchestration repo for the Oliver local workspace.
 
-This repo currently lives at `~/.claude`, because Claude is the agent with the mature local orchestration layer today. That does not mean Codex lives inside Claude. The runtime split is:
+Checked out at `~/.claude`. Runtime split:
 
-- `~/.claude` for Claude runtime and tracked Claude-side orchestration
-- `~/.codex` for Codex runtime
-- `~/projects/*` for actual application repositories
+- `~/.claude` — Claude runtime + tracked orchestration
+- `~/.codex` — Codex runtime
+- `~/projects/*` — application repositories
 
-The goal is one accurate control plane story with no duplicate project repos and no fake second copies of orchestration files.
-
-## Current Model
+## Layout
 
 ```text
 /Users/oliver
-|- .claude      OliverRepo git checkout + Claude runtime
+|- .claude      oliver-local git checkout + Claude runtime
 |- .codex       Codex runtime
 `- projects     application repos
 ```
-
-## Target Model
-
-```text
-/Users/oliver
-|- .claude      Claude runtime and Claude-specific orchestration
-|- .codex       Codex runtime and Codex-specific orchestration
-|- projects     application repos
-`- shared       neutral cross-agent definitions, tracked in OliverRepo
-```
-
-In practice, the neutral cross-agent definitions are tracked here for now under [`shared/`](/Users/oliver/.claude/shared), because `OliverRepo` is already the active orchestration repo.
 
 ## What Belongs Here
 
@@ -42,7 +28,6 @@ In practice, the neutral cross-agent definitions are tracked here for now under 
 ## What Does Not Belong Here
 
 - Duplicated copies of app repos
-- Duplicate clones of `OliverRepo`
 - Codex runtime databases, logs, or session state
 - Claude runtime caches, telemetry, and session artifacts
 
