@@ -6,7 +6,7 @@
       "path": "/Users/oliver/projects/tesknota",
       "owner": "oliver-chase",
       "repo": "tesknota",
-      "stack": ["javascript", "html", "css"],
+      "stack": ["typescript", "nextjs", "supabase"],
       "focus": ["frontend", "mobile", "deploy"]
     },
     {

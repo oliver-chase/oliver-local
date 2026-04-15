@@ -28,7 +28,7 @@ These directories contain each agent's local runtime state, caches, sessions, au
 
 ### 3. Orchestration Layer
 
-Tracked by `oliver-local` (`oliver-chase/oliver-local`), currently checked out at `~/.claude`.
+Tracked by `oliver-local` (`oliver-chase/oliver-local`), checked out at `~/oliver-local/`.
 
 This layer defines:
 
@@ -48,23 +48,15 @@ Claude and Codex should remain separate runtimes, but they should agree on:
 
 That common material should be written once in tracked files and referenced by both agents rather than duplicated in both runtimes.
 
-## Safe Near-Term Structure
+## Repo Remotes
 
-```text
-~/.claude/
-|- CLAUDE.md
-|- commands/
-|- hooks/
-|- identity/
-|- personas/
-|- skills/
-|- docs/
-`- shared/
-
-~/.codex/
-|- runtime files only
-`- system/custom skills as needed
-```
+| Local path | Remote |
+|------------|--------|
+| `~/oliver-local` | `oliver-chase/oliver-local` |
+| `~/projects/tesknota` | `oliver-chase/tesknota` |
+| `~/projects/ops-dashboard` | `oliver-chase/ops-dashboard` |
+| `~/projects/v-two-sdr` | `oliver-chase/v-two-sdr` |
+| `~/projects/fallow` | `oliver-chase/fallow` |
 
 ## Codex
 
