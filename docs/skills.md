@@ -1,6 +1,8 @@
 # Claude Skills
 
-The live Claude skill layer now treats `~/.claude/skills/gstack` as canonical for overlapping Garry Tan skills. Top-level duplicates were replaced with aliases into that vendored toolkit. Unique local skills and imported Codex system skills remain top-level additions.
+Updated 2026-04-15.
+
+`~/.claude/skills/gstack` is canonical for overlapping Garry Tan skills. Top-level duplicates are aliases into that vendored toolkit. Unique local skills, .md shortcut skills, and imported Codex system skills remain top-level additions.
 
 ## Canonical gstack aliases
 
@@ -47,24 +49,28 @@ unfreeze -> gstack/unfreeze
 ## Local-only Claude skills
 
 ```text
-browser-qa
-codebase-onboarding
-context-budget
+browser-qa/
+codebase-onboarding/
+context-budget/
+devextreme/
+e2e-testing/
+security-review/
+supabase/
+supabase-postgres-best-practices/
 debug-issue.md
-devextreme
-e2e-testing
+doc-audit.md
 explore-codebase.md
+mem-sync.md
 refactor-safely.md
 review-changes.md
-security-review
 ```
 
 ## Imported Codex system skills
 
 ```text
-imagegen
-openai-docs
-plugin-creator
-skill-creator
-skill-installer
+imagegen/
+openai-docs/
+plugin-creator/
+skill-creator/
+skill-installer/
 ```

@@ -1,39 +1,72 @@
 # oliver-local
 
-`oliver-local` is the tracked orchestration repo for the Oliver local workspace.
+Sanitized map of the live `/Users/oliver` workspace. Updated 2026-04-15.
 
-Checked out at `~/.claude`. Runtime split:
+- documents the real local operating structure
+- preserves stable orchestration files and cross-agent docs
+- records project repo structure without duplicating full app repos
+- keeps runtime state, secrets, auth, caches, logs, and other machine-private artifacts out of git
 
-- `~/.claude` — Claude runtime + tracked orchestration
-- `~/.codex` — Codex runtime
-- `~/projects/*` — application repositories
-
-## Layout
+## Quick Structure
 
 ```text
 /Users/oliver
-|- .claude      oliver-local git checkout + Claude runtime
-|- .codex       Codex runtime
-`- projects     application repos
+|- .claude                    Claude runtime + tracked orchestration layer
+|  |- CLAUDE.md
+|  |- README.md
+|  |- commands/
+|  |- docs/
+|  |- hooks/
+|  |- identity/
+|  |- personas/
+|  |- plugins/
+|  |- shared/
+|  `- skills/
+|     |- gstack/             canonical gstack toolkit
+|     |- <aliases>           top-level links into gstack for overlapping skills
+|     |- browser-qa/
+|     |- codebase-onboarding/
+|     |- context-budget/
+|     |- devextreme/
+|     |- e2e-testing/
+|     |- security-review/
+|     |- supabase/
+|     |- supabase-postgres-best-practices/
+|     |- imagegen/
+|     |- openai-docs/
+|     |- plugin-creator/
+|     |- skill-creator/
+|     `- skill-installer/
+|- .codex                     Codex runtime
+|- .gstack                    gstack browser agent runtime
+|- .serena                    Serena MCP runtime
+|- projects/
+|  |- tesknota/               Next.js 15 + TypeScript + Supabase
+|  |- ops-dashboard/          Vanilla JS + Cloudflare Pages + Supabase
+|  |- v-two-sdr/              Node.js outreach pipeline
+|  `- fallow/                 Early-stage project
+|- dotfiles/
+|- claude-push/
+`- tesknota-audit/
 ```
 
-## What Belongs Here
+## What Is Included
 
-- Claude operating rules, personas, hooks, and custom skills
-- The vendored `gstack` toolkit at `~/.claude/skills/gstack`, with top-level skill aliases pointing to it
-- Codex-derived system skills that are useful in Claude (`imagegen`, `openai-docs`, `plugin-creator`, `skill-creator`, `skill-installer`)
-- Cross-agent repo map and workflow standards
-- Documentation of the live local architecture
+- Sanitized workspace and repo structure in [docs/workspace-tree.md](docs/workspace-tree.md) and [docs/project-repos.md](docs/project-repos.md)
+- Current Claude skill-layer map in [docs/skills.md](docs/skills.md)
 
-## What Does Not Belong Here
+## What Is Deliberately Not Duplicated
 
-- Duplicated copies of app repos
-- Codex runtime databases, logs, or session state
-- Claude runtime caches, telemetry, and session artifacts
+- Full contents of `~/projects/*` — each project has its own Git repo
+- Full vendored `gstack` source tree — canonical inside `~/.claude/skills/gstack`
+- Runtime-only Claude and Codex state: sessions, caches, telemetry, logs, sqlite DBs, auth files, shell snapshots
+- Secret material or machine-private credentials
 
-## Key Docs
+## Current Skill Model
 
-- [Current State](docs/current-state.md)
-- [Architecture](docs/architecture.md)
-- [Repo Map](shared/repo-map.json)
-- [Workflow Standards](shared/workflow-standards.md)
+- `~/.claude/skills/gstack` is the canonical source for overlapping gstack skills
+- Top-level overlapping skill names in `~/.claude/skills/` are aliases into `gstack`
+- Local-only Claude skills remain top-level
+- Codex system skills were imported into the Claude skill layer as top-level additions
+
+See [docs/skills.md](docs/skills.md) for the full map.

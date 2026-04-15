@@ -1,236 +1,248 @@
 # Project Repos
 
-Each project already lives in its own Git repo under `/Users/oliver/projects`. To avoid duplication drift, `oliver-local` records structure only and does not vendor the full project contents.
+Each project lives in its own Git repo under `/Users/oliver/projects`. Structure only — no vendored content.
+
+Updated 2026-04-15.
 
 ## tesknota
 
+Next.js 15 app (TypeScript + Supabase). Migrated from vanilla JS. Live at tesknota.pages.dev.
+
 ```text
-~/projects/tesknota/.github
-~/projects/tesknota/.github/workflows
-~/projects/tesknota/.gitignore
-~/projects/tesknota/ARCHITECTURE.md
-~/projects/tesknota/AUDIT.md
-~/projects/tesknota/CLAUDE.md
-~/projects/tesknota/CONTRIBUTING.md
-~/projects/tesknota/DEPLOY.md
-~/projects/tesknota/README.md
-~/projects/tesknota/ROADMAP.md
-~/projects/tesknota/_redirects
-~/projects/tesknota/build.js
-~/projects/tesknota/config.example.js
-~/projects/tesknota/css
-~/projects/tesknota/css/styles.css
-~/projects/tesknota/css/tokens.css
-~/projects/tesknota/fetch-metadata.js
-~/projects/tesknota/index.html
-~/projects/tesknota/js
-~/projects/tesknota/js/add-comp.js
-~/projects/tesknota/js/add-frag.js
-~/projects/tesknota/js/admin.js
-~/projects/tesknota/js/analytics-collection.js
-~/projects/tesknota/js/analytics.js
-~/projects/tesknota/js/audit.js
-~/projects/tesknota/js/auth.js
-~/projects/tesknota/js/bot.js
-~/projects/tesknota/js/collection.js
-~/projects/tesknota/js/compliments.js
-~/projects/tesknota/js/dashboard.js
-~/projects/tesknota/js/data.js
-~/projects/tesknota/js/detail.js
-~/projects/tesknota/js/fragdb.js
-~/projects/tesknota/js/friend.js
-~/projects/tesknota/js/identity.js
-~/projects/tesknota/js/import.js
-~/projects/tesknota/js/misc.js
-~/projects/tesknota/js/nav.js
-~/projects/tesknota/js/palette.js
-~/projects/tesknota/js/seed.js
-~/projects/tesknota/js/sheets.js
-~/projects/tesknota/js/state.js
-~/projects/tesknota/js/utils.js
-~/projects/tesknota/js/wishlist.js
-~/projects/tesknota/mockups
-~/projects/tesknota/mockups/tesknota-admin-mockup.html
-~/projects/tesknota/mockups/tesknota-analytics.html
-~/projects/tesknota/mockups/tesknota-dashboard.html
-~/projects/tesknota/mockups/tesknota-mockup-v2.html
-~/projects/tesknota/mockups/tesknota-redesign-brief.md
-~/projects/tesknota/mockups/tesknota-social-analytics.html
-~/projects/tesknota/package-lock.json
-~/projects/tesknota/package.json
-~/projects/tesknota/playwright.config.js
-~/projects/tesknota/scripts
-~/projects/tesknota/scripts/pre-commit.sh
-~/projects/tesknota/scripts/run-audit.js
-~/projects/tesknota/scripts/setup-hooks.sh
-~/projects/tesknota/setup-sheets.js
-~/projects/tesknota/tests
-~/projects/tesknota/tests/smoke.spec.js
-~/projects/tesknota/tests/visual-qa.spec.js
-~/projects/tesknota/verify-setup.js
-~/projects/tesknota/worker
-~/projects/tesknota/worker/ai-worker.js
+~/projects/tesknota/
+|- app/
+|  |- (app)/
+|  |  |- admin/page.tsx
+|  |  |- analytics/page.tsx
+|  |  |- collection/page.tsx
+|  |  |- compliments/page.tsx
+|  |  |- dashboard/page.tsx
+|  |  |- friend/page.tsx
+|  |  |- import/page.tsx
+|  |  |- settings/page.tsx
+|  |  |- wishlist/page.tsx
+|  |  `- layout.tsx
+|  |- globals.css
+|  |- layout.tsx
+|  `- page.tsx
+|- components/
+|  |- layout/
+|  |  |- AppShell.tsx
+|  |  |- Sidebar.tsx
+|  |  `- Topbar.tsx
+|  `- ui/
+|     |- accord-cloud.tsx
+|     |- bot-drawer.tsx
+|     |- button.tsx
+|     |- cmd-palette.tsx
+|     |- comp-form.tsx
+|     |- filter-bar.tsx
+|     |- frag-detail.tsx
+|     |- frag-form.tsx
+|     |- frag-row.tsx
+|     |- modal.tsx
+|     |- pagination.tsx
+|     |- section-header.tsx
+|     |- stat-box.tsx
+|     `- toast.tsx
+|- lib/
+|  |- data/
+|  |  |- index.ts
+|  |  `- mutations.ts
+|  |- data-context.tsx
+|  |- frag-utils.ts
+|  |- mobile-nav-context.tsx
+|  |- state.ts
+|  |- supabase.ts
+|  |- user-context.tsx
+|  `- utils.ts
+|- scripts/
+|  |- migrate-to-supabase.js
+|  `- schema.sql
+|- types/index.ts
+|- AGENTS.md
+|- ARCHITECTURE.md
+|- CLAUDE.md
+|- MIGRATION.md
+|- README.md
+|- components.json
+|- next.config.ts
+|- postcss.config.mjs
+`- tsconfig.json
 ```
 
 ## ops-dashboard
 
+Vanilla JS multi-section dashboard. Cloudflare Pages + Supabase backend. Live at vtwo-ops.pages.dev.
+
 ```text
-~/projects/ops-dashboard/.github
-~/projects/ops-dashboard/.github/workflows
-~/projects/ops-dashboard/.gitignore
-~/projects/ops-dashboard/ARCHITECTURE.md
-~/projects/ops-dashboard/AUDIT.md
-~/projects/ops-dashboard/CLAUDE.md
-~/projects/ops-dashboard/CONTRIBUTING.md
-~/projects/ops-dashboard/MEMORY.md
-~/projects/ops-dashboard/README.md
-~/projects/ops-dashboard/_headers
-~/projects/ops-dashboard/accounts
-~/projects/ops-dashboard/accounts/MEMORY.md
-~/projects/ops-dashboard/accounts/accounts.css
-~/projects/ops-dashboard/accounts/index.html
-~/projects/ops-dashboard/accounts/js
-~/projects/ops-dashboard/build.js
-~/projects/ops-dashboard/config.example.js
-~/projects/ops-dashboard/crm
-~/projects/ops-dashboard/crm/index.html
-~/projects/ops-dashboard/docs
-~/projects/ops-dashboard/docs/FOUNDATION-RUNBOOK.md
-~/projects/ops-dashboard/docs/RUNBOOK.md
-~/projects/ops-dashboard/docs/superpowers
-~/projects/ops-dashboard/hr
-~/projects/ops-dashboard/hr/index.html
-~/projects/ops-dashboard/hr/js
-~/projects/ops-dashboard/index.html
-~/projects/ops-dashboard/migrate-schema.js
-~/projects/ops-dashboard/package-lock.json
-~/projects/ops-dashboard/package.json
-~/projects/ops-dashboard/playwright.config.js
-~/projects/ops-dashboard/scripts
-~/projects/ops-dashboard/scripts/check-integrity.js
-~/projects/ops-dashboard/scripts/pre-commit
-~/projects/ops-dashboard/scripts/run-audit.js
-~/projects/ops-dashboard/scripts/setup-hooks.sh
-~/projects/ops-dashboard/scripts/setup-trash-tabs.js
-~/projects/ops-dashboard/sdr
-~/projects/ops-dashboard/sdr/index.html
-~/projects/ops-dashboard/setup-accounts-sheet.js
-~/projects/ops-dashboard/shared
-~/projects/ops-dashboard/shared/components.css
-~/projects/ops-dashboard/shared/hub-nav.js
-~/projects/ops-dashboard/shared/sheets.js
-~/projects/ops-dashboard/shared/styles.css
-~/projects/ops-dashboard/shared/tokens.css
-~/projects/ops-dashboard/shared/utils.js
-~/projects/ops-dashboard/tests
-~/projects/ops-dashboard/tests/qa.spec.js
-~/projects/ops-dashboard/tests/visual-qa.spec.js
+~/projects/ops-dashboard/
+|- accounts/
+|  |- js/
+|  |  |- actions.js
+|  |  |- app.js
+|  |  |- chatbot-upload.js
+|  |  |- chatbot.js
+|  |  |- data.js
+|  |  |- export.js
+|  |  |- notes.js
+|  |  |- opportunities.js
+|  |  |- orgchart.js
+|  |  |- overview-chart.js
+|  |  |- overview.js
+|  |  |- people.js
+|  |  |- pickers.js
+|  |  |- projects.js
+|  |  |- state.js
+|  |  `- utils.js
+|  |- accounts.css
+|  |- chatbot.css
+|  |- index.html
+|  `- MEMORY.md
+|- admin/
+|  |- js/keys.js
+|  |- admin.css
+|  `- index.html
+|- crm/
+|  |- js/app.js
+|  |- crm.css
+|  `- index.html
+|- docs/
+|  |- AGENT-PERSONA.md
+|  |- DATA-GUIDE.md
+|  |- FOUNDATION-RUNBOOK.md
+|  `- RUNBOOK.md
+|- functions/
+|  |- _shared/ai.js
+|  `- api/
+|     |- admin/keys.js
+|     |- chat.js
+|     |- confirm-write.js
+|     |- parse-document.js
+|     `- parse-image.js
+|- hr/
+|  |- js/
+|  |  |- assignments.js
+|  |  |- cp-flows-cand.js
+|  |  |- cp-flows-device.js
+|  |  |- cp-flows-emp.js
+|  |  |- cp-flows-track.js
+|  |  |- cp.js
+|  |  |- dashboard.js
+|  |  |- data.js
+|  |  |- directory.js
+|  |  |- global-search.js
+|  |  |- hiring-modals.js
+|  |  |- hiring.js
+|  |  |- inventory.js
+|  |  |- onboarding.js
+|  |  |- reports.js
+|  |  |- settings.js
+|  |  |- state.js
+|  |  |- tracks.js
+|  |  `- utils.js
+|  |- hr.css
+|  `- index.html
+|- scripts/
+|  |- pre-commit
+|  |- run-audit.js
+|  |- setup-hooks.sh
+|  `- setup-supabase.sql
+|- sdr/
+|  |- js/app.js
+|  |- sdr.css
+|  `- index.html
+|- shared/
+|  |- components-base.css
+|  |- components-interactive.css
+|  |- components-layout.css
+|  |- components.css
+|  |- db.js
+|  |- hub-nav.js
+|  |- placeholder.css
+|  |- popover.js
+|  |- styles.css
+|  |- tokens.css
+|  `- utils.js
+|- supabase/
+|  `- ai_config.sql
+|- ARCHITECTURE.md
+|- AUDIT.md
+|- CLAUDE.md
+|- CONTRIBUTING.md
+|- MEMORY.md
+|- README.md
+|- _headers
+|- build.js
+|- config.example.js
+├- index.html
+`- package.json
 ```
 
 ## v-two-sdr
 
+Node.js automated B2B outreach pipeline. GitHub Actions orchestration. 386/386 tests passing.
+
 ```text
-~/projects/v-two-sdr/.env.example
-~/projects/v-two-sdr/.github
-~/projects/v-two-sdr/.github/dependabot.yml
-~/projects/v-two-sdr/.github/workflows
-~/projects/v-two-sdr/.gitignore
-~/projects/v-two-sdr/CLAUDE.md
-~/projects/v-two-sdr/README.md
-~/projects/v-two-sdr/REDESIGN.md
-~/projects/v-two-sdr/RUNBOOK.md
-~/projects/v-two-sdr/__tests__
-~/projects/v-two-sdr/__tests__/add-prospects.test.js
-~/projects/v-two-sdr/__tests__/enrichment-engine.test.js
-~/projects/v-two-sdr/__tests__/hunter-verifier.test.js
-~/projects/v-two-sdr/__tests__/inbox-monitor.test.js
-~/projects/v-two-sdr/__tests__/mailer.test.js
-~/projects/v-two-sdr/__tests__/reply-classifier.test.js
-~/projects/v-two-sdr/__tests__/sheets-connector.test.js
-~/projects/v-two-sdr/__tests__/timezone-cache.test.js
-~/projects/v-two-sdr/cloudflare
-~/projects/v-two-sdr/cloudflare/README.md
-~/projects/v-two-sdr/cloudflare/approval-worker.js
-~/projects/v-two-sdr/cloudflare/wrangler.toml
-~/projects/v-two-sdr/config
-~/projects/v-two-sdr/config.email.js
-~/projects/v-two-sdr/config.sheets.js
-~/projects/v-two-sdr/config/config.oauth.js
-~/projects/v-two-sdr/config/config.sheets.js
-~/projects/v-two-sdr/config/sequences.js
-~/projects/v-two-sdr/docs
-~/projects/v-two-sdr/docs/ABSTRACT_API_INTEGRATION.md
-~/projects/v-two-sdr/docs/GOOGLE_CLOUD_SETUP.md
-~/projects/v-two-sdr/docs/OAUTH_MIGRATION.md
-~/projects/v-two-sdr/docs/SHEETS_CONNECTOR.md
-~/projects/v-two-sdr/jest.config.js
-~/projects/v-two-sdr/lib
-~/projects/v-two-sdr/lib/timezone-cache.js
-~/projects/v-two-sdr/outreach
-~/projects/v-two-sdr/outreach/approved
-~/projects/v-two-sdr/outreach/approved-sends.json
-~/projects/v-two-sdr/outreach/drafts
-~/projects/v-two-sdr/outreach/opt-outs.json
-~/projects/v-two-sdr/outreach/prospects.csv
-~/projects/v-two-sdr/outreach/replies
-~/projects/v-two-sdr/outreach/replies.json
-~/projects/v-two-sdr/outreach/sends.json
-~/projects/v-two-sdr/outreach/sent
-~/projects/v-two-sdr/outreach/templates.md
-~/projects/v-two-sdr/outreach/timezone-cache.json
-~/projects/v-two-sdr/outreach/weekly-reports.json
-~/projects/v-two-sdr/package-lock.json
-~/projects/v-two-sdr/package.json
-~/projects/v-two-sdr/prospects.json
-~/projects/v-two-sdr/scripts
-~/projects/v-two-sdr/scripts/add-prospects.js
-~/projects/v-two-sdr/scripts/approval-email.js
-~/projects/v-two-sdr/scripts/bounce-handler.js
-~/projects/v-two-sdr/scripts/cleanup-sheet.js
-~/projects/v-two-sdr/scripts/digest.js
-~/projects/v-two-sdr/scripts/draft.js
-~/projects/v-two-sdr/scripts/enrichment-engine.js
-~/projects/v-two-sdr/scripts/followup-scheduler.js
-~/projects/v-two-sdr/scripts/handle-approval.js
-~/projects/v-two-sdr/scripts/hunter-verifier.js
-~/projects/v-two-sdr/scripts/inbox-monitor.js
-~/projects/v-two-sdr/scripts/inbox.js
-~/projects/v-two-sdr/scripts/mailer.js
-~/projects/v-two-sdr/scripts/oauth-client.js
-~/projects/v-two-sdr/scripts/prospect.js
-~/projects/v-two-sdr/scripts/reply-classifier.js
-~/projects/v-two-sdr/scripts/send.js
-~/projects/v-two-sdr/scripts/sheets-writer.js
-~/projects/v-two-sdr/scripts/sync.js
-~/projects/v-two-sdr/scripts/validate-prospects.js
-~/projects/v-two-sdr/sheets-connector.js
-~/projects/v-two-sdr/sheets-utils.js
+~/projects/v-two-sdr/
+|- __tests__/
+|- cloudflare/
+|  |- approval-worker.js
+|  `- wrangler.toml
+|- config/
+|  |- config.oauth.js
+|  |- config.sheets.js
+|  `- sequences.js
+|- docs/
+|- lib/timezone-cache.js
+|- outreach/
+|- scripts/
+|  |- add-prospects.js
+|  |- approval-email.js
+|  |- bounce-handler.js
+|  |- cleanup-sheet.js
+|  |- digest.js
+|  |- draft.js
+|  |- enrichment-engine.js
+|  |- followup-scheduler.js
+|  |- handle-approval.js
+|  |- hunter-verifier.js
+|  |- inbox-monitor.js
+|  |- inbox.js
+|  |- mailer.js
+|  |- oauth-client.js
+|  |- prospect.js
+|  |- reply-classifier.js
+|  |- send.js
+|  |- sheets-writer.js
+|  |- sync.js
+|  `- validate-prospects.js
+|- CLAUDE.md
+|- README.md
+|- REDESIGN.md
+`- RUNBOOK.md
 ```
 
 ## fallow
 
-```text
-~/projects/fallow/.gitignore
-~/projects/fallow/README.md
-~/projects/fallow/docs
-~/projects/fallow/docs/DATA_SCHEMA.md
-~/projects/fallow/docs/DEPLOYMENT.md
-~/projects/fallow/docs/DESIGN.md
-~/projects/fallow/docs/HOSTING_GUIDE.md
-~/projects/fallow/docs/LEGAL_COMPLIANCE.md
-~/projects/fallow/docs/LEGAL_VERIFICATION.md
-~/projects/fallow/docs/PRODUCT_ROADMAP.md
-~/projects/fallow/docs/ROADMAP.md
-~/projects/fallow/docs/UX.md
-~/projects/fallow/src
-~/projects/fallow/src/.env.example
-~/projects/fallow/src/README.md
-~/projects/fallow/src/README_PHASE2.md
-~/projects/fallow/src/data
-~/projects/fallow/src/package-lock.json
-~/projects/fallow/src/package.json
-~/projects/fallow/src/scripts
-~/projects/fallow/src/server.js
-~/projects/fallow/src/ui
-```
+Early-stage project. Docs-heavy, minimal code.
 
+```text
+~/projects/fallow/
+|- docs/
+|  |- DATA_SCHEMA.md
+|  |- DEPLOYMENT.md
+|  |- DESIGN.md
+|  |- HOSTING_GUIDE.md
+|  |- LEGAL_COMPLIANCE.md
+|  |- LEGAL_VERIFICATION.md
+|  |- PRODUCT_ROADMAP.md
+|  |- ROADMAP.md
+|  `- UX.md
+|- src/
+|  |- data/
+|  |- scripts/
+|  |- ui/
+|  `- server.js
+`- README.md
+```
