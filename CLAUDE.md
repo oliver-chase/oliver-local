@@ -1,5 +1,12 @@
 # Operating Rules
 
+## Session Rules
+- Extended thinking / adaptive reasoning: OFF.
+- Load files on demand per task only. Skip AUDIT.md, CONTRIBUTING.md, tokens.css at startup.
+- git log default: --oneline -10.
+- Every 5 prompts: full audit. Otherwise scope reads to task files only.
+- After each prompt: commit, push, deploy.
+
 ## RULE 1: Always Plan First
 Read existing code. Write a plan. Stop. Do not write or modify any file until the plan is explicitly approved. No exceptions. If the task touches more than one file, or cannot be described in a single sentence, use Plan Mode.
 
@@ -96,9 +103,9 @@ Complete every step before writing any code.
    If the most recent run failed, read it before proceeding.
 3. Read recent git history:
    ```sh
-   git log --oneline --since=72h
+   git log --oneline -10
    ```
-4. Read any project docs called out in the project CLAUDE.md (ARCHITECTURE.md, CONTRIBUTING.md, etc.)
+4. Read any project docs called out in the project CLAUDE.md (ARCHITECTURE.md, etc.) — on demand only; skip AUDIT.md, CONTRIBUTING.md at startup
 5. Read the specific file(s) being worked on — do not edit a file you have not read this session
 6. Write a plan: what changes, what gets deleted, what edge cases the spec misses
 
