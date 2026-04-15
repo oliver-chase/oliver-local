@@ -6,7 +6,7 @@
   "permissions": {
     "defaultMode": "bypassPermissions"
   },
-  "model": "sonnet",
+  "model": "haiku",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -18,30 +18,12 @@
         ]
       }
     ],
-    "PostToolUse": [
-      {
-        "matcher": "Edit|Write|Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "code-review-graph update --skip-flows",
-            "timeout": 30
-          }
-        ]
-      }
-    ],
-    "SessionStart": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "code-review-graph status",
-            "timeout": 10
-          }
-        ]
-      }
-    ]
+    "PostToolUse": [],
+    "SessionStart": []
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash \"/Users/oliver/.claude/plugins/cache/caveman/caveman/63e797cd753b/hooks/caveman-statusline.sh\""
   },
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true,
