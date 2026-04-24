@@ -7,6 +7,20 @@
 - Every 5 prompts: full audit. Otherwise scope reads to task files only.
 - After each prompt: commit, push, deploy.
 
+## Workflow Trigger Terms
+- `backlog` -> use `~/.claude/shared/workflows/backlog-workflow.md`
+- `testing` -> use `~/.claude/shared/workflows/testing-rules.md`
+- `qa` -> use `~/.claude/shared/workflows/qa-process.md`
+- `full qa` -> use `~/.claude/shared/workflows/full-qa-audit.md`
+- If any trigger term conflicts with active repo docs, pause and surface the exact conflict before proceeding.
+- Testing applies to all code work and is required before considering implementation complete.
+
+## Commit Rules
+- Do not auto-commit after every change.
+- Only commit when explicitly asked, or when a named milestone is complete.
+- When committing, group all related changes into a single commit with a message matching the active milestone name.
+- Never create more than one commit per working session unless explicitly told to start a new milestone.
+
 ## RULE 1: Always Plan First
 Read existing code. Write a plan. Stop. Do not write or modify any file until the plan is explicitly approved. No exceptions. If the task touches more than one file, or cannot be described in a single sentence, use Plan Mode.
 

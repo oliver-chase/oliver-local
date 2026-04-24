@@ -1,8 +1,11 @@
 # Claude Skills
 
-Updated 2026-04-15.
+Updated 2026-04-24.
 
 `~/.claude/skills/gstack` is canonical for overlapping Garry Tan skills. Top-level duplicates are aliases into that vendored toolkit. Unique local skills, .md shortcut skills, and imported Codex system skills remain top-level additions.
+
+Workflow trigger routing is defined separately in `shared/workflows/*.md`.
+If a plain-language trigger term and a skill alias collide (for example, `qa`), pause and surface the conflict before proceeding.
 
 ## Canonical gstack aliases
 

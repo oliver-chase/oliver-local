@@ -28,13 +28,14 @@ These directories contain each agent's local runtime state, caches, sessions, au
 
 ### 3. Orchestration Layer
 
-Tracked by `oliver-local` (`oliver-chase/oliver-local`), checked out at `~/oliver-local/`.
+Tracked by `oliver-local` (`oliver-chase/oliver-local`), checked out at `~/.claude` with command alias `~/oliver-local`.
 
 This layer defines:
 
 - Claude instructions and personas
 - Shared repo metadata
 - Shared workflow standards
+- Shared workflow procedures (`shared/workflows/*.md`)
 - Documentation of how the workspace is wired
 
 ## Cross-Agent Pattern
@@ -52,7 +53,7 @@ That common material should be written once in tracked files and referenced by b
 
 | Local path | Remote |
 |------------|--------|
-| `~/oliver-local` | `oliver-chase/oliver-local` |
+| `~/.claude` (alias: `~/oliver-local`) | `oliver-chase/oliver-local` |
 | `~/projects/tesknota` | `oliver-chase/tesknota` |
 | `~/projects/ops-dashboard` | `oliver-chase/ops-dashboard` |
 | `~/projects/v-two-sdr` | `oliver-chase/v-two-sdr` |

@@ -1,50 +1,27 @@
 # oliver-local
 
-Sanitized map of the live `/Users/oliver` workspace. Updated 2026-04-15.
+Sanitized map of the live `/Users/oliver` workspace. Updated 2026-04-24.
 
 - documents the real local operating structure
 - preserves stable orchestration files and cross-agent docs
 - records project repo structure without duplicating full app repos
 - keeps runtime state, secrets, auth, caches, logs, and other machine-private artifacts out of git
 
+Checked out at `~/.claude` with canonical Git command path `~/oliver-local` (symlink alias).
+
 ## Quick Structure
 
 ```text
 /Users/oliver
 |- .claude                    Claude runtime + tracked orchestration layer
-|  |- CLAUDE.md
-|  |- README.md
-|  |- commands/
-|  |- docs/
-|  |- hooks/
-|  |- identity/
-|  |- personas/
-|  |- plugins/
-|  |- shared/
-|  `- skills/
-|     |- gstack/             canonical gstack toolkit
-|     |- <aliases>           top-level links into gstack for overlapping skills
-|     |- browser-qa/
-|     |- codebase-onboarding/
-|     |- context-budget/
-|     |- devextreme/
-|     |- e2e-testing/
-|     |- security-review/
-|     |- supabase/
-|     |- supabase-postgres-best-practices/
-|     |- imagegen/
-|     |- openai-docs/
-|     |- plugin-creator/
-|     |- skill-creator/
-|     `- skill-installer/
+|- oliver-local -> .claude    canonical git command alias
 |- .codex                     Codex runtime
 |- .gstack                    gstack browser agent runtime
-|- .serena                    Serena MCP runtime
 |- projects/
-|  |- tesknota/               Next.js 15 + TypeScript + Supabase
-|  |- ops-dashboard/          Vanilla JS + Cloudflare Pages + Supabase
-|  |- v-two-sdr/              Node.js outreach pipeline
-|  `- fallow/                 Early-stage project
+|  |- tesknota/
+|  |- ops-dashboard/
+|  |- v-two-sdr/
+|  `- fallow/
 |- dotfiles/
 |- claude-push/
 `- tesknota-audit/
@@ -57,8 +34,8 @@ Sanitized map of the live `/Users/oliver` workspace. Updated 2026-04-15.
 
 ## What Is Deliberately Not Duplicated
 
-- Full contents of `~/projects/*` — each project has its own Git repo
-- Full vendored `gstack` source tree — canonical inside `~/.claude/skills/gstack`
+- Full contents of `~/projects/*` - each project has its own Git repo
+- Full vendored `gstack` source tree - canonical inside `~/.claude/skills/gstack`
 - Runtime-only Claude and Codex state: sessions, caches, telemetry, logs, sqlite DBs, auth files, shell snapshots
 - Secret material or machine-private credentials
 
@@ -70,3 +47,13 @@ Sanitized map of the live `/Users/oliver` workspace. Updated 2026-04-15.
 - Codex system skills were imported into the Claude skill layer as top-level additions
 
 See [docs/skills.md](docs/skills.md) for the full map.
+
+## Key Docs
+
+- [Architecture](docs/architecture.md)
+- [Project Repos](docs/project-repos.md)
+- [Skills](docs/skills.md)
+- [Workspace Tree](docs/workspace-tree.md)
+- [Repo Map](shared/repo-map.json)
+- [Workflow Standards](shared/workflow-standards.md)
+- [Workflow Procedures](shared/workflows/)

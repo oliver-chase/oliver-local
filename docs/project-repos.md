@@ -2,7 +2,7 @@
 
 Each project lives in its own Git repo under `/Users/oliver/projects`. Structure only — no vendored content.
 
-Updated 2026-04-15.
+Updated 2026-04-24 (reconciled from archived oliver-local copy).
 
 ## tesknota
 
@@ -175,7 +175,7 @@ Vanilla JS multi-section dashboard. Cloudflare Pages + Supabase backend. Live at
 |- _headers
 |- build.js
 |- config.example.js
-├- index.html
+|- index.html
 `- package.json
 ```
 

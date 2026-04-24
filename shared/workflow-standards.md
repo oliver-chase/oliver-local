@@ -2,6 +2,17 @@
 
 These are the cross-agent rules both Claude and Codex should follow when working in the Oliver workspace.
 
+## Trigger Routing
+
+Use these trigger terms as workflow selectors:
+
+- `backlog` -> `shared/workflows/backlog-workflow.md`
+- `testing` -> `shared/workflows/testing-rules.md`
+- `qa` -> `shared/workflows/qa-process.md`
+- `full qa` -> `shared/workflows/full-qa-audit.md`
+
+If any trigger term conflicts with active repo docs, pause and surface the exact conflict before continuing.
+
 ## Repo Location
 
 All product repos live under `~/projects/`.
@@ -47,3 +58,7 @@ Workflow-adjacent systems also matter:
 - Prefer SSH Git remotes for `oliver-chase/*`
 - Do not hard-code primary vs. secondary repo assumptions into long-lived docs
 - Keep deployment and repo-path knowledge in tracked metadata instead of agent memory alone
+
+## Testing Baseline
+
+Testing applies to all code work. Follow `shared/workflows/testing-rules.md` as a required gate.
