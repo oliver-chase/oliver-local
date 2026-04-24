@@ -1,9 +1,9 @@
 # Runtime session state
 history.jsonl
-projects/*
-!projects/-Users-oliver/
-projects/-Users-oliver/*
-!projects/-Users-oliver/memory/
+/projects/*
+!/projects/-Users-oliver/
+/projects/-Users-oliver/*
+!/projects/-Users-oliver/memory/
 tasks/
 cache/
 backups/
@@ -31,8 +31,12 @@ plugins/
 .claude.json
 .caveman-active
 mcp-needs-auth-cache.json
-projects/
+/projects/
 sessions/
 shell-snapshots/
 telemetry/
 skills/gstack
+
+# Keep docs project pointers tracked
+!docs/projects/
+!docs/projects/**
