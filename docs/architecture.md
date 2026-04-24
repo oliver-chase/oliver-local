@@ -56,6 +56,7 @@ That common material should be written once in tracked files and referenced by b
 | `~/.claude` (alias: `~/oliver-local`) | `oliver-chase/oliver-local` |
 | `~/projects/tesknota` | `oliver-chase/tesknota` |
 | `~/projects/ops-dashboard` | `oliver-chase/ops-dashboard` |
+| `~/projects/oliver-app` | `oliver-chase/oliver-app` |
 | `~/projects/v-two-sdr` | `oliver-chase/v-two-sdr` |
 | `~/projects/fallow` | `oliver-chase/fallow` |
 

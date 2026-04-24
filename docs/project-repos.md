@@ -10,6 +10,7 @@ Updated 2026-04-24.
 - [ops-dashboard](projects/ops-dashboard.md)
 - [v-two-sdr](projects/v-two-sdr.md)
 - [fallow](projects/fallow.md)
+- [oliver-app](projects/oliver-app.md)
 
 ## Archive
 

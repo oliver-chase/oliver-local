@@ -18,6 +18,14 @@
       "focus": ["ops", "frontend", "testing", "deploy"]
     },
     {
+      "name": "oliver-app",
+      "path": "/Users/oliver/projects/oliver-app",
+      "owner": "oliver-chase",
+      "repo": "oliver-app",
+      "stack": ["typescript", "nextjs", "supabase"],
+      "focus": ["ops", "frontend", "migration", "deploy"]
+    },
+    {
       "name": "v-two-sdr",
       "path": "/Users/oliver/projects/v-two-sdr",
       "owner": "oliver-chase",
