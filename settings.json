@@ -44,7 +44,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "bash \"/Users/oliver/.claude/plugins/cache/caveman/caveman/63e797cd753b/hooks/caveman-statusline.sh\""
+    "command": "bash \"/Users/oliver/.claude/plugins/marketplaces/caveman/hooks/caveman-statusline.sh\""
   },
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true,

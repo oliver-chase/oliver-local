@@ -4,7 +4,7 @@
   "role": "Sales Development Representative",
   "company": "V.Two",
   "status": "active",
-  "workspace": "workspaces/work/projects/SDR",
+  "workspace": "/Users/oliver/projects/v-two-sdr",
   "allowed_tools": ["web_search", "write", "message", "read"],
   "restricted_tools": ["exec", "secrets.access"],
   "approval_required": ["message", "send_email"],
@@ -12,13 +12,13 @@
   "collaboration": {
     "can_request": ["cmo", "marketing", "claude_code"],
     "shared_data": {
-      "prospects": "workspaces/work/projects/SDR/prospects.json",
-      "templates": "workspaces/work/projects/SDR/outreach/templates.md",
-      "sends": "workspaces/work/projects/SDR/outreach/sends.json",
-      "opt_outs": "workspaces/work/projects/SDR/outreach/opt-outs.json",
-      "weekly_reports": "workspaces/work/projects/SDR/outreach/weekly-reports.json"
+      "prospects": "/Users/oliver/projects/v-two-sdr/prospects.json",
+      "templates": "/Users/oliver/projects/v-two-sdr/outreach/templates.md",
+      "sends": "/Users/oliver/projects/v-two-sdr/outreach/sends.json",
+      "opt_outs": "/Users/oliver/projects/v-two-sdr/outreach/opt-outs.json",
+      "weekly_reports": "/Users/oliver/projects/v-two-sdr/outreach/weekly-reports.json"
     }
   },
   "skill": "skills/work-outreach/SKILL.md",
-  "persona_soul": "team/members/sdr/persona_soul.md"
+  "persona_soul": "personas/sdr/persona_soul.md"
 }

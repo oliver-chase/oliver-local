@@ -19,9 +19,12 @@ Checked out at `~/.claude` with canonical Git command path `~/oliver-local` (sym
 |- .gstack                    gstack browser agent runtime
 |- projects/
 |  |- tesknota/
+|  |- oliver-app/
 |  |- ops-dashboard/
 |  |- v-two-sdr/
-|  `- fallow/
+|  |- fallow/
+|  `- prompt-lint/ (local utility, non-git)
+|- references/
 |- dotfiles/
 |- claude-push/
 `- tesknota-audit/
@@ -38,6 +41,7 @@ Checked out at `~/.claude` with canonical Git command path `~/oliver-local` (sym
 - Full vendored `gstack` source tree - canonical inside `~/.claude/skills/gstack`
 - Runtime-only Claude and Codex state: sessions, caches, telemetry, logs, sqlite DBs, auth files, shell snapshots
 - Secret material or machine-private credentials
+- Local runtime scratch artifacts under `~/ide` and `~/plans`
 
 ## Current Skill Model
 

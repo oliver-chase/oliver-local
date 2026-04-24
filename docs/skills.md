@@ -60,6 +60,9 @@ e2e-testing/
 security-review/
 supabase/
 supabase-postgres-best-practices/
+cmo/
+marketing/
+work-outreach/
 debug-issue.md
 doc-audit.md
 explore-codebase.md
@@ -76,4 +79,15 @@ openai-docs/
 plugin-creator/
 skill-creator/
 skill-installer/
+nextjs-advanced-routing/
+nextjs-anti-patterns/
+nextjs-app-router-fundamentals/
+nextjs-client-cookie-pattern/
+nextjs-dynamic-routes-params/
+nextjs-pathname-id-fetch/
+nextjs-scaffold/
+nextjs-server-client-components/
+nextjs-server-navigation/
+nextjs-use-search-params-suspense/
+vercel-ai-sdk/
 ```

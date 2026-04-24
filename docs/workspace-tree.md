@@ -19,9 +19,12 @@ Intentionally structural, not exhaustive. Secret files, auth material, caches, l
 |- main/
 |- projects/
 |  |- fallow/
+|  |- oliver-app/
 |  |- ops-dashboard/
+|  |- prompt-lint/           local utility workspace (non-git)
 |  |- tesknota/
 |  `- v-two-sdr/
+|- references/               upstream references and templates
 |- sync-repos.sh
 `- tesknota-audit/            standalone audit workspace for tesknota
 ```
@@ -33,3 +36,4 @@ Intentionally structural, not exhaustive. Secret files, auth material, caches, l
 - `~/.gstack` is an MCP tool runtime
 - `~/projects/*` contains the real product repos
 - `~/oliver-local` points to `~/.claude` to avoid duplicate checkouts
+- `~/references`, `~/tesknota-audit`, and `~/claude-push` are intentional auxiliary directories

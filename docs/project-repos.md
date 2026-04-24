@@ -12,6 +12,10 @@ Updated 2026-04-24.
 - [fallow](projects/fallow.md)
 - [oliver-app](projects/oliver-app.md)
 
+## Local Utilities (Non-Git)
+
+- `~/projects/prompt-lint` (local utility workspace, intentionally not in `shared/repo-map.json`)
+
 ## Archive
 
 Detailed historical structure snapshot preserved at:

@@ -5,7 +5,6 @@
 - Load files on demand per task only. Skip AUDIT.md, CONTRIBUTING.md, tokens.css at startup.
 - git log default: --oneline -10.
 - Every 5 prompts: full audit. Otherwise scope reads to task files only.
-- After each prompt: commit, push, deploy.
 
 ## Workflow Trigger Terms
 - `backlog` -> use `~/.claude/shared/workflows/backlog-workflow.md`
@@ -21,10 +20,7 @@
 - When committing, group all related changes into a single commit with a message matching the active milestone name.
 - Never create more than one commit per working session unless explicitly told to start a new milestone.
 
-## RULE 1: Always Plan First
-Read existing code. Write a plan. Stop. Do not write or modify any file until the plan is explicitly approved. No exceptions. If the task touches more than one file, or cannot be described in a single sentence, use Plan Mode.
-
-## RULE 2: Migrations and Feature Changes Mean Rewrite, Not Patch
+## RULE 1: Migrations and Feature Changes Mean Rewrite, Not Patch
 IMPORTANT: When functionality, a data source, a file format, or a tech approach changes, the old implementation is replaced entirely.
 
 Before writing anything, produce a deletion list:
@@ -39,7 +35,7 @@ Then build the replacement:
 
 After implementing, verify the output runs, renders, or passes its verification step independently. A task is not done when code is written. Flag unresolved dependencies explicitly before closing.
 
-## RULE 3: Simplify After Every Change
+## RULE 2: Simplify After Every Change
 After implementing, review changed files:
 - Remove duplication, unused imports, dead variables.
 - Flatten nesting where possible. Prefer early returns and guard clauses.
@@ -47,17 +43,17 @@ After implementing, review changed files:
 - Do not add comments unless the why is genuinely non-obvious.
 - Do not add error handling for impossible scenarios. Only validate at system boundaries.
 
-## RULE 4: Design and QA Mindset
+## RULE 3: Design and QA Mindset
 Before implementing, consider:
 - Does this change introduce unnecessary complexity?
 - Are there edge cases, failure modes, or missing states the spec does not address?
 - Does the solution interact cleanly with existing patterns in the codebase?
-Surface these concerns during planning, not after code is written.
+Surface these concerns before implementation, not after code is written.
 
-## RULE 5: Scope Discipline
+## RULE 4: Scope Discipline
 Do not improve or refactor anything outside the stated task. Flag it, do not fix it. A bug fix does not justify cleaning up surrounding code unless asked.
 
-## RULE 6: CI-First Testing
+## RULE 5: CI-First Testing
 Check CI before starting work. Never block a session on a local test run — CI owns verification.
 
 At session start in any project that has CI:
@@ -75,7 +71,7 @@ When work is complete:
 - A session is done when the push lands and CI picks it up — not when code is written.
 - Never run `npm test` (or equivalent) locally as a blocking gate. Run a named test locally only to debug a specific failure.
 
-## RULE 7: No Planning Phase
+## RULE 6: No Planning Phase
 Execute directly. Never load superpowers:executing-plans or
 superpowers:brainstorming skills unless explicitly asked.
 Never write a plan file before executing. Read the files,
@@ -121,7 +117,7 @@ Complete every step before writing any code.
    ```
 4. Read any project docs called out in the project CLAUDE.md (ARCHITECTURE.md, etc.) — on demand only; skip AUDIT.md, CONTRIBUTING.md at startup
 5. Read the specific file(s) being worked on — do not edit a file you have not read this session
-6. Write a plan: what changes, what gets deleted, what edge cases the spec misses
+6. State a concise execution approach: what changes, what gets deleted, what edge cases the spec misses
 
 Do not begin coding without completing this sequence.
 

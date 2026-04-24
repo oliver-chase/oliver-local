@@ -14,6 +14,7 @@ This contains the actual codebases:
 
 - `tesknota`
 - `ops-dashboard`
+- `oliver-app`
 - `v-two-sdr`
 - `fallow`
 
@@ -37,6 +38,24 @@ This layer defines:
 - Shared workflow standards
 - Shared workflow procedures (`shared/workflows/*.md`)
 - Documentation of how the workspace is wired
+
+### 4. Auxiliary Layer
+
+Support directories that are intentionally outside the canonical app-repo map:
+
+- `~/references` - imported templates and upstream reference repos
+- `~/tesknota-audit` - standalone audit artifacts
+- `~/claude-push` - separate utility repo for Claude push automation
+
+These are not product source-of-truth repos and should not be added to `shared/repo-map.json`.
+
+## Persona Workspace Mapping
+
+Persona config and workspace conventions:
+
+- `personas/cmo/config.json` -> strategy docs in `docs/personas/cmo/`
+- `personas/marketing/config.json` -> strategy docs in `docs/personas/marketing/`
+- `personas/sdr/config.json` -> execution workspace in `~/projects/v-two-sdr`
 
 ## Cross-Agent Pattern
 

@@ -5,18 +5,18 @@
   "company": "V.Two",
   "status": "planned",
   "trigger_keyword": "Marketing",
-  "workspace": "workspaces/work/projects/Marketing",
+  "workspace": "/Users/oliver/.claude/docs/personas/marketing",
   "allowed_tools": ["web_search", "write", "read"],
   "restricted_tools": ["exec", "secrets.access", "message"],
   "approval_required": ["message", "public_post"],
   "collaboration": {
     "can_request": ["sdr", "cmo", "claude_code"],
     "shared_data": {
-      "content_calendar": "workspaces/work/projects/Marketing/content-calendar.md",
-      "seo_targets": "workspaces/work/projects/Marketing/seo-targets.md",
-      "assets": "workspaces/work/projects/Marketing/assets/"
+      "content_calendar": "/Users/oliver/.claude/docs/personas/marketing/content-calendar.md",
+      "seo_targets": "/Users/oliver/.claude/docs/personas/marketing/seo-targets.md",
+      "assets": "/Users/oliver/.claude/docs/personas/marketing/assets/"
     }
   },
   "skill": "skills/marketing/SKILL.md",
-  "persona_soul": "team/members/marketing/persona_soul.md"
+  "persona_soul": "personas/marketing/persona_soul.md"
 }

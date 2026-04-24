@@ -1,5 +1,7 @@
 # Runtime session state
 history.jsonl
+/ide/
+/plans/
 /projects/*
 !/projects/-Users-oliver/
 /projects/-Users-oliver/*

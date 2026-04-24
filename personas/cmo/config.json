@@ -5,18 +5,18 @@
   "company": "V.Two",
   "status": "planned",
   "trigger_keyword": "CMO",
-  "workspace": "workspaces/work/projects/CMO",
+  "workspace": "/Users/oliver/.claude/docs/personas/cmo",
   "allowed_tools": ["web_search", "write", "read"],
   "restricted_tools": ["exec", "secrets.access", "message"],
   "approval_required": ["message", "public_post"],
   "collaboration": {
     "can_request": ["sdr", "marketing", "claude_code"],
     "shared_data": {
-      "brand_guide": "workspaces/work/projects/CMO/brand-guide.md",
-      "positioning": "workspaces/work/projects/CMO/positioning.md",
-      "campaigns": "workspaces/work/projects/CMO/campaigns/"
+      "brand_guide": "/Users/oliver/.claude/docs/personas/cmo/brand-guide.md",
+      "positioning": "/Users/oliver/.claude/docs/personas/cmo/positioning.md",
+      "campaigns": "/Users/oliver/.claude/docs/personas/cmo/campaigns/"
     }
   },
   "skill": "skills/cmo/SKILL.md",
-  "persona_soul": "team/members/cmo/persona_soul.md"
+  "persona_soul": "personas/cmo/persona_soul.md"
 }
