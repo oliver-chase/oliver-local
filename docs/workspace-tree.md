@@ -20,7 +20,6 @@ Intentionally structural, not exhaustive. Secret files, auth material, caches, l
 |- projects/
 |  |- fallow/
 |  |- oliver-app/
-|  |- ops-dashboard/
 |  |- prompt-lint/           local utility workspace (non-git)
 |  |- tesknota/
 |  `- v-two-sdr/

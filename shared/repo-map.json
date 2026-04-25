@@ -10,14 +10,6 @@
       "focus": ["frontend", "mobile", "deploy"]
     },
     {
-      "name": "ops-dashboard",
-      "path": "/Users/oliver/projects/ops-dashboard",
-      "owner": "oliver-chase",
-      "repo": "ops-dashboard",
-      "stack": ["javascript", "html", "css"],
-      "focus": ["ops", "frontend", "testing", "deploy"]
-    },
-    {
       "name": "oliver-app",
       "path": "/Users/oliver/projects/oliver-app",
       "owner": "oliver-chase",

@@ -11,6 +11,7 @@
 - `testing` -> use `~/.claude/shared/workflows/testing-rules.md`
 - `qa` -> use `~/.claude/shared/workflows/qa-process.md`
 - `full qa` -> use `~/.claude/shared/workflows/full-qa-audit.md`
+- `oliver-local sync` -> use `~/.claude/shared/workflows/oliver-local-sync.md`
 - If any trigger term conflicts with active repo docs, pause and surface the exact conflict before proceeding.
 - Testing applies to all code work and is required before considering implementation complete.
 
@@ -96,10 +97,10 @@ All active projects live in `~/projects/`. Each has its own CLAUDE.md — read t
 
 | Project | Repo | Live |
 |---------|------|------|
-| ops-dashboard | oliver-chase/ops-dashboard | vtwo-ops.pages.dev/accounts/ |
 | v-two-sdr | oliver-chase/v-two-sdr | - |
 | tesknota | oliver-chase/tesknota | tesknota.pages.dev |
 | fallow | oliver-chase/fallow | - |
+| oliver-app | oliver-chase/oliver-app | staging.oliver-app.pages.dev |
 
 ## Session Startup (all projects)
 

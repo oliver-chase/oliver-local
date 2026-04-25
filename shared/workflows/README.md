@@ -6,5 +6,6 @@ Canonical workflow procedures for plain-language trigger terms:
 - `testing` -> `testing-rules.md`
 - `qa` -> `qa-process.md`
 - `full qa` -> `full-qa-audit.md`
+- `oliver-local sync` -> `oliver-local-sync.md`
 
 If trigger terms conflict with active repo docs, pause and surface the conflict before continuing.

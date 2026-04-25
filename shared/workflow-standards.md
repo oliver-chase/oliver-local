@@ -10,6 +10,7 @@ Use these trigger terms as workflow selectors:
 - `testing` -> `shared/workflows/testing-rules.md`
 - `qa` -> `shared/workflows/qa-process.md`
 - `full qa` -> `shared/workflows/full-qa-audit.md`
+- `oliver-local sync` -> `shared/workflows/oliver-local-sync.md`
 
 If any trigger term conflicts with active repo docs, pause and surface the exact conflict before continuing.
 
@@ -20,9 +21,17 @@ All product repos live under `~/projects/`.
 ## Product Repos
 
 - `tesknota`
-- `ops-dashboard`
 - `v-two-sdr`
 - `fallow`
+- `oliver-app`
+
+## Orchestration Upkeep
+
+When workspace layout or active local repos change:
+
+- run `shared/workflows/oliver-local-sync.md`
+- reconcile `shared/repo-map.json` and `docs/projects/*.md`
+- re-run `scripts/test-structure.sh` before commit
 
 ## Stack Reality
 

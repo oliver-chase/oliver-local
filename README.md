@@ -20,7 +20,6 @@ Checked out at `~/.claude` with canonical Git command path `~/oliver-local` (sym
 |- projects/
 |  |- tesknota/
 |  |- oliver-app/
-|  |- ops-dashboard/
 |  |- v-two-sdr/
 |  |- fallow/
 |  `- prompt-lint/ (local utility, non-git)
@@ -61,3 +60,4 @@ See [docs/skills.md](docs/skills.md) for the full map.
 - [Repo Map](shared/repo-map.json)
 - [Workflow Standards](shared/workflow-standards.md)
 - [Workflow Procedures](shared/workflows/)
+- [Oliver-Local Sync Workflow](shared/workflows/oliver-local-sync.md)
