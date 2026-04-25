@@ -45,9 +45,10 @@ jq -r '.repos[].name + " -> " + .path' ~/oliver-local/shared/repo-map.json
 - align `docs/workspace-tree.md` and `docs/architecture.md`
 - align `README.md` and `CLAUDE.md` references
 
-5. Re-run checks.
+5. Run impact + structure checks.
 
 ```bash
+bash ~/oliver-local/scripts/check-doc-config-impact.sh
 bash ~/oliver-local/scripts/test-structure.sh
 ```
 
@@ -62,7 +63,7 @@ git -C ~/oliver-local add shared/repo-map.json docs README.md CLAUDE.md shared/w
 git -C ~/oliver-local commit -m "docs: sync oliver-local repo map and workflow metadata"
 ```
 
-7. Push `main` when requested.
+7. Push `main` immediately.
 
 ```bash
 git -C ~/oliver-local push origin main

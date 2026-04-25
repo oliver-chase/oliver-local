@@ -31,7 +31,9 @@ When workspace layout or active local repos change:
 
 - run `shared/workflows/oliver-local-sync.md`
 - reconcile `shared/repo-map.json` and `docs/projects/*.md`
+- run `scripts/check-doc-config-impact.sh`
 - re-run `scripts/test-structure.sh` before commit
+- for `oliver-local` sync work, commit and push immediately after checks pass
 
 ## Stack Reality
 

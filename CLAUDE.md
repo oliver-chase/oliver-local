@@ -20,6 +20,10 @@
 - Only commit when explicitly asked, or when a named milestone is complete.
 - When committing, group all related changes into a single commit with a message matching the active milestone name.
 - Never create more than one commit per working session unless explicitly told to start a new milestone.
+- For `oliver-local` maintenance work, commit and push immediately once checks pass.
+- Before `oliver-local` commit/push, run:
+  - `bash ~/.claude/scripts/check-doc-config-impact.sh`
+  - `bash ~/.claude/scripts/test-structure.sh`
 
 ## RULE 1: Migrations and Feature Changes Mean Rewrite, Not Patch
 IMPORTANT: When functionality, a data source, a file format, or a tech approach changes, the old implementation is replaced entirely.

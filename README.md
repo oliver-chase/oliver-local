@@ -61,3 +61,14 @@ See [docs/skills.md](docs/skills.md) for the full map.
 - [Workflow Standards](shared/workflow-standards.md)
 - [Workflow Procedures](shared/workflows/)
 - [Oliver-Local Sync Workflow](shared/workflows/oliver-local-sync.md)
+
+## Upkeep Checks
+
+For `oliver-local` sync/reconciliation changes, run:
+
+```bash
+bash ~/oliver-local/scripts/check-doc-config-impact.sh
+bash ~/oliver-local/scripts/test-structure.sh
+```
+
+Then commit and push `main` immediately.
