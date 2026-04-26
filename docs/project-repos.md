@@ -6,6 +6,7 @@ Updated 2026-04-24.
 
 ## Project Pointers
 
+- [oliver-local](projects/oliver-local.md)
 - [tesknota](projects/tesknota.md)
 - [v-two-sdr](projects/v-two-sdr.md)
 - [fallow](projects/fallow.md)
