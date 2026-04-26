@@ -1,31 +1,23 @@
 # Workspace Tree
 
-Sanitized snapshot of the live `/Users/oliver` layout. Updated 2026-04-24.
-
-Intentionally structural, not exhaustive. Secret files, auth material, caches, logs, telemetry, sessions, sqlite state, and other runtime-only artifacts are omitted.
+Sanitized map of the live `/Users/oliver` workspace. Updated 2026-04-24.
 
 ```text
 /Users/oliver
 |- .claude                    Claude runtime + tracked orchestration layer
-|- oliver-local -> .claude    this repo alias path
+|- oliver-local -> .claude    canonical git command alias
 |- .codex                     Codex runtime
-|  |- memories/
-|  |- skills/
-|  `- config.toml
 |- .gstack                    gstack browser agent runtime
-|- CLAUDE.md
-|- claude-push/               git repo for pushing claude state
-|- dotfiles/
-|- main/
 |- projects/
-|  |- fallow/
-|  |- oliver-app/
-|  |- prompt-lint/           local utility workspace (non-git)
 |  |- tesknota/
-|  `- v-two-sdr/
-|- references/               upstream references and templates
-|- sync-repos.sh
-`- tesknota-audit/            standalone audit workspace for tesknota
+|  |- oliver-app/
+|  |- v-two-sdr/
+|  |- fallow/
+|  `- prompt-lint/ (local utility, non-git)
+|- references/
+|- dotfiles/
+|- claude-push/
+`- tesknota-audit/             standalone audit workspace for tesknota
 ```
 
 ## Notes
@@ -35,4 +27,3 @@ Intentionally structural, not exhaustive. Secret files, auth material, caches, l
 - `~/.gstack` is an MCP tool runtime
 - `~/projects/*` contains the real product repos
 - `~/oliver-local` points to `~/.claude` to avoid duplicate checkouts
-- `~/references`, `~/tesknota-audit`, and `~/claude-push` are intentional auxiliary directories
