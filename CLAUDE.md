@@ -8,6 +8,7 @@
 
 ## Workflow Trigger Terms
 - `backlog` -> use `~/.claude/shared/workflows/backlog-workflow.md`
+- `story lifecycle` -> use `~/.claude/shared/workflows/story-lifecycle-sop.md`
 - `testing` -> use `~/.claude/shared/workflows/testing-rules.md`
 - `qa` -> use `~/.claude/shared/workflows/qa-process.md`
 - `full qa` -> use `~/.claude/shared/workflows/full-qa-audit.md`

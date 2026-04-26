@@ -7,6 +7,7 @@ These are the cross-agent rules both Claude and Codex should follow when working
 Use these trigger terms as workflow selectors:
 
 - `backlog` -> `shared/workflows/backlog-workflow.md`
+- `story lifecycle` -> `shared/workflows/story-lifecycle-sop.md`
 - `testing` -> `shared/workflows/testing-rules.md`
 - `qa` -> `shared/workflows/qa-process.md`
 - `full qa` -> `shared/workflows/full-qa-audit.md`
