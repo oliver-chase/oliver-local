@@ -54,6 +54,7 @@ See [docs/skills.md](docs/skills.md) for the full map.
 ## Key Docs
 
 - [Architecture](docs/architecture.md)
+- [Codex Remote SSH Auth](docs/codex-remote-ssh-auth.md)
 - [Project Repos](docs/project-repos.md)
 - [Skills](docs/skills.md)
 - [Workspace Tree](docs/workspace-tree.md)
