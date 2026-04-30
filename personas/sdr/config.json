@@ -2,7 +2,7 @@
   "persona": "sdr",
   "name": "SDR Oliver",
   "role": "Sales Development Representative",
-  "company": "V.Two",
+  "company": "Organization",
   "status": "active",
   "workspace": "/Users/oliver/projects/v-two-sdr",
   "allowed_tools": ["web_search", "write", "message", "read"],

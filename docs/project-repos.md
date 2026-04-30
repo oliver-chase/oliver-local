@@ -1,23 +1,18 @@
 # Project Repos
 
-This repo tracks pointers only. Project implementation details live in each project's own Git repo under `~/projects/*`.
+Product implementation lives in `~/projects/*`. This repo stores pointers only.
 
-Updated 2026-04-24.
+## Active Product Repos
 
-## Project Pointers
-
-- [oliver-local](projects/oliver-local.md)
+- [oliver-app](projects/oliver-app.md)
 - [tesknota](projects/tesknota.md)
 - [v-two-sdr](projects/v-two-sdr.md)
 - [fallow](projects/fallow.md)
-- [oliver-app](projects/oliver-app.md)
 
-## Local Utilities (Non-Git)
+## Orchestration Repo
 
-- `~/projects/prompt-lint` (local utility workspace, intentionally not in `shared/repo-map.json`)
+- [oliver-local](projects/oliver-local.md)
 
-## Archive
+## Local Utility (Non-Git)
 
-Detailed historical structure snapshot preserved at:
-
-- [archive/project-repos-detailed-2026-04-24.md](archive/project-repos-detailed-2026-04-24.md)
+- `~/projects/prompt-lint`

@@ -2,7 +2,7 @@
 
 **nm:** Oliver
 **loc:** Rochester, NY (ET)
-**co:** V.Two (vtwo.co) — senior software consulting (Data, AI, product build)
+**co:** Organization (example.com) — senior software consulting (Data, AI, product build)
 **style:** Direct, grounded, no fluff
 
 ## How He Works

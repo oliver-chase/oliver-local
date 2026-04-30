@@ -66,10 +66,11 @@ done
 # 4) Project pointer docs and repo-map should stay aligned.
 map_names="$(jq -r '.repos[].name' shared/repo-map.json | sort)"
 doc_names="$(find docs/projects -maxdepth 1 -type f -name '*.md' -exec basename {} .md \; | sort)"
-if [[ "$map_names" = "$doc_names" ]]; then
-  pass "docs/projects/*.md matches shared/repo-map.json"
+map_plus_orchestration="$(printf "%s\noliver-local\n" "$map_names" | sort)"
+if [[ "$map_plus_orchestration" = "$doc_names" ]]; then
+  pass "docs/projects/*.md matches shared/repo-map.json + oliver-local orchestration doc"
 else
-  fail "docs/projects/*.md matches shared/repo-map.json"
+  fail "docs/projects/*.md matches shared/repo-map.json + oliver-local orchestration doc"
 fi
 
 while IFS= read -r repo_path; do
@@ -81,10 +82,10 @@ while IFS= read -r repo_path; do
 done < <(jq -r '.repos[].path' shared/repo-map.json)
 
 # 5) Guard against known docs drift.
-if rg -q 'oliver-app' docs/architecture.md; then
-  pass "docs/architecture.md includes oliver-app"
+if rg -q '~/projects/\*' docs/architecture.md; then
+  pass "docs/architecture.md includes canonical product root pattern"
 else
-  fail "docs/architecture.md includes oliver-app"
+  fail "docs/architecture.md includes canonical product root pattern"
 fi
 
 if rg -q 'oliver-app' docs/workspace-tree.md; then
@@ -94,10 +95,10 @@ else
 fi
 
 # 6) README and skills documentation should reflect active structure.
-if rg -q 'oliver-app' README.md && rg -q 'prompt-lint' README.md; then
-  pass "README.md includes oliver-app and prompt-lint"
+if rg -q 'Shared System' README.md && rg -q 'Governance Gates' README.md; then
+  pass "README.md includes shared-system and governance sections"
 else
-  fail "README.md includes oliver-app and prompt-lint"
+  fail "README.md includes shared-system and governance sections"
 fi
 
 for required_skill in \
@@ -120,17 +121,17 @@ else
   fail "ide/ and plans/ are ignored"
 fi
 
-# 8) Guard against instruction conflicts.
+# 8) Guard against instruction conflicts and missing orchestration entries.
 if rg -q 'Always Plan First' CLAUDE.md; then
   fail "CLAUDE.md removed obsolete 'Always Plan First' rule"
 else
   pass "CLAUDE.md removed obsolete 'Always Plan First' rule"
 fi
 
-if rg -q 'No Planning Phase' CLAUDE.md; then
-  pass "CLAUDE.md keeps 'No Planning Phase' rule"
+if [[ -f ORCHESTRATION.md ]] && rg -q 'Shared System' ORCHESTRATION.md; then
+  pass "ORCHESTRATION.md exists and references shared system"
 else
-  fail "CLAUDE.md keeps 'No Planning Phase' rule"
+  fail "ORCHESTRATION.md exists and references shared system"
 fi
 
 printf "\n"

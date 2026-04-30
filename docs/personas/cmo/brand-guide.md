@@ -4,7 +4,7 @@ Canonical orchestration reference for CMO persona brand direction.
 
 ## Positioning Anchor
 
-V.Two is positioned as a senior software consulting partner focused on data, AI, and product delivery for high-leverage teams.
+Organization is positioned as a senior software consulting partner focused on data, AI, and product delivery for high-leverage teams.
 
 ## Voice
 

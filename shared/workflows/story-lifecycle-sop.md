@@ -38,4 +38,4 @@ Use this before and after implementation work unless the user explicitly asks fo
 ## Canonical references
 
 - Primary backlog workflow: `shared/workflows/backlog-workflow.md`
-- Global canonical policy: `~/.codex/skills/story-lifecycle-gate/SKILL.md`
+- Supporting gate skill (runtime-agnostic): `story-lifecycle-gate`

@@ -1,67 +1,57 @@
 # oliver-local
 
-Sanitized map of the live `/Users/oliver` workspace. Updated 2026-04-24.
+Canonical workspace-orchestration repo for `/Users/oliver`.
 
-- documents the real local operating structure
-- preserves stable orchestration files and cross-agent docs
-- records project repo structure without duplicating full app repos
-- keeps runtime state, secrets, auth, caches, logs, and other machine-private artifacts out of git
+`oliver-local` is a symlink to `~/.claude`:
+- repo path: `~/.claude`
+- command alias: `~/oliver-local`
 
-Checked out at `~/.claude` with canonical Git command path `~/oliver-local` (symlink alias).
+## Shared System
 
-## Quick Structure
+- Shared structure: `/Users/oliver/AGENT_SHARED_STRUCTURE.md`
+- Shared orchestration core: `/Users/oliver/SHARED_ORCHESTRATION.md`
+- Shared manifest: `/Users/oliver/AGENT_SYSTEM_MANIFEST.json`
+
+## Runtime Entries
+
+- Claude: `~/.claude/ORCHESTRATION.md`
+- Codex: `~/.codex/ORCHESTRATION.md`
+
+## Governance Gates
+
+- Policy: `docs/governance.md`
+- Full gate runner: `scripts/run-governance-gates.sh`
+- Repo hook installer: `scripts/install-governance-hook.sh`
+
+## Workspace Model
 
 ```text
 /Users/oliver
-|- .claude                    Claude runtime + tracked orchestration layer
-|- oliver-local -> .claude    canonical git command alias
-|- .codex                     Codex runtime
-|- .gstack                    gstack browser agent runtime
+|- .claude
+|- oliver-local -> .claude
+|- .codex
+|- .agents
 |- projects/
-|  |- tesknota/
-|  |- oliver-app/
-|  |- v-two-sdr/
-|  |- fallow/
-|  `- prompt-lint/ (local utility, non-git)
 |- references/
 |- dotfiles/
-|- claude-push/
-`- tesknota-audit/
+`- claude-push/
 ```
 
-## What Is Included
+## Ownership Rules
 
-- Sanitized workspace and repo structure in [docs/workspace-tree.md](docs/workspace-tree.md) and [docs/project-repos.md](docs/project-repos.md)
-- Current Claude skill-layer map in [docs/skills.md](docs/skills.md)
-
-## What Is Deliberately Not Duplicated
-
-- Full contents of `~/projects/*` - each project has its own Git repo
-- Full vendored `gstack` source tree - canonical inside `~/.claude/skills/gstack`
-- Runtime-only Claude and Codex state: sessions, caches, telemetry, logs, sqlite DBs, auth files, shell snapshots
-- Secret material or machine-private credentials
-- Local runtime scratch artifacts under `~/ide` and `~/plans`
-
-## Current Skill Model
-
-- `~/.claude/skills/gstack` is the canonical source for overlapping gstack skills
-- Top-level overlapping skill names in `~/.claude/skills/` are aliases into `gstack`
-- Local-only Claude skills remain top-level
-- Codex system skills were imported into the Claude skill layer as top-level additions
-
-See [docs/skills.md](docs/skills.md) for the full map.
+- Product code/docs live in `~/projects/*`.
+- Cross-project orchestration standards live in `~/.claude/shared/*`.
+- Runtime folders (`.claude`, `.codex`) are not product source-of-truth.
 
 ## Key Docs
 
 - [Architecture](docs/architecture.md)
-- [Codex Remote SSH Auth](docs/codex-remote-ssh-auth.md)
 - [Project Repos](docs/project-repos.md)
-- [Skills](docs/skills.md)
 - [Workspace Tree](docs/workspace-tree.md)
-- [Repo Map](shared/repo-map.json)
+- [Governance](docs/governance.md)
+- [Oliver-Local Repo Operations](docs/oliver-local-repo-operations.md)
 - [Workflow Standards](shared/workflow-standards.md)
 - [Workflow Procedures](shared/workflows/)
-- [Oliver-Local Sync Workflow](shared/workflows/oliver-local-sync.md)
 
 ## Upkeep Checks
 
@@ -71,5 +61,3 @@ For `oliver-local` sync/reconciliation changes, run:
 bash ~/oliver-local/scripts/check-doc-config-impact.sh
 bash ~/oliver-local/scripts/test-structure.sh
 ```
-
-Then commit and push `main` immediately.

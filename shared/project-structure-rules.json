@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "repos": [
+    {
+      "name": "oliver-app",
+      "path": "/Users/oliver/projects/oliver-app",
+      "required_paths": [
+        "README.md",
+        "CLAUDE.md",
+        "AGENTS.md",
+        "docs/MODULE_CONTEXT.md",
+        "docs/MODULE_INSTRUCTIONS.md",
+        ".github/oliver-app/modules",
+        ".github/user-stories/oliver-app",
+        "src/tech-debt"
+      ],
+      "forbidden_backlog_globs": [
+        "docs/*backlog*.md",
+        "src/*backlog*.md"
+      ],
+      "allowed_backlog_roots": [
+        ".github/oliver-app/modules",
+        ".github/user-stories/oliver-app",
+        "src/tech-debt"
+      ]
+    },
+    {
+      "name": "tesknota",
+      "path": "/Users/oliver/projects/tesknota",
+      "required_paths": [
+        "README.md",
+        "CLAUDE.md",
+        "AGENTS.md",
+        "docs/product/03-backlog-user-stories.md",
+        "docs/product/07-execution-status.md",
+        ".github/user-stories",
+        "docs/tech-debt"
+      ],
+      "forbidden_backlog_globs": [
+        "docs/*backlog*.md"
+      ],
+      "allowed_backlog_roots": [
+        "docs/product",
+        ".github/user-stories"
+      ]
+    },
+    {
+      "name": "v-two-sdr",
+      "path": "/Users/oliver/projects/v-two-sdr",
+      "required_paths": [
+        "README.md",
+        "CLAUDE.md",
+        "docs/README.md",
+        "docs/SDR_EXECUTION_BACKLOG.md",
+        "docs/SDR_EPICS_USER_STORIES.md",
+        ".github/user-stories",
+        "docs/tech-debt"
+      ],
+      "forbidden_backlog_globs": [
+        "docs/*STATE-AUDIT*.md",
+        "docs/*FULL_PASS_BACKLOG*.md",
+        "docs/*USER_STORIES_ACCEPTANCE_TESTS*.md"
+      ],
+      "allowed_backlog_roots": [
+        "docs"
+      ]
+    },
+    {
+      "name": "fallow",
+      "path": "/Users/oliver/projects/fallow",
+      "required_paths": [
+        "README.md",
+        "CLAUDE.md",
+        "docs/v2/README.md",
+        "docs/v2/EXECUTION_BACKLOG.md",
+        "docs/v2/EPICS_USER_STORIES.md",
+        ".github/user-stories",
+        "docs/tech-debt"
+      ],
+      "forbidden_backlog_globs": [
+        "docs/*ROADMAP*.md",
+        "docs/*DESIGN*.md",
+        "docs/*UX*.md",
+        "docs/*DATA_SCHEMA*.md",
+        "docs/v2/*LEGACY_DOC_AUDIT*.md"
+      ],
+      "allowed_backlog_roots": [
+        "docs/v2"
+      ]
+    }
+  ]
+}
