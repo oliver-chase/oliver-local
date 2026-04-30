@@ -62,3 +62,5 @@ Install governance hooks in all project repos:
 ```
 
 Each repo hook executes repo-scoped governance gates before commit.
+
+- Oliver-local repo operations: `/Users/oliver/.claude/docs/oliver-local-repo-operations.md`

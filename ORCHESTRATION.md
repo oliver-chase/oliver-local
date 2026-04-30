@@ -9,6 +9,8 @@ Claude runtime/orchestration entry for this machine.
 
 ## Shared System (Authoritative)
 
+- Oliver-local repo operations: `/Users/oliver/.claude/docs/oliver-local-repo-operations.md`
+
 - Shared structure: `/Users/oliver/AGENT_SHARED_STRUCTURE.md`
 - Shared orchestration core: `/Users/oliver/SHARED_ORCHESTRATION.md`
 - Shared manifest: `/Users/oliver/AGENT_SYSTEM_MANIFEST.json`

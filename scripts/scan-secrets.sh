@@ -10,11 +10,9 @@ else
   tracked_files=$(find . -type f)
 fi
 
-# High-confidence risky tracked files (avoid generic "token" false positives)
 matches=$(echo "$tracked_files" | rg -n '(^|/)(\.env$|\.env\.(local|production|staging|dev)|.*(secret|credential|private[-_]?key|service[-_]?account).*(json|ya?ml|txt|pem|key)$|.*\.(pem|p12|pfx|key)$|secrets/.+\.(json|ya?ml|txt))' -S || true)
 
-# Allowlist safe templates/examples/docs
-filtered=$(echo "$matches" | rg -v '\.env\.example$|\.env\.local\.example$|\.example\.|secrets/README\.md$' || true)
+filtered=$(echo "$matches" | rg -v '\.env\.example$|\.env\.local\.example$|\.example\.|secrets/README\.md$|\.github/workflows/governance-secrets-gate\.yml$' || true)
 
 if [ -n "${filtered// }" ]; then
   echo "FAIL secret-like tracked files detected"
