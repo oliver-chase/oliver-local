@@ -4,9 +4,9 @@ Thanks for wanting to make gstack better. Whether you're fixing a typo in a skil
 
 ## Quick start
 
-gstack skills are Markdown files that Claude Code discovers from a `skills/` directory. Normally they live at `~/.claude/skills/gstack/` (your global install). But when you're developing gstack itself, you want Claude Code to use the skills *in your working tree* — so edits take effect instantly without copying or deploying anything.
+gstack skills are Markdown files that Claude Code discovers from a `skills/` directory. On this machine they live at `~/oliver-local/skills/gstack`, with `~/.claude/skills` acting as an adapter symlink. When you're developing gstack itself, edits in the shared checkout take effect instantly without copying or deploying anything.
 
-That's what dev mode does. It symlinks your repo into the local `.claude/skills/` directory so Claude Code reads skills straight from your checkout.
+For a standalone upstream checkout, dev mode symlinks your repo into a local `.claude/skills/` directory so Claude Code reads skills straight from your checkout. For this Oliver-local install, work directly in `~/oliver-local/skills/gstack`.
 
 ```bash
 git clone <repo> && cd gstack
@@ -342,7 +342,7 @@ individual top-level directories (`qa/SKILL.md`, `ship/SKILL.md`, etc.), not thr
 the `gstack/` directory itself. Run `./setup` to create them:
 
 ```bash
-cd .claude/skills/gstack && bun install && bun run build && ./setup
+cd ~/oliver-local/skills/gstack && bun install && bun run build && ./setup
 ```
 
 Setup will ask whether you want short names (`/qa`) or namespaced (`/gstack-qa`).
@@ -354,9 +354,9 @@ To skip the prompt, pass `--no-prefix` (short names) or `--prefix` (namespaced).
 Edit a template, run `bun run gen:skill-docs`, and the next `/review` or `/qa`
 call picks it up immediately. No restart needed.
 
-### Going back to the stable global install
+### Going back to the stable shared install
 
-Remove the project-local symlink. Claude Code falls back to `~/.claude/skills/gstack/`:
+Remove any project-local gstack symlink. Claude Code falls back to the shared install at `~/oliver-local/skills/gstack`:
 
 ```bash
 rm .claude/skills/gstack
@@ -376,18 +376,20 @@ cd .claude/skills/gstack && ./setup --prefix       # switch to /gstack-qa, /gsta
 
 Setup cleans up the old symlinks automatically. No manual cleanup needed.
 
-### Alternative: point your global install at a branch
+### Alternative: point a standalone install at a branch
 
-If you don't want per-project symlinks, you can switch the global install:
+For a standalone upstream gstack checkout, you can switch the install:
 
 ```bash
-cd ~/.claude/skills/gstack
-git fetch origin
+cd <standalone-gstack-checkout>
+git fetch <remote-name>
 git checkout origin/<branch>
 bun install && bun run build && ./setup
 ```
 
-This affects all projects. To revert: `git checkout main && git pull && bun run build && ./setup`.
+This does not apply to the Oliver-local shared install on this machine. Here,
+active gstack files live at `~/oliver-local/skills/gstack` and are committed from
+`~/oliver-local`.
 
 ## Community PR triage (wave process)
 

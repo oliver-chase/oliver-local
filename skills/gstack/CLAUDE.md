@@ -193,19 +193,15 @@ failure modes. The sidebar spans 5 files across 2 codebases (extension + server)
 with non-obvious ordering dependencies. The doc exists to prevent the kind of
 silent failures that come from not understanding the cross-component flow.
 
-## Dev symlink awareness
+## Shared install awareness
 
-When developing gstack, `.claude/skills/gstack` may be a symlink back to this
-working directory (gitignored). This means skill changes are **live immediately**,
-great for rapid iteration, risky during big refactors where half-written skills
-could break other Claude Code sessions using gstack concurrently.
+On this machine, gstack is owned by `~/oliver-local/skills/gstack`.
+`~/.claude/skills` is an adapter symlink to `~/oliver-local/skills`, so edits in
+this directory affect active Claude Code skill usage immediately.
 
-**Check once per session:** Run `ls -la .claude/skills/gstack` to see if it's a
-symlink or a real copy. If it's a symlink to your working directory, be aware that:
-- Template changes + `bun run gen:skill-docs` immediately affect all gstack invocations
-- Breaking changes to SKILL.md.tmpl files can break concurrent gstack sessions
-- During large refactors, remove the symlink (`rm .claude/skills/gstack`) so the
-  global install at `~/.claude/skills/gstack/` is used instead
+This is useful for rapid iteration, but risky during large refactors where
+half-written skills could affect concurrent sessions. Keep template and generated
+skill-doc changes coherent before leaving the working tree.
 
 **Prefix setting:** Setup creates real directories (not symlinks) at the top level
 with a SKILL.md symlink inside (e.g., `qa/SKILL.md -> gstack/qa/SKILL.md`). This
@@ -489,14 +485,15 @@ Repeat for each skill: `gstack-openclaw-ceo-review`, `gstack-openclaw-investigat
 
 **Verification:** `clawhub search gstack` to confirm they're live.
 
-## Deploying to the active skill
+## Updating the active skill
 
-The active skill lives at `~/.claude/skills/gstack/`. After making changes:
+The active skill lives at `~/oliver-local/skills/gstack`. After making changes:
 
-1. Push your branch
-2. Fetch and reset in the skill directory: `cd ~/.claude/skills/gstack && git fetch origin && git reset --hard origin/main`
-3. Rebuild: `cd ~/.claude/skills/gstack && bun run build`
+1. Commit shared-orchestration changes from `~/oliver-local`.
+2. Rebuild from the gstack directory if generated assets changed:
+   `cd ~/oliver-local/skills/gstack && bun run build`
+3. Run the oliver-local governance gates before relying on the updated skill:
+   `~/oliver-local/scripts/run-governance-gates.sh`
 
-Or copy the binaries directly:
-- `cp browse/dist/browse ~/.claude/skills/gstack/browse/dist/browse`
-- `cp design/dist/design ~/.claude/skills/gstack/design/dist/design`
+Do not run `git fetch` or `git reset` inside `~/.claude/skills/gstack`; it is not
+an independent Git checkout on this machine.

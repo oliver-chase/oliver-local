@@ -7,6 +7,8 @@
 - `.codex`: Codex runtime adapter + state.
 - `.agents`: agent-runtime adapters + state.
 
+`~/.claude` must not be a separate Git checkout for shared orchestration. Its shared-facing directories are adapter links into `~/oliver-local`.
+
 ## Product Repositories
 
 - `~/projects/oliver-app`
@@ -27,6 +29,16 @@
 - `~/.codex/*` (runtime state)
 - `~/.claude/*` runtime artifacts outside pointer files
 - `~/.agents/*` runtime artifacts outside pointer files
+
+## Runtime Adapter Links
+
+- `~/.claude/docs` -> `~/oliver-local/docs`
+- `~/.claude/scripts` -> `~/oliver-local/scripts`
+- `~/.claude/shared` -> `~/oliver-local/shared`
+- `~/.claude/personas` -> `~/oliver-local/personas`
+- `~/.claude/identity` -> `~/oliver-local/identity`
+- `~/.claude/skills` -> `~/oliver-local/skills`
+- `~/.codex/skills/story-lifecycle-gate` -> `~/oliver-local/skills/story-lifecycle-gate`
 
 ## Duplication Policy
 

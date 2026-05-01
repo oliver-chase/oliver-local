@@ -11,18 +11,20 @@ Cleans and syncs all memory and startup structures so a fresh session can orient
 
 | File | Purpose | Max length |
 |------|---------|-----------|
-| `~/.claude/CLAUDE.md` | Global session rules + project table | ~160 lines |
-| `~/.claude/projects/-Users-oliver/memory/MEMORY.md` | Index of all memory files | ~130 lines |
-| `~/.claude/projects/-Users-oliver/memory/*.md` | Individual memory files | ~30 lines each |
+| `~/oliver-local/CLAUDE.md` | Shared operating rules | ~160 lines |
+| `~/.claude/CLAUDE.md` | Claude runtime adapter pointer rules | ~80 lines |
+| `~/.claude/projects/-Users-oliver/memory/MEMORY.md` | Claude runtime memory index | ~130 lines |
+| `~/.claude/projects/-Users-oliver/memory/*.md` | Claude runtime memory files | ~30 lines each |
 | `<project>/MEMORY.md` | In-repo session memory snapshot | ~90 lines |
 | `<project>/CLAUDE.md` | Project session protocol | As-is (protocol docs) |
 
 ## Steps
 
-### 1. Global CLAUDE.md
-- Project table: every row must have the correct repo (verify with `git remote -v` in each project dir). Remove any project that no longer has a git remote.
-- Live URL column: verify URLs match actual deployment. Cross-check against CF Pages / Vercel / etc.
-- No orphaned instructions referencing deleted files or retired patterns.
+### 1. Shared and runtime startup docs
+- `~/oliver-local/CLAUDE.md` must describe shared operating rules only.
+- `~/.claude/CLAUDE.md` must describe Claude runtime adapter behavior only and point back to `~/oliver-local`.
+- Project tables or repo inventories belong in `~/oliver-local/docs/project-repos.md` and `~/oliver-local/shared/repo-map.json`.
+- No startup doc may describe `~/.claude` as the shared-system source of truth.
 
 ### 2. Global MEMORY.md index
 - Every line must point to a file that exists: `ls ~/.claude/projects/-Users-oliver/memory/<file>`
@@ -45,17 +47,17 @@ Cleans and syncs all memory and startup structures so a fresh session can orient
 
 ### 5. Cross-check
 ```bash
-# Verify repo names in CLAUDE.md match actual remotes
-git -C ~/projects/ops-dashboard remote get-url origin
+# Verify repo names in shared repo map match actual remotes
+jq -r '.repos[].path' ~/oliver-local/shared/repo-map.json
 git -C ~/projects/tesknota remote get-url origin
-# etc.
 ```
 
 ### 6. Update "Last Updated" timestamp in MEMORY.md index
 
 ### 7. Commit
 If in a project repo: `git add` only doc files, commit as `docs: sync memory and startup files`.
-If in ~/.claude: `git add -A && git commit -m "docs: mem-sync — clean stale entries"` then push to oliver-local.
+If shared orchestration files changed: commit from `~/oliver-local`.
+Do not commit from `~/.claude`; it is runtime adapter/state.
 
 ## Signs memory needs syncing
 

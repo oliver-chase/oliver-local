@@ -22,6 +22,7 @@ Status: Active
 - Shared skills are canonical in one place (`/Users/oliver/oliver-local/skills/*`).
 - Runtime skill adapters, when needed, point into `~/oliver-local/skills`.
 - Any persona references outside canonical location are pointers only.
+- `~/.claude` shared-facing directories are pointers into `~/oliver-local`; active duplicate copies are not allowed.
 
 ## Operational Rule
 

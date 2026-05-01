@@ -66,11 +66,25 @@ else
   fail "shared skills stored in oliver-local"
 fi
 
+if [[ ! -d "/Users/oliver/.claude/.git" ]]; then
+  pass ".claude is not a separate shared-system git checkout"
+else
+  fail ".claude is not a separate shared-system git checkout"
+fi
+
 if [[ "$(readlink /Users/oliver/.claude/skills 2>/dev/null || true)" = "/Users/oliver/oliver-local/skills" ]]; then
   pass ".claude skills adapter points to oliver-local"
 else
   fail ".claude skills adapter points to oliver-local"
 fi
+
+for adapter_name in docs scripts shared personas identity; do
+  if [[ "$(readlink "/Users/oliver/.claude/$adapter_name" 2>/dev/null || true)" = "/Users/oliver/oliver-local/$adapter_name" ]]; then
+    pass ".claude $adapter_name adapter points to oliver-local"
+  else
+    fail ".claude $adapter_name adapter points to oliver-local"
+  fi
+done
 
 if [[ "$(readlink /Users/oliver/.codex/skills/story-lifecycle-gate 2>/dev/null || true)" = "/Users/oliver/oliver-local/skills/story-lifecycle-gate" ]]; then
   pass ".codex story-lifecycle-gate adapter points to oliver-local"
