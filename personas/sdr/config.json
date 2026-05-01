@@ -5,12 +5,29 @@
   "company": "Organization",
   "status": "active",
   "workspace": "/Users/oliver/projects/v-two-sdr",
-  "allowed_tools": ["web_search", "write", "message", "read"],
-  "restricted_tools": ["exec", "secrets.access"],
-  "approval_required": ["message", "send_email"],
-  "immediate_action": ["opt_out"],
+  "allowed_tools": [
+    "web_search",
+    "write",
+    "message",
+    "read"
+  ],
+  "restricted_tools": [
+    "exec",
+    "secrets.access"
+  ],
+  "approval_required": [
+    "message",
+    "send_email"
+  ],
+  "immediate_action": [
+    "opt_out"
+  ],
   "collaboration": {
-    "can_request": ["cmo", "marketing", "claude_code"],
+    "can_request": [
+      "cmo",
+      "marketing",
+      "claude_code"
+    ],
     "shared_data": {
       "prospects": "/Users/oliver/projects/v-two-sdr/prospects.json",
       "templates": "/Users/oliver/projects/v-two-sdr/outreach/templates.md",

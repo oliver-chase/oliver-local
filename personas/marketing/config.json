@@ -5,16 +5,31 @@
   "company": "Organization",
   "status": "planned",
   "trigger_keyword": "Marketing",
-  "workspace": "/Users/oliver/.claude/docs/personas/marketing",
-  "allowed_tools": ["web_search", "write", "read"],
-  "restricted_tools": ["exec", "secrets.access", "message"],
-  "approval_required": ["message", "public_post"],
+  "workspace": "/Users/oliver/oliver-local/docs/personas/marketing",
+  "allowed_tools": [
+    "web_search",
+    "write",
+    "read"
+  ],
+  "restricted_tools": [
+    "exec",
+    "secrets.access",
+    "message"
+  ],
+  "approval_required": [
+    "message",
+    "public_post"
+  ],
   "collaboration": {
-    "can_request": ["sdr", "cmo", "claude_code"],
+    "can_request": [
+      "sdr",
+      "cmo",
+      "claude_code"
+    ],
     "shared_data": {
-      "content_calendar": "/Users/oliver/.claude/docs/personas/marketing/content-calendar.md",
-      "seo_targets": "/Users/oliver/.claude/docs/personas/marketing/seo-targets.md",
-      "assets": "/Users/oliver/.claude/docs/personas/marketing/assets/"
+      "content_calendar": "/Users/oliver/oliver-local/docs/personas/marketing/content-calendar.md",
+      "seo_targets": "/Users/oliver/oliver-local/docs/personas/marketing/seo-targets.md",
+      "assets": "/Users/oliver/oliver-local/docs/personas/marketing/assets/"
     }
   },
   "skill": "skills/marketing/SKILL.md",
