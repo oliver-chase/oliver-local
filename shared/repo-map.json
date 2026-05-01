@@ -18,6 +18,30 @@
       "focus": ["ops", "frontend", "migration", "deploy"]
     },
     {
+      "name": "oliver-app-dev",
+      "path": "/Users/oliver/projects/oliver-app-dev",
+      "owner": "oliver-chase",
+      "repo": "oliver-app",
+      "stack": ["typescript", "nextjs", "supabase"],
+      "focus": ["ops", "frontend", "development"]
+    },
+    {
+      "name": "oliver-app-main",
+      "path": "/Users/oliver/projects/oliver-app-main",
+      "owner": "oliver-chase",
+      "repo": "oliver-app",
+      "stack": ["typescript", "nextjs", "supabase"],
+      "focus": ["ops", "frontend", "main-alignment"]
+    },
+    {
+      "name": "oliver-app-staging",
+      "path": "/Users/oliver/projects/oliver-app-staging",
+      "owner": "oliver-chase",
+      "repo": "oliver-app",
+      "stack": ["typescript", "nextjs", "supabase"],
+      "focus": ["ops", "frontend", "staging-alignment"]
+    },
+    {
       "name": "v-two-sdr",
       "path": "/Users/oliver/projects/v-two-sdr",
       "owner": "oliver-chase",
