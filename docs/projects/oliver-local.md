@@ -26,5 +26,5 @@ It is **not** where feature/product code for `oliver-app`, `v-two-sdr`, `fallow`
 
 ## Canonical local path relationship
 
-- Working tree root: `~/.claude`
+- Working tree root: `~/oliver-local`
 - Canonical command alias: `~/oliver-local`

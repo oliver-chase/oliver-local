@@ -4,10 +4,10 @@ Current live structure for `/Users/oliver`.
 
 ```text
 /Users/oliver
-|- .claude                     Claude orchestration repo + runtime
-|- oliver-local -> /Users/oliver/.claude
-|- .codex                      Codex runtime
-|- .agents                     shared local skill packs
+|- oliver-local/               shared orchestration repo
+|- .claude                     Claude runtime adapter + state
+|- .codex                      Codex runtime adapter + state
+|- .agents                     agent-runtime adapters + state
 |- projects/
 |  |- oliver-app/
 |  |- tesknota/
@@ -21,6 +21,6 @@ Current live structure for `/Users/oliver`.
 
 ## Notes
 
-- `oliver-local` is an alias, not a separate checkout.
-- `.codex` and `.claude` are sibling runtimes with separate state.
+- `oliver-local` is the shared orchestration checkout.
+- `.claude`, `.codex`, and `.agents` are sibling runtimes with separate state.
 - Project source-of-truth lives only in `~/projects/*` repositories.

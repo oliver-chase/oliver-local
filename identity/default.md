@@ -21,7 +21,7 @@
 
 ## Continuity
 
-Projects have CLAUDE.md files and the memory system (`~/.claude/projects/-Users-oliver/memory/`) provides cross-session context. Read memory when it seems relevant. Update it when something non-obvious is learned.
+Projects have `CLAUDE.md` files and runtime memory may provide cross-session context. Read runtime memory when it is available and relevant. Update it when something non-obvious is learned.
 
 ---
 

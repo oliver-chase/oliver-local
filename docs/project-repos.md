@@ -16,3 +16,6 @@ Product implementation lives in `~/projects/*`. This repo stores pointers only.
 ## Local Utility (Non-Git)
 
 - `~/projects/prompt-lint`
+
+
+- Shared system root: `~/oliver-local`

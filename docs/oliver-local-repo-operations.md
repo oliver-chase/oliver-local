@@ -1,7 +1,7 @@
 # Oliver-Local Repo Operations
 
 Status: Active
-Scope: Full `/Users/oliver` orchestration system (control-plane git checkout in `~/.claude`)
+Scope: Full `/Users/oliver` orchestration system (git root: `~/oliver-local`)
 
 ## Purpose
 
@@ -9,12 +9,16 @@ This repository exists to version the orchestration system and guardrails used a
 
 ## System Boundaries
 
-- Git repo root: `~/.claude` (alias: `~/oliver-local`)
+- Git repo root: `~/oliver-local`
 - Shared-system scope includes runtime integrations for:
-  - `~/.claude`
+  - `~/.claude` (runtime adapter)
   - `~/.codex`
   - `~/.agents`
 - Authoritative shared contracts:
+  - `~/oliver-local/contracts/AGENT_SHARED_STRUCTURE.md`
+  - `~/oliver-local/contracts/SHARED_ORCHESTRATION.md`
+  - `~/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
+- Machine-level aliases point to those contract files:
   - `/Users/oliver/AGENT_SHARED_STRUCTURE.md`
   - `/Users/oliver/SHARED_ORCHESTRATION.md`
   - `/Users/oliver/AGENT_SYSTEM_MANIFEST.json`
@@ -24,6 +28,7 @@ This repository exists to version the orchestration system and guardrails used a
 Push only orchestration-system assets, including:
 
 - shared workflow standards and SOPs (`shared/*`)
+- shared skills and tools (`skills/*`)
 - orchestration docs (`README.md`, `ORCHESTRATION.md`, `docs/*`)
 - governance scripts and validators (`scripts/*`)
 - persona and routing config (`personas/*`, `settings.json`, `identity/*`)
@@ -32,11 +37,11 @@ Do not treat runtime state as product code. Do not add project feature code here
 
 ## Required Guardrails Before Commit
 
-From `~/.claude`, run:
+From `~/oliver-local`, run:
 
 ```bash
-/Users/oliver/.claude/scripts/run-governance-gates.sh
-/Users/oliver/.claude/scripts/scan-secrets.sh /Users/oliver/.claude
+/Users/oliver/oliver-local/scripts/run-governance-gates.sh
+/Users/oliver/oliver-local/scripts/scan-secrets.sh /Users/oliver/oliver-local
 ```
 
 Commit only if both pass.

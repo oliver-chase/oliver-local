@@ -2,9 +2,10 @@
 
 ## Active Core Runtimes
 
-- `.claude`: Claude orchestration + runtime.
-- `.codex`: Codex runtime.
-- `.agents`: shared local skills/config packs used by agent tooling.
+- `~/oliver-local`: shared orchestration root.
+- `.claude`: Claude runtime adapter + state.
+- `.codex`: Codex runtime adapter + state.
+- `.agents`: agent-runtime adapters + state.
 
 ## Product Repositories
 
@@ -22,12 +23,14 @@
 
 ## Not Source Of Truth For Product Features
 
-- `~/.claude/docs/*` (workspace pointers/standards only)
+- `~/oliver-local/docs/*` (workspace pointers/standards only)
 - `~/.codex/*` (runtime state)
-- `~/.claude/session-env/*` and similar runtime artifacts
+- `~/.claude/*` runtime artifacts outside pointer files
+- `~/.agents/*` runtime artifacts outside pointer files
 
 ## Duplication Policy
 
 - Product behavior/process docs: keep in each product repo.
-- Cross-project agent rules: keep in `~/.claude/shared/*`.
+- Cross-project agent rules: keep in `~/oliver-local/shared/*`.
+- Shared skills/tools: keep in `~/oliver-local/skills/*`.
 - Do not maintain duplicate copies of the same process document across both locations.

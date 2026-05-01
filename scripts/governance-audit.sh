@@ -113,6 +113,7 @@ audit_repo() {
 
   scan_forbidden_refs "$repo" "/Users/oliver/.codex/skills"
   scan_forbidden_refs "$repo" "/Users/oliver/.claude/skills"
+  scan_forbidden_refs "$repo" "/Users/oliver/oliver-local/skills"
   scan_forbidden_refs "$repo" "story-lifecycle-gate"
 }
 

@@ -7,13 +7,13 @@ This policy prevents documentation and structure drift across project repositori
 Run before commit (workspace-wide):
 
 ```bash
-/Users/oliver/.claude/scripts/run-governance-gates.sh
+/Users/oliver/oliver-local/scripts/run-governance-gates.sh
 ```
 
 Run for one repo only:
 
 ```bash
-/Users/oliver/.claude/scripts/run-governance-gates.sh /Users/oliver/projects/<repo>
+/Users/oliver/oliver-local/scripts/run-governance-gates.sh /Users/oliver/projects/<repo>
 ```
 
 ## Nightly Task
@@ -21,11 +21,11 @@ Run for one repo only:
 Nightly cleanup + governance run:
 
 ```bash
-/Users/oliver/.claude/scripts/run-nightly-governance.sh
+/Users/oliver/oliver-local/scripts/run-nightly-governance.sh
 ```
 
 Status report output:
-- `/Users/oliver/.claude/docs/runtime-verification/governance-status.md`
+- `/Users/oliver/oliver-local/docs/runtime-verification/governance-status.md`
 
 launchd task file:
 - `/Users/oliver/Library/LaunchAgents/com.oliver.governance-nightly.plist`
@@ -33,10 +33,11 @@ launchd task file:
 ## What Is Enforced
 
 - Canonical required files exist per repo.
-- Forbidden legacy snapshot documents are absent in repos where retired.
+- Forbidden retired snapshot documents are absent in repos where inactive.
 - Forbidden runtime-coupled references are absent from active docs:
   - `/Users/oliver/.codex/skills`
   - `/Users/oliver/.claude/skills`
+  - `/Users/oliver/oliver-local/skills`
   - `story-lifecycle-gate`
 - Project backlog file placement stays inside approved roots.
 - Cross-repo structure/doc integrity checks remain green.
@@ -52,15 +53,16 @@ launchd task file:
 - Canonical skills inventory: `docs/skills.md`
 - Shared workflows must not hardcode runtime-specific skill file paths; use workflow trigger names instead.
 - Shared SOP/workflow docs must not be copied into project repos; projects reference canonical shared workflow docs.
+- Runtime adapters may point to `~/oliver-local/skills`, but project repos must not.
 
 ## Pre-commit Hook Installation
 
 Install governance hooks in all project repos:
 
 ```bash
-/Users/oliver/.claude/scripts/install-governance-hook.sh
+/Users/oliver/oliver-local/scripts/install-governance-hook.sh
 ```
 
 Each repo hook executes repo-scoped governance gates before commit.
 
-- Oliver-local repo operations: `/Users/oliver/.claude/docs/oliver-local-repo-operations.md`
+- Oliver-local repo operations: `/Users/oliver/oliver-local/docs/oliver-local-repo-operations.md`

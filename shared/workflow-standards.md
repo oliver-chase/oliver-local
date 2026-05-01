@@ -4,8 +4,8 @@ Cross-agent workflow routing and standards.
 
 ## Authoritative References
 
-- Shared orchestration core: `/Users/oliver/SHARED_ORCHESTRATION.md`
-- Shared manifest: `/Users/oliver/AGENT_SYSTEM_MANIFEST.json`
+- Shared orchestration core: `contracts/SHARED_ORCHESTRATION.md`
+- Shared manifest: `contracts/AGENT_SYSTEM_MANIFEST.json`
 
 ## Trigger Routing
 
@@ -27,7 +27,8 @@ All product repos live under `~/projects/`.
 ## Orchestration Rules
 
 - Keep `.claude` and `.codex` runtime state separate.
-- Keep shared standards in one place (`~/.claude/shared/*`).
+- Keep shared standards in one place (`~/oliver-local/shared/*`).
+- Keep shared skills in one place (`~/oliver-local/skills/*`).
 - Do not duplicate product workflow docs into runtime folders.
 - Do not duplicate shared SOP/workflow files into project repos; reference canonical shared workflows instead.
 - Treat live machine layout as source of truth over stale cached paths.

@@ -11,11 +11,11 @@ Purpose: keep active docs concise, scannable, and non-duplicative.
 
 ## Out of Scope
 
-- `docs/archive/**` historical snapshots
+- `docs/archive/**` archive snapshots
 - Generated verification reports (`docs/runtime-verification/**`)
 - Skill bodies under `skills/**`
 
 ## Enforcement
 
-- Gate script: `/Users/oliver/.claude/scripts/validate-doc-lengths.sh`
-- Included in: `/Users/oliver/.claude/scripts/run-governance-gates.sh`
+- Gate script: `/Users/oliver/oliver-local/scripts/validate-doc-lengths.sh`
+- Included in: `/Users/oliver/oliver-local/scripts/run-governance-gates.sh`

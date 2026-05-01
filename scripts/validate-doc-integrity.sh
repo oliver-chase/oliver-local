@@ -12,6 +12,7 @@ REPOS=(
 FORBIDDEN_PATTERNS=(
   '/Users/oliver/.codex/skills'
   '/Users/oliver/.claude/skills'
+  '/Users/oliver/oliver-local/skills'
   'story-lifecycle-gate'
   'oliver-local-reconciliation-2026-04-24.md'
   'STATE-AUDIT-2026-04-22.md'

@@ -2,7 +2,7 @@
 
 ## Runtime Boundary
 
-- `~/oliver-local` is `~/.claude` (same directory via symlink).
+- `~/oliver-local` is the shared orchestration system root.
 - `~/.codex` is separate runtime state; do not treat it as a project repo.
 - Product implementation always happens in `~/projects/*` repos.
 
@@ -20,7 +20,7 @@
 
 ## Workspace Sync Rules (`oliver-local`)
 
-When changing workspace structure or standards in `~/.claude`:
+When changing workspace structure or standards in `~/oliver-local`:
 
 1. Update these canonical docs when relevant:
 - `README.md`
@@ -32,8 +32,8 @@ When changing workspace structure or standards in `~/.claude`:
 
 2. Run checks:
 ```bash
-bash ~/.claude/scripts/check-doc-config-impact.sh
-bash ~/.claude/scripts/test-structure.sh
+bash ~/oliver-local/scripts/check-doc-config-impact.sh
+bash ~/oliver-local/scripts/test-structure.sh
 ```
 
 3. Commit only sync-scope files.

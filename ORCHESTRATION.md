@@ -1,9 +1,13 @@
-# Claude Orchestration Entry
+# Oliver-Local Orchestration Root
 
-- Runtime root: `~/.claude`
 - Shared system root: `~/oliver-local`
-- Shared system docs: `~/oliver-local/docs`
+- Shared docs: `~/oliver-local/docs`
 - Shared workflows: `~/oliver-local/shared/workflows`
 - Shared scripts/gates: `~/oliver-local/scripts`
+- Shared skills: `~/oliver-local/skills`
+- Runtime adapters:
+  - `~/.claude/ORCHESTRATION.md`
+  - `~/.codex/ORCHESTRATION.md`
+  - `~/.agents/ORCHESTRATION.md`
 
-Claude runtime files stay in `~/.claude`. Canonical shared orchestration assets live in `~/oliver-local`.
+Canonical shared orchestration assets live in `~/oliver-local`. Runtime folders consume them.

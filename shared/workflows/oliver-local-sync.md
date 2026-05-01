@@ -4,11 +4,12 @@ Use this workflow when the user asks to sync, reconcile, or refresh `oliver-loca
 
 ## Scope
 
-`oliver-local` is the orchestration repo at `~/.claude` (alias `~/oliver-local`), not an app repo.
+`oliver-local` is the shared orchestration repo at `~/oliver-local`, not an app repo.
 
 This workflow keeps these files aligned with the live machine state:
 
 - `shared/repo-map.json`
+- `contracts/*`
 - `docs/project-repos.md`
 - `docs/projects/*.md`
 - `docs/workspace-tree.md`
@@ -19,11 +20,11 @@ This workflow keeps these files aligned with the live machine state:
 
 ## Procedure
 
-1. Confirm repo + alias health.
+1. Confirm repo health.
 
 ```bash
 git -C ~/oliver-local status --short --branch
-readlink ~/oliver-local
+test -d ~/oliver-local
 ```
 
 2. Run structure drift checks.
@@ -41,6 +42,7 @@ jq -r '.repos[].name + " -> " + .path' ~/oliver-local/shared/repo-map.json
 
 4. If inventory drift exists:
 - update `shared/repo-map.json`
+- update `contracts/*` if machine-level aliases or shared roots changed
 - align `docs/projects/*.md` and `docs/project-repos.md`
 - align `docs/workspace-tree.md` and `docs/architecture.md`
 - align `README.md` and `CLAUDE.md` references

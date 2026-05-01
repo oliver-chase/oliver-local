@@ -7,7 +7,7 @@ Status: Active
 ## Scope Layers
 
 - System root: `/Users/oliver`
-- Control-plane repo checkout: `/Users/oliver/.claude`
+- Control-plane repo checkout: `/Users/oliver/oliver-local`
 - Codex runtime: `/Users/oliver/.codex`
 - Shared skill/runtime packs: `/Users/oliver/.agents`
 - Product repos: `/Users/oliver/projects/*`
@@ -15,12 +15,13 @@ Status: Active
 ## Source-of-Truth Rules
 
 - Shared orchestration contracts:
-  - `/Users/oliver/AGENT_SHARED_STRUCTURE.md`
-  - `/Users/oliver/SHARED_ORCHESTRATION.md`
-  - `/Users/oliver/AGENT_SYSTEM_MANIFEST.json`
-- Persona definitions are canonical in one place (`/Users/oliver/.claude/personas/*`).
+  - `~/oliver-local/contracts/AGENT_SHARED_STRUCTURE.md`
+  - `~/oliver-local/contracts/SHARED_ORCHESTRATION.md`
+  - `~/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
+- Persona definitions are canonical in one place (`/Users/oliver/oliver-local/personas/*`).
+- Shared skills are canonical in one place (`/Users/oliver/oliver-local/skills/*`).
 - Any persona references outside canonical location are pointers only.
 
 ## Operational Rule
 
-Agents treat `.claude` as control-plane storage for orchestrating the full `/Users/oliver` system and must keep `.codex`/`.agents` alignment documented through shared contracts.
+Agents treat `~/oliver-local` as the shared orchestration root and must keep `.claude`/`.codex`/`.agents` alignment documented through shared contracts.

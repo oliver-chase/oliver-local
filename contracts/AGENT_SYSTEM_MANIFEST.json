@@ -6,16 +6,20 @@
   },
   "runtime_entries": {
     "claude": "/Users/oliver/.claude/ORCHESTRATION.md",
-    "codex": "/Users/oliver/.codex/ORCHESTRATION.md"
+    "codex": "/Users/oliver/.codex/ORCHESTRATION.md",
+    "agents": "/Users/oliver/.agents/ORCHESTRATION.md"
   },
+  "contracts_root": "/Users/oliver/oliver-local/contracts",
   "shared_workflows": {
-    "standards": "/Users/oliver/.claude/shared/workflow-standards.md",
-    "index": "/Users/oliver/.claude/shared/workflows/README.md"
+    "standards": "/Users/oliver/oliver-local/shared/workflow-standards.md",
+    "index": "/Users/oliver/oliver-local/shared/workflows/README.md"
   },
+  "shared_skills_root": "/Users/oliver/oliver-local/skills",
   "product_roots": [
     "/Users/oliver/projects/oliver-app",
     "/Users/oliver/projects/tesknota",
     "/Users/oliver/projects/v-two-sdr",
     "/Users/oliver/projects/fallow"
-  ]
+  ],
+  "system_root": "/Users/oliver/oliver-local"
 }

@@ -3,20 +3,22 @@
 Canonical orchestration system for `/Users/oliver` (oliver-local).
 
 `oliver-local` represents the full local orchestration system rooted at `/Users/oliver`.
-Current git control-plane checkout lives at `~/.claude`, and `~/oliver-local` currently points there.
+`~/oliver-local` is the shared orchestration system root for this machine.
 
 ## Shared System
 
-- Oliver-local repo operations: `/Users/oliver/.claude/docs/oliver-local-repo-operations.md`
-
-- Shared structure: `/Users/oliver/AGENT_SHARED_STRUCTURE.md`
-- Shared orchestration core: `/Users/oliver/SHARED_ORCHESTRATION.md`
-- Shared manifest: `/Users/oliver/AGENT_SYSTEM_MANIFEST.json`
+- Oliver-local repo operations: `/Users/oliver/oliver-local/docs/oliver-local-repo-operations.md`
+- Canonical contracts: `contracts/*`
+- Machine-level aliases:
+  - `/Users/oliver/AGENT_SHARED_STRUCTURE.md`
+  - `/Users/oliver/SHARED_ORCHESTRATION.md`
+  - `/Users/oliver/AGENT_SYSTEM_MANIFEST.json`
 
 ## Runtime Entries
 
 - Claude: `~/.claude/ORCHESTRATION.md`
 - Codex: `~/.codex/ORCHESTRATION.md`
+- Agents: `~/.agents/ORCHESTRATION.md`
 
 ## Governance Gates
 
@@ -29,9 +31,9 @@ Current git control-plane checkout lives at `~/.claude`, and `~/oliver-local` cu
 ```text
 /Users/oliver
 |- .claude
-|- oliver-local -> .claude
 |- .codex
 |- .agents
+|- oliver-local/
 |- projects/
 |- references/
 |- dotfiles/
@@ -41,8 +43,9 @@ Current git control-plane checkout lives at `~/.claude`, and `~/oliver-local` cu
 ## Ownership Rules
 
 - Product code/docs live in `~/projects/*`.
-- Cross-project orchestration standards live in `~/.claude/shared/*`.
-- Runtime folders (`.claude`, `.codex`) are not product source-of-truth.
+- Cross-project orchestration standards live in `~/oliver-local/shared/*`.
+- Shared skills live in `~/oliver-local/skills/*`.
+- Runtime folders (`.claude`, `.codex`, `.agents`) are adapters and runtime state, not shared-system source-of-truth.
 
 ## Key Docs
 

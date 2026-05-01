@@ -5,23 +5,26 @@ Shared contract for agent runtimes on this machine.
 ## Canonical Paths
 
 - Product repos: `~/projects/*`
-- Claude runtime/orchestration: `~/.claude` (alias `~/oliver-local`)
+- Shared system root: `~/oliver-local`
+- Claude runtime/orchestration: `~/.claude`
 - Codex runtime: `~/.codex`
-- Shared local skill packs: `~/.agents`
-- Shared orchestration core: `/Users/oliver/SHARED_ORCHESTRATION.md`
-- Shared manifest: `/Users/oliver/AGENT_SYSTEM_MANIFEST.json`
+- Agents runtime: `~/.agents`
+- Shared skills root: `~/oliver-local/skills`
+- Shared orchestration core: `~/oliver-local/contracts/SHARED_ORCHESTRATION.md`
+- Shared manifest: `~/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
 
 ## Ownership
 
 - Product-specific implementation docs/workflows belong in each project repo.
-- Cross-project orchestration standards belong in `~/.claude/shared/*`.
+- Cross-project orchestration standards belong in `~/oliver-local/shared/*`.
+- Shared skills/tools belong in `~/oliver-local/skills/*`.
 - Runtime state in `.claude` and `.codex` is operational data, not product source code.
-- Shared workflow orchestration is runtime-neutral: both Claude and Codex reference the same shared workflow sources in `~/.claude/shared/*`.
+- Shared workflow orchestration is runtime-neutral: both Claude and Codex reference the same shared workflow sources in `~/oliver-local/shared/*`.
 
 ## Sync Contract
 
 When workspace structure or cross-project standards change:
-1. Update `/Users/oliver/AGENT_SHARED_STRUCTURE.md`.
-2. Update `/Users/oliver/SHARED_ORCHESTRATION.md`.
-3. Keep `~/.claude/ORCHESTRATION.md` and `~/.codex/ORCHESTRATION.md` aligned.
-4. Update `/Users/oliver/AGENT_SYSTEM_MANIFEST.json` if paths or roots changed.
+1. Update `~/oliver-local/contracts/AGENT_SHARED_STRUCTURE.md`.
+2. Update `~/oliver-local/contracts/SHARED_ORCHESTRATION.md`.
+3. Keep runtime entries (`~/.claude/ORCHESTRATION.md`, `~/.codex/ORCHESTRATION.md`, `~/.agents/ORCHESTRATION.md`) aligned to `~/oliver-local`.
+4. Update `~/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json` if paths or roots changed.

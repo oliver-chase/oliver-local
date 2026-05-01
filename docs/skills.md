@@ -2,7 +2,7 @@
 
 Updated 2026-04-24.
 
-`~/.claude/skills/gstack` is canonical for overlapping Garry Tan skills. Top-level duplicates are aliases into that vendored toolkit. Unique local skills, .md shortcut skills, and imported Codex system skills remain top-level additions.
+`~/oliver-local/skills` is the canonical shared skill layer for this system. Runtime adapters reference these shared skills.
 
 Workflow trigger routing is defined separately in `shared/workflows/*.md`.
 If a plain-language trigger term and a skill alias collide (for example, `qa`), pause and surface the conflict before proceeding.

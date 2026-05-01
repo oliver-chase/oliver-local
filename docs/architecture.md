@@ -8,14 +8,14 @@ Contains application code, app-specific docs, migrations, tests, and deploy logi
 
 ## 2. Orchestration Layer
 
-Location: `~/.claude` (alias `~/oliver-local`)
+Location: `~/oliver-local` (shared system root)
 
 Contains shared agent operating rules, workspace maps, persona/skill metadata, and workflow standards.
 
 ## 3. Runtime Layer
 
 Locations:
-- `~/.claude` runtime state
+- Runtime state in `.claude`, `.codex`, and `.agents`
 - `~/.codex` runtime state
 
 Runtime state is intentionally separate from product repositories.
@@ -24,11 +24,13 @@ Runtime state is intentionally separate from product repositories.
 
 Locations:
 - `~/.agents` for local shared skill packs
+- `~/oliver-local/skills` for canonical shared skills
 - `~/references` for upstream templates/reference repos
 - `~/dotfiles` for machine configuration
 
 ## Operating Contract
 
 - Do not duplicate project source trees into orchestration folders.
-- Keep cross-project standards in `~/.claude/shared/*` once, then reference them.
+- Keep cross-project standards in `~/oliver-local/shared/*` once, then reference them.
+- Keep shared skills in `~/oliver-local/skills/*` once, then reference them from runtime adapters.
 - Keep project-specific instructions inside each project repo.

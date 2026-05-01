@@ -52,6 +52,26 @@ else
   fail "oliver-local root exists"
 fi
 
+for alias_name in AGENT_SHARED_STRUCTURE.md SHARED_ORCHESTRATION.md AGENT_SYSTEM_MANIFEST.json; do
+  if [[ -L "/Users/oliver/$alias_name" ]]; then
+    pass "machine-level alias present: $alias_name"
+  else
+    fail "machine-level alias present: $alias_name"
+  fi
+done
+
+if [[ ! -L "$ROOT/skills" && -d "$ROOT/skills" ]]; then
+  pass "shared skills stored in oliver-local"
+else
+  fail "shared skills stored in oliver-local"
+fi
+
+if [[ "$(readlink /Users/oliver/.claude/skills 2>/dev/null || true)" = "/Users/oliver/oliver-local/skills" ]]; then
+  pass ".claude skills adapter points to oliver-local"
+else
+  fail ".claude skills adapter points to oliver-local"
+fi
+
 # 3) Persona config paths must resolve.
 for persona in cmo marketing sdr; do
   cfg="personas/${persona}/config.json"
