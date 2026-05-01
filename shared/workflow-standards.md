@@ -6,6 +6,8 @@ Cross-agent workflow routing and standards.
 
 - Shared orchestration core: `contracts/SHARED_ORCHESTRATION.md`
 - Shared manifest: `contracts/AGENT_SYSTEM_MANIFEST.json`
+- Project hygiene baseline: `contracts/PROJECT_HYGIENE_STANDARD.md`
+- Project structure baseline: `contracts/PROJECT_STRUCTURE_STANDARD.md`
 
 ## Trigger Routing
 

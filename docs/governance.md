@@ -33,6 +33,7 @@ launchd task file:
 ## What Is Enforced
 
 - Canonical required files exist per repo.
+- Repo structure contracts exist and align with `contracts/PROJECT_STRUCTURE_STANDARD.md`.
 - Forbidden retired snapshot documents are absent in repos where inactive.
 - Forbidden runtime-coupled references are absent from active docs:
   - `/Users/oliver/.codex/skills`

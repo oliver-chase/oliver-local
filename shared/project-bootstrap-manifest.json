@@ -9,7 +9,9 @@
   "templatedFiles": [
     {"source": "shared/templates/project/.github/workflows/qa-hygiene.yml", "target": ".github/workflows/qa-hygiene.yml", "mode": "strict"},
     {"source": "shared/templates/project/.github/user-stories/README.md", "target": ".github/user-stories/README.md", "mode": "presence"},
+    {"source": "shared/templates/project/.github/user-stories/_index.md", "target": ".github/user-stories/_index.md", "mode": "presence"},
     {"source": "shared/templates/project/AGENTS.md", "target": "AGENTS.md", "mode": "presence"},
+    {"source": "shared/templates/project/docs/repo-structure-contract.md", "target": "docs/repo-structure-contract.md", "mode": "presence"},
     {"source": "shared/templates/project/docs/tech-debt/README.md", "target": "docs/tech-debt/README.md", "mode": "presence"},
     {"source": "shared/templates/project/docs/product/README.md", "target": "docs/product/README.md", "mode": "presence"}
   ]

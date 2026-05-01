@@ -34,10 +34,15 @@ Scope: All repositories, modules, and workstreams
 4. Public tracked docs use placeholders for service URLs, account emails, local usernames, device paths, and deployment identifiers unless the value is intentionally public product information.
 
 ## Canonical story layout contract
-1. Planning/backlog docs live under `.github/user-stories/<project>/`.
-2. Executable story artifacts (`US-*`, `SLD-*`, `SMK-*`) live under module artifact roots (for Oliver app: `.github/oliver-app/modules/**`).
-3. The same story ID filename must not exist in more than one root.
-4. Story checkers must fail if artifact roots validate zero stories, or if planning roots contain executable story artifact files.
+1. Contract source: `contracts/PROJECT_STRUCTURE_STANDARD.md`.
+2. Every repo must keep `docs/repo-structure-contract.md` aligned with that contract.
+3. `_index.md` is the canonical index filename for story folders.
+4. `backlog.md` is retired as an active planning filename.
+5. The same story ID filename must not exist in more than one artifact root.
+6. Story checkers must fail when:
+- artifact roots validate zero stories where stories are expected
+- planning roots contain executable story artifact files
+- required index/contract files are missing
 
 ## Required secret hygiene
 1. Real credentials, tokens, API keys, service-role keys, webhook secrets, private keys, and local auth files stay in ignored local env or provider secret stores.

@@ -8,7 +8,9 @@ Canonical orchestration system for `/Users/oliver` (oliver-local).
 ## Shared System
 
 - Oliver-local repo operations: `/Users/oliver/oliver-local/docs/oliver-local-repo-operations.md`
-- Canonical contracts: `contracts/*`, including `contracts/PROJECT_HYGIENE_STANDARD.md`
+- Canonical contracts: `contracts/*`, including:
+  - `contracts/PROJECT_HYGIENE_STANDARD.md`
+  - `contracts/PROJECT_STRUCTURE_STANDARD.md`
 - Machine-level aliases:
   - `/Users/oliver/AGENT_SHARED_STRUCTURE.md`
   - `/Users/oliver/SHARED_ORCHESTRATION.md`
@@ -67,6 +69,7 @@ Those files explain what each local runtime folder is, what state may live there
 ## Key Docs
 
 - [Architecture](docs/architecture.md)
+- [Project Structure Standard](contracts/PROJECT_STRUCTURE_STANDARD.md)
 - [Project Repos](docs/project-repos.md)
 - [Runtime Adapters](docs/runtime-adapters.md)
 - [Workspace Tree](docs/workspace-tree.md)

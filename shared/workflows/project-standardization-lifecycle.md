@@ -8,6 +8,7 @@ Define one standard lifecycle for project bootstrap, governance sync, drift audi
 2. `shared/project-bootstrap-manifest.json` for managed files and strictness modes.
 3. `shared/repo-map.json` for managed repo inventory.
 4. `shared/project-structure-rules.json` for structure and backlog-location enforcement.
+5. `contracts/PROJECT_STRUCTURE_STANDARD.md` for locked story/backlog/index naming and folder shape.
 
 ## Lifecycle
 1. Bootstrap new project:
@@ -33,6 +34,14 @@ Define one standard lifecycle for project bootstrap, governance sync, drift audi
 ## Managed File Policy
 - `strict`: file content must exactly match template.
 - `presence`: file must exist; repo-specific content is allowed.
+
+## Mandatory Repo Contract File
+
+Each repo must keep `docs/repo-structure-contract.md` current with:
+1. active backlog path
+2. story catalog path
+3. acceptance matrix path
+4. story artifact roots
 
 ## Cadence
 1. Run sync + audit before major releases.

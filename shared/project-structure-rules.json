@@ -8,10 +8,15 @@
         "README.md",
         "CLAUDE.md",
         "AGENTS.md",
+        "docs/repo-structure-contract.md",
         "docs/MODULE_CONTEXT.md",
         "docs/MODULE_INSTRUCTIONS.md",
         ".github/oliver-app/modules",
+        ".github/user-stories/README.md",
+        ".github/user-stories/_index.md",
         ".github/user-stories/oliver-app",
+        ".github/user-stories/oliver-app/README.md",
+        ".github/user-stories/oliver-app/_index.md",
         "src/tech-debt"
       ],
       "forbidden_backlog_globs": [
@@ -31,10 +36,15 @@
         "README.md",
         "CLAUDE.md",
         "AGENTS.md",
+        "docs/repo-structure-contract.md",
         "docs/MODULE_CONTEXT.md",
         "docs/MODULE_INSTRUCTIONS.md",
         ".github/oliver-app/modules",
+        ".github/user-stories/README.md",
+        ".github/user-stories/_index.md",
         ".github/user-stories/oliver-app",
+        ".github/user-stories/oliver-app/README.md",
+        ".github/user-stories/oliver-app/_index.md",
         "src/tech-debt"
       ],
       "forbidden_backlog_globs": [
@@ -54,10 +64,15 @@
         "README.md",
         "CLAUDE.md",
         "AGENTS.md",
+        "docs/repo-structure-contract.md",
         "docs/MODULE_CONTEXT.md",
         "docs/MODULE_INSTRUCTIONS.md",
         ".github/oliver-app/modules",
+        ".github/user-stories/README.md",
+        ".github/user-stories/_index.md",
         ".github/user-stories/oliver-app",
+        ".github/user-stories/oliver-app/README.md",
+        ".github/user-stories/oliver-app/_index.md",
         "src/tech-debt"
       ],
       "forbidden_backlog_globs": [
@@ -77,10 +92,15 @@
         "README.md",
         "CLAUDE.md",
         "AGENTS.md",
+        "docs/repo-structure-contract.md",
         "docs/MODULE_CONTEXT.md",
         "docs/MODULE_INSTRUCTIONS.md",
         ".github/oliver-app/modules",
+        ".github/user-stories/README.md",
+        ".github/user-stories/_index.md",
         ".github/user-stories/oliver-app",
+        ".github/user-stories/oliver-app/README.md",
+        ".github/user-stories/oliver-app/_index.md",
         "src/tech-debt"
       ],
       "forbidden_backlog_globs": [
@@ -100,9 +120,14 @@
         "README.md",
         "CLAUDE.md",
         "AGENTS.md",
+        "docs/repo-structure-contract.md",
         "docs/product/03-backlog-user-stories.md",
         "docs/product/07-execution-status.md",
         ".github/user-stories",
+        ".github/user-stories/README.md",
+        ".github/user-stories/_index.md",
+        ".github/user-stories/tesknota/README.md",
+        ".github/user-stories/tesknota/_index.md",
         "docs/tech-debt"
       ],
       "forbidden_backlog_globs": [
@@ -119,10 +144,14 @@
       "required_paths": [
         "README.md",
         "CLAUDE.md",
+        "docs/repo-structure-contract.md",
         "docs/README.md",
         "docs/SDR_EXECUTION_BACKLOG.md",
         "docs/SDR_EPICS_USER_STORIES.md",
         ".github/user-stories",
+        ".github/user-stories/README.md",
+        ".github/user-stories/_index.md",
+        ".github/user-stories/v-two-sdr/_index.md",
         "docs/tech-debt"
       ],
       "forbidden_backlog_globs": [
@@ -140,10 +169,13 @@
       "required_paths": [
         "README.md",
         "CLAUDE.md",
+        "docs/repo-structure-contract.md",
         "docs/v2/README.md",
         "docs/v2/EXECUTION_BACKLOG.md",
         "docs/v2/EPICS_USER_STORIES.md",
         ".github/user-stories",
+        ".github/user-stories/README.md",
+        ".github/user-stories/_index.md",
         "docs/tech-debt"
       ],
       "forbidden_backlog_globs": [
