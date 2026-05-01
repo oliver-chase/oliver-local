@@ -13,3 +13,5 @@ Canonical workflow procedure index.
 System-level references:
 - `~/oliver-local/contracts/SHARED_ORCHESTRATION.md`
 - `~/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
+- `~/oliver-local/contracts/PROJECT_HYGIENE_STANDARD.md`
+- `~/oliver-local/contracts/PROJECT_STRUCTURE_STANDARD.md`
