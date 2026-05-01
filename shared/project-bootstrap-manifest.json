@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "requiredDirectories": [
     ".github/workflows",
     ".github/user-stories",
@@ -8,8 +8,14 @@
   ],
   "templatedFiles": [
     {"source": "shared/templates/project/.github/workflows/qa-hygiene.yml", "target": ".github/workflows/qa-hygiene.yml", "mode": "strict"},
+    {"source": "shared/templates/project/.github/workflows/governance-secrets-gate.yml", "target": ".github/workflows/governance-secrets-gate.yml", "mode": "strict"},
+    {"source": "shared/templates/project/.github/workflows/dependency-review.yml", "target": ".github/workflows/dependency-review.yml", "mode": "strict"},
+    {"source": "shared/templates/project/.github/CODEOWNERS", "target": ".github/CODEOWNERS", "mode": "strict"},
+    {"source": "shared/templates/project/.github/pull_request_template.md", "target": ".github/pull_request_template.md", "mode": "strict"},
+    {"source": "shared/templates/project/QUALITY_BASELINE.md", "target": "QUALITY_BASELINE.md", "mode": "strict"},
     {"source": "shared/templates/project/.github/user-stories/README.md", "target": ".github/user-stories/README.md", "mode": "presence"},
     {"source": "shared/templates/project/.github/user-stories/_index.md", "target": ".github/user-stories/_index.md", "mode": "presence"},
+    {"source": "shared/templates/project/scripts/check-structure-contract.mjs", "target": "scripts/check-structure-contract.mjs", "mode": "strict"},
     {"source": "shared/templates/project/AGENTS.md", "target": "AGENTS.md", "mode": "presence"},
     {"source": "shared/templates/project/docs/repo-structure-contract.md", "target": "docs/repo-structure-contract.md", "mode": "presence"},
     {"source": "shared/templates/project/docs/tech-debt/README.md", "target": "docs/tech-debt/README.md", "mode": "presence"},

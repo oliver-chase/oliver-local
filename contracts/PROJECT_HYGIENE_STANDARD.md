@@ -55,6 +55,13 @@ Scope: All repositories, modules, and workstreams
 2. Keep archive indexes for deferred functionality with clear re-enable instructions.
 3. Define a single orchestration command named `qa:hygiene` in each repo package scripts that runs all required story/epic/test hygiene gates for that repo.
 
+## Required shared quality baseline hygiene
+1. Shared CI/QA policy files are canonicalized in `~/oliver-local/shared/templates/project`.
+2. Managed files must stay byte-identical across all repos where they are marked strict in `shared/project-bootstrap-manifest.json`.
+3. Any change to one managed file requires changing the canonical template first, then syncing every mapped repo.
+4. Cross-repo sync command: `bash ~/oliver-local/scripts/sync-project-hygiene.sh`.
+5. Cross-repo drift audit command: `bash ~/oliver-local/scripts/audit-project-hygiene.sh`.
+
 ## Enforcement checklist (pre-push)
 1. Story linked and AC/evidence/test-plan complete.
 2. Epic assignment explicit and correct.

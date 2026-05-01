@@ -39,3 +39,10 @@ All product repos live under `~/projects/`.
 ## Testing Baseline
 
 Testing applies to all code work. Follow `shared/workflows/testing-rules.md`.
+
+## Cross-Repo Quality Baseline
+
+- Canonical managed quality files live in `shared/templates/project`.
+- Sync all mapped repos: `bash ~/oliver-local/scripts/sync-project-hygiene.sh`.
+- Audit strict-file drift: `bash ~/oliver-local/scripts/audit-project-hygiene.sh`.
+- Policy: a managed-file change in one repo is invalid unless the canonical template is updated and re-synced to all repos.

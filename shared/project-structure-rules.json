@@ -151,6 +151,7 @@
         ".github/user-stories",
         ".github/user-stories/README.md",
         ".github/user-stories/_index.md",
+        ".github/user-stories/v-two-sdr/README.md",
         ".github/user-stories/v-two-sdr/_index.md",
         "docs/tech-debt"
       ],
@@ -176,6 +177,8 @@
         ".github/user-stories",
         ".github/user-stories/README.md",
         ".github/user-stories/_index.md",
+        ".github/user-stories/fallow/README.md",
+        ".github/user-stories/fallow/_index.md",
         "docs/tech-debt"
       ],
       "forbidden_backlog_globs": [

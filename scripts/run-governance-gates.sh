@@ -17,4 +17,5 @@ fi
 "$SCRIPT_DIR/validate-active-doc-hygiene.sh"
 "$SCRIPT_DIR/validate-doc-integrity.sh"
 "$SCRIPT_DIR/governance-audit.sh"
+"$SCRIPT_DIR/audit-project-hygiene.sh"
 "$SCRIPT_DIR/check-project-structure.sh"
