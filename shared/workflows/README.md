@@ -15,3 +15,6 @@ System-level references:
 - `~/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
 - `~/oliver-local/contracts/PROJECT_HYGIENE_STANDARD.md`
 - `~/oliver-local/contracts/PROJECT_STRUCTURE_STANDARD.md`
+
+Hygiene policy updates that affect project templates are tracked by:
+- `~/oliver-local/shared/workflow-standards.md`

@@ -79,6 +79,7 @@ if (!existsSync(userStoriesRoot)) {
   const rootMarkdown = readdirSync(userStoriesRoot).filter((entry) => {
     if (!entry.endsWith('.md')) return false
     if (entry === 'README.md' || entry === '_index.md') return false
+    if (/^[a-z0-9][a-z0-9-]*-(?:governance|structure)-audit-\d{4}-\d{2}-\d{2}\.md$/i.test(entry)) return false
     return true
   })
   if (rootMarkdown.length > 0) failures.push(`user-stories root should not contain ad-hoc markdown docs: ${rootMarkdown.join(', ')}`)
@@ -101,8 +102,6 @@ if (existsSync(githubDir)) {
 
   const legacyBacklogs = allMarkdown.filter((file) => {
     if (basename(file).toLowerCase() !== 'backlog.md') return false
-    const rel = relative(ROOT, file).replaceAll('\\', '/')
-    if (rel.startsWith('.github/user-stories/')) return false
     return true
   })
   for (const file of legacyBacklogs) failures.push(`legacy backlog.md should be retired: ${relative(ROOT, file)}`)
