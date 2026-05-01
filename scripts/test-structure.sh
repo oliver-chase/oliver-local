@@ -92,6 +92,21 @@ else
   fail ".codex story-lifecycle-gate adapter points to oliver-local"
 fi
 
+for runtime in .claude .codex .agents; do
+  readme="/Users/oliver/$runtime/README.md"
+  orchestration="/Users/oliver/$runtime/ORCHESTRATION.md"
+  if [[ -f "$readme" ]] && rg -q 'Runtime Adapter|runtime adapter' "$readme" && rg -q '~/oliver-local' "$readme"; then
+    pass "$runtime README documents local runtime adapter"
+  else
+    fail "$runtime README documents local runtime adapter"
+  fi
+  if [[ -f "$orchestration" ]] && rg -q '~/oliver-local' "$orchestration"; then
+    pass "$runtime ORCHESTRATION points to oliver-local"
+  else
+    fail "$runtime ORCHESTRATION points to oliver-local"
+  fi
+done
+
 # 3) Persona config paths must resolve.
 for persona in cmo marketing sdr; do
   cfg="personas/${persona}/config.json"

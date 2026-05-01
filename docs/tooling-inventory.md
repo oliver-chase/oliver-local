@@ -18,9 +18,9 @@
 
 ## Utility Repositories / Workspaces
 
-- `~/claude-push`: helper automation repo.
-- `~/dotfiles`: machine config repo.
-- `~/references/*`: external templates/reference code.
+- `~/claude-push`: helper automation repo for Claude permission push notifications.
+- `~/dotfiles`: machine shell/config repo.
+- `~/references/*`: external templates/reference code; not active source-of-truth.
 - `~/projects/prompt-lint`: local utility workspace.
 
 ## Not Source Of Truth For Product Features
@@ -32,6 +32,10 @@
 
 ## Runtime Adapter Links
 
+- Runtime adapter README files:
+  - `~/.claude/README.md`
+  - `~/.codex/README.md`
+  - `~/.agents/README.md`
 - `~/.claude/docs` -> `~/oliver-local/docs`
 - `~/.claude/scripts` -> `~/oliver-local/scripts`
 - `~/.claude/shared` -> `~/oliver-local/shared`

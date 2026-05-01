@@ -37,9 +37,9 @@ Runtime folders are visible on disk but are not tracked as folders inside this r
 |- .agents
 |- oliver-local/
 |- projects/
-|- references/
-|- dotfiles/
-`- claude-push/
+|- references/                 external templates/reference repos
+|- dotfiles/                   machine shell/config repo
+`- claude-push/                Claude permission push-notification helper
 ```
 
 ## Ownership Rules
@@ -48,6 +48,7 @@ Runtime folders are visible on disk but are not tracked as folders inside this r
 - Cross-project orchestration standards live in `~/oliver-local/shared/*`.
 - Shared skills live in `~/oliver-local/skills/*`.
 - Runtime folders (`.claude`, `.codex`, `.agents`) are adapters and runtime state, not shared-system source-of-truth.
+- `references`, `dotfiles`, and `claude-push` are support workspaces; they are not shared orchestration roots.
 
 ## Key Docs
 
