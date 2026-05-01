@@ -20,6 +20,8 @@ Canonical orchestration system for `/Users/oliver` (oliver-local).
 - Codex: `~/.codex/ORCHESTRATION.md`
 - Agents: `~/.agents/ORCHESTRATION.md`
 
+Runtime folders are visible on disk but are not tracked as folders inside this repo. This repo tracks the contracts, docs, scripts, shared workflows, personas, identity files, and shared skills those runtime adapters consume.
+
 ## Governance Gates
 
 - Policy: `docs/governance.md`

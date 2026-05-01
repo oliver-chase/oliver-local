@@ -18,8 +18,8 @@ Shared contract for agent runtimes on this machine.
 - Product-specific implementation docs/workflows belong in each project repo.
 - Cross-project orchestration standards belong in `~/oliver-local/shared/*`.
 - Shared skills/tools belong in `~/oliver-local/skills/*`.
-- Runtime state in `.claude` and `.codex` is operational data, not product source code.
-- Shared workflow orchestration is runtime-neutral: both Claude and Codex reference the same shared workflow sources in `~/oliver-local/shared/*`.
+- Runtime state in `.claude`, `.codex`, and `.agents` is operational data, not product source code.
+- Shared workflow orchestration is runtime-neutral: Claude, Codex, and other agent runtimes reference the same shared workflow sources in `~/oliver-local/shared/*`.
 
 ## Sync Contract
 

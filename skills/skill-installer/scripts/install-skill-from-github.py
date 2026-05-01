@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install a skill from a GitHub repo path into $CODEX_HOME/skills."""
+"""Install a skill from a GitHub repo path into the shared oliver-local skills root."""
 
 from __future__ import annotations
 
@@ -42,8 +42,11 @@ class InstallError(Exception):
     pass
 
 
-def _codex_home() -> str:
-    return os.environ.get("CODEX_HOME", os.path.expanduser("~/.codex"))
+def _shared_skills_root() -> str:
+    return os.environ.get(
+        "OLIVER_LOCAL_SKILLS",
+        os.path.expanduser("~/oliver-local/skills"),
+    )
 
 
 def _tmp_root() -> str:
@@ -241,7 +244,7 @@ def _resolve_source(args: Args) -> Source:
 
 
 def _default_dest() -> str:
-    return os.path.join(_codex_home(), "skills")
+    return _shared_skills_root()
 
 
 def _parse_args(argv: list[str]) -> Args:

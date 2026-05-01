@@ -18,7 +18,7 @@ After writing code on any project, review it using this checklist before marking
 - The current state is genuinely wrong
 - The improvement is substantial
 
-If you propose a refactor: describe it, explain why current state is problematic, then wait for Oliver's explicit approval. One at a time, never batched.
+If you propose a refactor: describe it, explain why current state is problematic, then wait for explicit user approval. One at a time, never batched.
 
 ### Checklist
 - [ ] Remove dead code (unreachable branches, unused variables)
@@ -42,7 +42,7 @@ Check for:
 
 **Apply simple patches directly.**
 
-For any structural security change: describe severity + attack vector, wait for Oliver's approval.
+For any structural security change: describe severity + attack vector, wait for user approval.
 
 ### Checklist
 - [ ] All external inputs are validated

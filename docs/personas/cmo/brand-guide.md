@@ -4,7 +4,7 @@ Canonical orchestration reference for CMO persona brand direction.
 
 ## Positioning Anchor
 
-Organization is positioned as a senior software consulting partner focused on data, AI, and product delivery for high-leverage teams.
+Organization positioning is defined by approved project context and must be verified before public use.
 
 ## Voice
 

@@ -4,10 +4,11 @@ Single source of truth for cross-agent orchestration on this machine.
 
 ## Scope
 
-Applies to both:
+Applies to:
 - Shared system root (`~/oliver-local`)
 - Claude runtime (`~/.claude`)
 - Codex runtime (`~/.codex`)
+- Agents runtime (`~/.agents`)
 
 ## Canonical Structure
 
@@ -20,9 +21,9 @@ Applies to both:
 
 - Product behavior/process docs live in each product repo.
 - Cross-project orchestration standards live in `~/oliver-local/shared/*`.
-- Runtime state in `.claude` and `.codex` is not product source-of-truth.
+- Runtime state in `.claude`, `.codex`, and `.agents` is not product source-of-truth.
 - Do not duplicate product workflow docs into runtime folders.
-- Claude and Codex must execute from the same canonical workflow set:
+- Claude, Codex, and other agent runtimes must execute from the same canonical workflow set:
   - `~/oliver-local/shared/workflow-standards.md`
   - `~/oliver-local/shared/workflows/*`
 - Project repos must reference shared workflows; they must not create duplicate copies of shared SOP/workflow docs.

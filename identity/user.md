@@ -1,11 +1,8 @@
 # User
 
-**nm:** Oliver
-**loc:** Rochester, NY (ET)
-**co:** Organization (example.com) — senior software consulting (Data, AI, product build)
 **style:** Direct, grounded, no fluff
 
-## How He Works
+## How They Work
 
 - High bar for accuracy — internal validation before presenting
 - Wants intelligent pushback, not blind agreement
