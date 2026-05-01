@@ -4,8 +4,8 @@ Status: Active
 
 ## Canonical Contract Sources
 
-1. `/Users/oliver/oliver-local/contracts/PROJECT_HYGIENE_STANDARD.md`
-2. `/Users/oliver/oliver-local/contracts/PROJECT_STRUCTURE_STANDARD.md`
+1. `~/oliver-local/contracts/PROJECT_HYGIENE_STANDARD.md`
+2. `~/oliver-local/contracts/PROJECT_STRUCTURE_STANDARD.md`
 
 ## Profile
 
@@ -51,7 +51,7 @@ Declare repo-specific canonical paths and keep them synchronized with story file
 1. `development`: unstarted and in-progress story housing.
 2. `staging`: completed work ready for QA validation.
 3. `main`: production-ready promotions only.
-4. Source-of-truth link: `/Users/oliver/oliver-local/shared/workflow-standards.md`.
+4. Source-of-truth link: `~/oliver-local/shared/workflow-standards.md`.
 5. Change-one/change-all:
 - If this lifecycle changes in a project repo, update this template and re-sync managed repos in the same governance cycle.
 
