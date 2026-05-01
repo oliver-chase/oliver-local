@@ -29,6 +29,10 @@ Define one standard lifecycle for project bootstrap, governance sync, drift audi
 4. Promotion and alignment:
 - Update development/staging/main project tracks via the same sync source.
 - Verify branch status and ahead/behind after push.
+- Enforce branch role mapping in every project:
+  - `development` -> unstarted/in-progress work
+  - `staging` -> completed QA-ready work
+  - `main` -> production-ready promotions
 - Never promote without a passing hygiene audit.
 
 ## Managed File Policy

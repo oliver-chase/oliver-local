@@ -40,6 +40,14 @@ All product repos live under `~/projects/`.
 
 Testing applies to all code work. Follow `shared/workflows/testing-rules.md`.
 
+## Branch Lifecycle Standard (All Projects)
+
+- `development`: unstarted and in-progress story housing.
+- `staging`: completed work that is ready for QA validation.
+- `main`: production-ready promotions only.
+- This lifecycle is mandatory across all project repos under `~/projects/`.
+- Change-one/change-all rule: if any repo lifecycle wording changes, update this file and the managed template files in the same governance cycle.
+
 ## Cross-Repo Quality Baseline
 
 - Canonical managed quality files live in `shared/templates/project`.

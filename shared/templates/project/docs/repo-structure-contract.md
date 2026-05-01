@@ -46,6 +46,15 @@ Declare repo-specific canonical paths and keep them synchronized with story file
    - Profile B: `.github/user-stories/<project>/US-*.md`
 5. Root index source: `.github/user-stories/_index.md`
 
+## Branch Lifecycle Contract
+
+1. `development`: unstarted and in-progress story housing.
+2. `staging`: completed work ready for QA validation.
+3. `main`: production-ready promotions only.
+4. Source-of-truth link: `/Users/oliver/oliver-local/shared/workflow-standards.md`.
+5. Change-one/change-all:
+- If this lifecycle changes in a project repo, update this template and re-sync managed repos in the same governance cycle.
+
 ## Naming Rules
 
 1. `_index.md` is the only story index filename.
