@@ -1,3 +1,16 @@
 ide/
 plans/
 .DS_Store
+.env
+.env.*
+!.env.example
+!.env.local.example
+settings.json
+settings.local.json
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+history.jsonl
+auth.json
+credentials.json
+*.credentials.json

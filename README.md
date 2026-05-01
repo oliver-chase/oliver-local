@@ -22,6 +22,8 @@ Canonical orchestration system for `/Users/oliver` (oliver-local).
 
 Runtime folders are visible on disk but are not tracked as folders inside this repo. This repo tracks the contracts, docs, scripts, shared workflows, personas, identity files, and shared skills those runtime adapters consume.
 
+Runtime settings and machine state are local-only. Do not commit live files such as `settings.json`, `settings.local.json`, `auth.json`, `credentials.json`, SQLite logs/state, shell history, or `.env.local`.
+
 Git-tracked copies of the local runtime README and ORCHESTRATION files live in `runtime-pointers/*`:
 
 - `runtime-pointers/.claude/README.md`
@@ -60,6 +62,7 @@ Those files explain what each local runtime folder is, what state may live there
 - Shared skills live in `~/oliver-local/skills/*`.
 - Runtime folders (`.claude`, `.codex`, `.agents`) are adapters and runtime state, not shared-system source-of-truth.
 - `references`, `dotfiles`, and `claude-push` are support workspaces; they are not shared orchestration roots.
+- Concrete service URLs, tokens, personal profile details, device identifiers, and runtime-only settings stay in local env/runtime files, not Git.
 
 ## Key Docs
 

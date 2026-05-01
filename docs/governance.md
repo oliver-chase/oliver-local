@@ -42,10 +42,8 @@ launchd task file:
 - Project backlog file placement stays inside approved roots.
 - Cross-repo structure/doc integrity checks remain green.
 - Active orchestration docs stay within concise length limits (see `docs/document-length-policy.md`).
-- Runtime hook baseline remains configured in `settings.json`:
-  - `UserPromptSubmit` -> `node ~/.claude/hooks/json-to-toon.mjs`
-  - `PostToolUse` -> `code-review-graph update --skip-flows`
-  - `SessionStart` -> `code-review-graph status`
+- Runtime settings remain runtime-local and must not be tracked in `oliver-local`.
+- `.claude/settings.json` must not enable bypass-permission defaults.
 
 ## Skills Baseline
 

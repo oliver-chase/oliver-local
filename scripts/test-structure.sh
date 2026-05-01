@@ -36,13 +36,17 @@ check_exists() {
 
 cd "$ROOT"
 
-# 1) statusLine hook path must exist.
-STATUS_CMD="$(jq -r '.statusLine.command' settings.json)"
-STATUS_PATH="$(printf "%s" "$STATUS_CMD" | sed -n 's/.*"\(\/[^"]*\)".*/\1/p')"
-if [[ -n "$STATUS_PATH" && -e "$STATUS_PATH" ]]; then
-  pass "settings.statusLine.command target exists"
+# 1) Runtime settings must stay local and avoid dangerous defaults.
+if [[ ! -e "$ROOT/settings.json" ]]; then
+  pass "settings.json is runtime-local, not tracked in oliver-local"
 else
-  fail "settings.statusLine.command target exists"
+  fail "settings.json is runtime-local, not tracked in oliver-local"
+fi
+
+if jq -e '.permissions.defaultMode == "bypassPermissions" or .skipDangerousModePermissionPrompt == true' /Users/oliver/.claude/settings.json >/dev/null; then
+  fail ".claude settings avoid bypass-permission defaults"
+else
+  pass ".claude settings avoid bypass-permission defaults"
 fi
 
 # 2) oliver-local alias should resolve to this repo root.

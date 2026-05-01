@@ -31,7 +31,8 @@ Push only orchestration-system assets, including:
 - shared skills and tools (`skills/*`)
 - orchestration docs (`README.md`, `ORCHESTRATION.md`, `docs/*`)
 - governance scripts and validators (`scripts/*`)
-- persona and routing config (`personas/*`, `settings.json`, `identity/*`)
+- persona and routing config (`personas/*`, `identity/*`)
+- runtime settings are local-only (`~/.claude/settings.json`, `~/.codex/config.toml`, runtime state files)
 
 Do not treat runtime state as product code. Do not add project feature code here.
 
