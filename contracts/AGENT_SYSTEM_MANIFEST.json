@@ -15,6 +15,10 @@
     "index": "/Users/oliver/oliver-local/shared/workflows/README.md"
   },
   "shared_skills_root": "/Users/oliver/oliver-local/skills",
+  "shared_skill_adapters": {
+    "claude": "/Users/oliver/.claude/skills",
+    "codex_story_lifecycle_gate": "/Users/oliver/.codex/skills/story-lifecycle-gate"
+  },
   "product_roots": [
     "/Users/oliver/projects/oliver-app",
     "/Users/oliver/projects/tesknota",

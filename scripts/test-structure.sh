@@ -72,6 +72,12 @@ else
   fail ".claude skills adapter points to oliver-local"
 fi
 
+if [[ "$(readlink /Users/oliver/.codex/skills/story-lifecycle-gate 2>/dev/null || true)" = "/Users/oliver/oliver-local/skills/story-lifecycle-gate" ]]; then
+  pass ".codex story-lifecycle-gate adapter points to oliver-local"
+else
+  fail ".codex story-lifecycle-gate adapter points to oliver-local"
+fi
+
 # 3) Persona config paths must resolve.
 for persona in cmo marketing sdr; do
   cfg="personas/${persona}/config.json"

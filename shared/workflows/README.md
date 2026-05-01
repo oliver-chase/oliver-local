@@ -10,5 +10,5 @@ Canonical workflow procedure index.
 - `oliver-local sync` -> `oliver-local-sync.md`
 
 System-level references:
-- `/Users/oliver/SHARED_ORCHESTRATION.md`
-- `/Users/oliver/AGENT_SYSTEM_MANIFEST.json`
+- `~/oliver-local/contracts/SHARED_ORCHESTRATION.md`
+- `~/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`

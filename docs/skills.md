@@ -1,4 +1,4 @@
-# Claude Skills
+# Shared Skills
 
 Updated 2026-04-24.
 
@@ -49,7 +49,7 @@ ship -> gstack/ship
 unfreeze -> gstack/unfreeze
 ```
 
-## Local-only Claude skills
+## Shared local skills
 
 ```text
 browser-qa/
@@ -63,6 +63,7 @@ supabase-postgres-best-practices/
 cmo/
 marketing/
 work-outreach/
+story-lifecycle-gate/
 debug-issue.md
 doc-audit.md
 explore-codebase.md

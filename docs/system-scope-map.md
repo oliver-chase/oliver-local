@@ -9,7 +9,7 @@ Status: Active
 - System root: `/Users/oliver`
 - Control-plane repo checkout: `/Users/oliver/oliver-local`
 - Codex runtime: `/Users/oliver/.codex`
-- Shared skill/runtime packs: `/Users/oliver/.agents`
+- Agents runtime adapter: `/Users/oliver/.agents`
 - Product repos: `/Users/oliver/projects/*`
 
 ## Source-of-Truth Rules
@@ -20,6 +20,7 @@ Status: Active
   - `~/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
 - Persona definitions are canonical in one place (`/Users/oliver/oliver-local/personas/*`).
 - Shared skills are canonical in one place (`/Users/oliver/oliver-local/skills/*`).
+- Runtime skill adapters, when needed, point into `~/oliver-local/skills`.
 - Any persona references outside canonical location are pointers only.
 
 ## Operational Rule
