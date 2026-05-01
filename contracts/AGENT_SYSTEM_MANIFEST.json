@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "shared_contract": {
+    "structure": "/Users/oliver/AGENT_SHARED_STRUCTURE.md",
+    "orchestration": "/Users/oliver/SHARED_ORCHESTRATION.md"
+  },
+  "runtime_entries": {
+    "claude": "/Users/oliver/.claude/ORCHESTRATION.md",
+    "codex": "/Users/oliver/.codex/ORCHESTRATION.md"
+  },
+  "shared_workflows": {
+    "standards": "/Users/oliver/.claude/shared/workflow-standards.md",
+    "index": "/Users/oliver/.claude/shared/workflows/README.md"
+  },
+  "product_roots": [
+    "/Users/oliver/projects/oliver-app",
+    "/Users/oliver/projects/tesknota",
+    "/Users/oliver/projects/v-two-sdr",
+    "/Users/oliver/projects/fallow"
+  ]
+}

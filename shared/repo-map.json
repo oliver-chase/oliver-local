@@ -1,0 +1,37 @@
+{
+  "workspaceRoot": "/Users/oliver/projects",
+  "repos": [
+    {
+      "name": "tesknota",
+      "path": "/Users/oliver/projects/tesknota",
+      "owner": "oliver-chase",
+      "repo": "tesknota",
+      "stack": ["typescript", "nextjs", "supabase"],
+      "focus": ["frontend", "mobile", "deploy"]
+    },
+    {
+      "name": "oliver-app",
+      "path": "/Users/oliver/projects/oliver-app",
+      "owner": "oliver-chase",
+      "repo": "oliver-app",
+      "stack": ["typescript", "nextjs", "supabase"],
+      "focus": ["ops", "frontend", "migration", "deploy"]
+    },
+    {
+      "name": "v-two-sdr",
+      "path": "/Users/oliver/projects/v-two-sdr",
+      "owner": "oliver-chase",
+      "repo": "v-two-sdr",
+      "stack": ["javascript"],
+      "focus": ["outreach", "automation", "deploy"]
+    },
+    {
+      "name": "fallow",
+      "path": "/Users/oliver/projects/fallow",
+      "owner": "oliver-chase",
+      "repo": "fallow",
+      "stack": ["javascript", "html", "css"],
+      "focus": ["frontend", "ui", "experimentation"]
+    }
+  ]
+}

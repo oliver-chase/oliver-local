@@ -1,0 +1,22 @@
+{
+  "persona": "marketing",
+  "name": "Marketing Oliver",
+  "role": "Content & Demand Gen Manager",
+  "company": "Organization",
+  "status": "planned",
+  "trigger_keyword": "Marketing",
+  "workspace": "/Users/oliver/.claude/docs/personas/marketing",
+  "allowed_tools": ["web_search", "write", "read"],
+  "restricted_tools": ["exec", "secrets.access", "message"],
+  "approval_required": ["message", "public_post"],
+  "collaboration": {
+    "can_request": ["sdr", "cmo", "claude_code"],
+    "shared_data": {
+      "content_calendar": "/Users/oliver/.claude/docs/personas/marketing/content-calendar.md",
+      "seo_targets": "/Users/oliver/.claude/docs/personas/marketing/seo-targets.md",
+      "assets": "/Users/oliver/.claude/docs/personas/marketing/assets/"
+    }
+  },
+  "skill": "skills/marketing/SKILL.md",
+  "persona_soul": "personas/marketing/persona_soul.md"
+}

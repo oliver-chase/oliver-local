@@ -1,0 +1,24 @@
+{
+  "persona": "sdr",
+  "name": "SDR Oliver",
+  "role": "Sales Development Representative",
+  "company": "Organization",
+  "status": "active",
+  "workspace": "/Users/oliver/projects/v-two-sdr",
+  "allowed_tools": ["web_search", "write", "message", "read"],
+  "restricted_tools": ["exec", "secrets.access"],
+  "approval_required": ["message", "send_email"],
+  "immediate_action": ["opt_out"],
+  "collaboration": {
+    "can_request": ["cmo", "marketing", "claude_code"],
+    "shared_data": {
+      "prospects": "/Users/oliver/projects/v-two-sdr/prospects.json",
+      "templates": "/Users/oliver/projects/v-two-sdr/outreach/templates.md",
+      "sends": "/Users/oliver/projects/v-two-sdr/outreach/sends.json",
+      "opt_outs": "/Users/oliver/projects/v-two-sdr/outreach/opt-outs.json",
+      "weekly_reports": "/Users/oliver/projects/v-two-sdr/outreach/weekly-reports.json"
+    }
+  },
+  "skill": "skills/work-outreach/SKILL.md",
+  "persona_soul": "personas/sdr/persona_soul.md"
+}
