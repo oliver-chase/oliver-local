@@ -44,7 +44,7 @@ Define one locked folder/file contract for backlog, epics, user stories, and lif
 2. Epics/story catalog doc: long-form story inventory and scope map.
 3. Acceptance test matrix: AC-to-test evidence mapping.
 4. Story files: execution-level acceptance criteria and evidence updates.
-5. Index files: navigational summaries only, not duplicate backlog queues.
+5. Index files: registry navigation and lifecycle visibility; they must not become the active backlog queue.
 
 ## Allowed Repo Profiles
 
@@ -80,7 +80,7 @@ Define one locked folder/file contract for backlog, epics, user stories, and lif
 
 ## Enforcement
 
-1. `npm run check:structure` in each repo.
+1. Run the repo's structure gate (`npm run check:structure` or `npm run check-stories`, depending on profile).
 2. `npm run qa:hygiene` in each repo.
 3. `~/oliver-local/scripts/check-project-structure.sh` for cross-repo shape checks.
 4. Contract drift in `docs/repo-structure-contract.md` is a blocker.

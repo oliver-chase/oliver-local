@@ -34,4 +34,4 @@ jobs:
         run: npm ci
 
       - name: Run QA Hygiene Gate
-        run: PLAYWRIGHT_USE_STABLE_DEV_SERVER=1 npm run -s qa:hygiene
+        run: npm run -s qa:hygiene

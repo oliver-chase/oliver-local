@@ -7,6 +7,13 @@ Status: Active
 1. `/Users/oliver/oliver-local/contracts/PROJECT_HYGIENE_STANDARD.md`
 2. `/Users/oliver/oliver-local/contracts/PROJECT_STRUCTURE_STANDARD.md`
 
+## Profile
+
+Choose exactly one profile for this repo and keep all path statements below consistent with that profile.
+
+1. Profile A: split planning root + module artifact roots (oliver-app family).
+2. Profile B: docs backlog/catalog + story artifacts under `.github/user-stories/<project>/`.
+
 ## Required Structure
 
 1. Root docs:
@@ -21,15 +28,23 @@ Status: Active
 3. Story folder minimum:
 - `.github/user-stories/<project>/README.md`
 - `.github/user-stories/<project>/_index.md`
-- `.github/user-stories/<project>/US-*.md`
+- one of:
+  - `.github/user-stories/<project>/US-*.md`
+  - `.github/user-stories/<project>/backlog/<module>/README.md`
 
 ## Backlog and Evidence Paths
 
-Declare repo-specific canonical paths and keep them synchronized with story files:
+Declare repo-specific canonical paths and keep them synchronized with story files. Do not leave unresolved placeholders.
 
-1. Active backlog source: `<replace-with-canonical-path>`
-2. Story catalog source: `<replace-with-canonical-path>`
-3. Acceptance test matrix source: `<replace-with-canonical-path>`
+1. Active backlog source: `<set explicit path>`
+2. Story catalog source: `<set explicit path>`
+3. Acceptance test matrix source:
+   - `<set explicit path>`, or
+   - `N/A (story files carry AC/test evidence directly)`
+4. Story artifact source:
+   - Profile A: `<set explicit module artifact root>`
+   - Profile B: `.github/user-stories/<project>/US-*.md`
+5. Root index source: `.github/user-stories/_index.md`
 
 ## Naming Rules
 
@@ -39,5 +54,5 @@ Declare repo-specific canonical paths and keep them synchronized with story file
 
 ## Enforcement
 
-1. `npm run check:structure`
+1. `npm run check:structure` or `npm run check-stories` (match repo profile)
 2. `npm run qa:hygiene`

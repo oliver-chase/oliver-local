@@ -73,7 +73,15 @@ if (!existsSync(userStoriesRoot)) {
     requireTrackedFile(join(storyGroupDir, '_index.md'), `missing story-group index (${group})`)
 
     const storyFiles = readdirSync(storyGroupDir).filter((entry) => /^US-[A-Z0-9]+-\d{3,4}-.*\.md$/i.test(entry))
-    if (storyFiles.length === 0) failures.push(`missing US-* story files in .github/user-stories/${group}`)
+    const planningBacklogReadmes = listFilesRecursive(join(storyGroupDir, 'backlog')).filter((file) => {
+      if (basename(file) !== 'README.md') return false
+      const rel = relative(storyGroupDir, file).replaceAll('\\', '/')
+      return /^backlog\/[^/]+\/README\.md$/i.test(rel)
+    })
+
+    if (storyFiles.length === 0 && planningBacklogReadmes.length === 0) {
+      failures.push(`missing story artifacts in .github/user-stories/${group}: expected US-* files or backlog/<module>/README.md`)
+    }
   }
 
   const rootMarkdown = readdirSync(userStoriesRoot).filter((entry) => {
