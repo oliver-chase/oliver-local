@@ -22,6 +22,17 @@ Canonical orchestration system for `/Users/oliver` (oliver-local).
 
 Runtime folders are visible on disk but are not tracked as folders inside this repo. This repo tracks the contracts, docs, scripts, shared workflows, personas, identity files, and shared skills those runtime adapters consume.
 
+Git-tracked copies of the local runtime README and ORCHESTRATION files live in `runtime-pointers/*`:
+
+- `runtime-pointers/.claude/README.md`
+- `runtime-pointers/.claude/ORCHESTRATION.md`
+- `runtime-pointers/.codex/README.md`
+- `runtime-pointers/.codex/ORCHESTRATION.md`
+- `runtime-pointers/.agents/README.md`
+- `runtime-pointers/.agents/ORCHESTRATION.md`
+
+Those files explain what each local runtime folder is, what state may live there, and why shared instructions point back to `~/oliver-local`. `scripts/test-structure.sh` checks that the live runtime files match these tracked copies.
+
 ## Governance Gates
 
 - Policy: `docs/governance.md`

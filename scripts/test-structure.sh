@@ -105,6 +105,16 @@ for runtime in .claude .codex .agents; do
   else
     fail "$runtime ORCHESTRATION points to oliver-local"
   fi
+  if cmp -s "$ROOT/runtime-pointers/$runtime/README.md" "$readme"; then
+    pass "$runtime README matches tracked runtime pointer"
+  else
+    fail "$runtime README matches tracked runtime pointer"
+  fi
+  if cmp -s "$ROOT/runtime-pointers/$runtime/ORCHESTRATION.md" "$orchestration"; then
+    pass "$runtime ORCHESTRATION matches tracked runtime pointer"
+  else
+    fail "$runtime ORCHESTRATION matches tracked runtime pointer"
+  fi
 done
 
 # 3) Persona config paths must resolve.
