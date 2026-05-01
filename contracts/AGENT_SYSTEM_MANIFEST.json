@@ -2,7 +2,8 @@
   "version": 1,
   "shared_contract": {
     "structure": "/Users/oliver/oliver-local/contracts/AGENT_SHARED_STRUCTURE.md",
-    "orchestration": "/Users/oliver/oliver-local/contracts/SHARED_ORCHESTRATION.md"
+    "orchestration": "/Users/oliver/oliver-local/contracts/SHARED_ORCHESTRATION.md",
+    "project_hygiene": "/Users/oliver/oliver-local/contracts/PROJECT_HYGIENE_STANDARD.md"
   },
   "runtime_entries": {
     "claude": "/Users/oliver/.claude/ORCHESTRATION.md",

@@ -8,7 +8,7 @@ Canonical orchestration system for `/Users/oliver` (oliver-local).
 ## Shared System
 
 - Oliver-local repo operations: `/Users/oliver/oliver-local/docs/oliver-local-repo-operations.md`
-- Canonical contracts: `contracts/*`
+- Canonical contracts: `contracts/*`, including `contracts/PROJECT_HYGIENE_STANDARD.md`
 - Machine-level aliases:
   - `/Users/oliver/AGENT_SHARED_STRUCTURE.md`
   - `/Users/oliver/SHARED_ORCHESTRATION.md`
