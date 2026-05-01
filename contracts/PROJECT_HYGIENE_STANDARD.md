@@ -33,6 +33,12 @@ Scope: All repositories, modules, and workstreams
 3. Backlog root files must keep current epic map and list unassigned-epic debt explicitly.
 4. Public tracked docs use placeholders for service URLs, account emails, local usernames, device paths, and deployment identifiers unless the value is intentionally public product information.
 
+## Canonical story layout contract
+1. Planning/backlog docs live under `.github/user-stories/<project>/`.
+2. Executable story artifacts (`US-*`, `SLD-*`, `SMK-*`) live under module artifact roots (for Oliver app: `.github/oliver-app/modules/**`).
+3. The same story ID filename must not exist in more than one root.
+4. Story checkers must fail if artifact roots validate zero stories, or if planning roots contain executable story artifact files.
+
 ## Required secret hygiene
 1. Real credentials, tokens, API keys, service-role keys, webhook secrets, private keys, and local auth files stay in ignored local env or provider secret stores.
 2. Concrete project URLs and public anon keys stay in ignored local env unless there is a documented reason they must be public.
@@ -42,6 +48,7 @@ Scope: All repositories, modules, and workstreams
 ## Required discoverability hygiene
 1. Provide one backlog root per module with quick commands for listing stories, epics, and unassigned entries.
 2. Keep archive indexes for deferred functionality with clear re-enable instructions.
+3. Define a single orchestration command named `qa:hygiene` in each repo package scripts that runs all required story/epic/test hygiene gates for that repo.
 
 ## Enforcement checklist (pre-push)
 1. Story linked and AC/evidence/test-plan complete.
@@ -50,3 +57,4 @@ Scope: All repositories, modules, and workstreams
 4. Tests added/updated and relevant suite passes.
 5. Docs/backlog/story metadata synchronized.
 6. Secret and privacy scans pass before commit.
+7. Story layout contract passes (`check-stories` and epic-hygiene gate where present).
