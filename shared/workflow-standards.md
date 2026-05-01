@@ -17,6 +17,7 @@ Use these trigger terms as workflow selectors:
 - `qa` -> `shared/workflows/qa-process.md`
 - `full qa` -> `shared/workflows/full-qa-audit.md`
 - `oliver-local sync` -> `shared/workflows/oliver-local-sync.md`
+- `project standardization` -> `shared/workflows/project-standardization-lifecycle.md`
 
 If a trigger term conflicts with active repo docs, surface the conflict before continuing.
 

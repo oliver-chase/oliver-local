@@ -4,6 +4,7 @@ set -euo pipefail
 ROOT="/Users/oliver/oliver-local"
 MAP="$ROOT/shared/repo-map.json"
 MANIFEST="$ROOT/shared/project-bootstrap-manifest.json"
+OVERWRITE_NON_STRICT="${OVERWRITE_NON_STRICT:-0}"
 
 sync_repo() {
   local repo_path="$1"
@@ -16,8 +17,19 @@ sync_repo() {
     src="$ROOT/$srcRel"
     dst="$repo_path/$dstRel"
     mkdir -p "$(dirname "$dst")"
+    if [[ "$mode" == "strict" ]]; then
+      cp "$src" "$dst"
+      echo "synced(strict): $repo_path/$dstRel"
+      continue
+    fi
+
+    if [[ -f "$dst" && "$OVERWRITE_NON_STRICT" != "1" ]]; then
+      echo "kept(local): $repo_path/$dstRel"
+      continue
+    fi
+
     cp "$src" "$dst"
-    echo "synced: $repo_path/$dstRel"
+    echo "synced(presence): $repo_path/$dstRel"
   done
 }
 

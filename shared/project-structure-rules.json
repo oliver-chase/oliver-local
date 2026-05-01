@@ -1,9 +1,78 @@
 {
-  "version": 1,
+  "version": 2,
   "repos": [
     {
       "name": "oliver-app",
       "path": "/Users/oliver/projects/oliver-app",
+      "required_paths": [
+        "README.md",
+        "CLAUDE.md",
+        "AGENTS.md",
+        "docs/MODULE_CONTEXT.md",
+        "docs/MODULE_INSTRUCTIONS.md",
+        ".github/oliver-app/modules",
+        ".github/user-stories/oliver-app",
+        "src/tech-debt"
+      ],
+      "forbidden_backlog_globs": [
+        "docs/*backlog*.md",
+        "src/*backlog*.md"
+      ],
+      "allowed_backlog_roots": [
+        ".github/oliver-app/modules",
+        ".github/user-stories/oliver-app",
+        "src/tech-debt"
+      ]
+    },
+    {
+      "name": "oliver-app-dev",
+      "path": "/Users/oliver/projects/oliver-app-dev",
+      "required_paths": [
+        "README.md",
+        "CLAUDE.md",
+        "AGENTS.md",
+        "docs/MODULE_CONTEXT.md",
+        "docs/MODULE_INSTRUCTIONS.md",
+        ".github/oliver-app/modules",
+        ".github/user-stories/oliver-app",
+        "src/tech-debt"
+      ],
+      "forbidden_backlog_globs": [
+        "docs/*backlog*.md",
+        "src/*backlog*.md"
+      ],
+      "allowed_backlog_roots": [
+        ".github/oliver-app/modules",
+        ".github/user-stories/oliver-app",
+        "src/tech-debt"
+      ]
+    },
+    {
+      "name": "oliver-app-main",
+      "path": "/Users/oliver/projects/oliver-app-main",
+      "required_paths": [
+        "README.md",
+        "CLAUDE.md",
+        "AGENTS.md",
+        "docs/MODULE_CONTEXT.md",
+        "docs/MODULE_INSTRUCTIONS.md",
+        ".github/oliver-app/modules",
+        ".github/user-stories/oliver-app",
+        "src/tech-debt"
+      ],
+      "forbidden_backlog_globs": [
+        "docs/*backlog*.md",
+        "src/*backlog*.md"
+      ],
+      "allowed_backlog_roots": [
+        ".github/oliver-app/modules",
+        ".github/user-stories/oliver-app",
+        "src/tech-debt"
+      ]
+    },
+    {
+      "name": "oliver-app-staging",
+      "path": "/Users/oliver/projects/oliver-app-staging",
       "required_paths": [
         "README.md",
         "CLAUDE.md",

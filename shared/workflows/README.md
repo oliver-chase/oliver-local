@@ -8,6 +8,7 @@ Canonical workflow procedure index.
 - `qa` -> `qa-process.md`
 - `full qa` -> `full-qa-audit.md`
 - `oliver-local sync` -> `oliver-local-sync.md`
+- `project standardization` -> `project-standardization-lifecycle.md`
 
 System-level references:
 - `~/oliver-local/contracts/SHARED_ORCHESTRATION.md`
