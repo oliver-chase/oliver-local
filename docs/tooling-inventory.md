@@ -32,6 +32,8 @@
 
 ## Runtime Adapter Links
 
+Tracked context for runtime adapter README/ORCHESTRATION files lives in `docs/runtime-adapters.md`.
+
 - Runtime adapter README files:
   - `~/.claude/README.md`
   - `~/.codex/README.md`

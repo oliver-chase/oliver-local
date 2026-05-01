@@ -149,6 +149,12 @@ else
   fail "docs/workspace-tree.md includes oliver-app"
 fi
 
+if [[ -f docs/runtime-adapters.md ]] && rg -q '~/.claude/README.md' docs/runtime-adapters.md && rg -q '~/.codex/README.md' docs/runtime-adapters.md && rg -q '~/.agents/README.md' docs/runtime-adapters.md; then
+  pass "docs/runtime-adapters.md documents runtime README files"
+else
+  fail "docs/runtime-adapters.md documents runtime README files"
+fi
+
 # 6) README and skills documentation should reflect active structure.
 if rg -q 'Shared System' README.md && rg -q 'Governance Gates' README.md; then
   pass "README.md includes shared-system and governance sections"

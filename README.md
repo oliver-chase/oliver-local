@@ -54,6 +54,7 @@ Runtime folders are visible on disk but are not tracked as folders inside this r
 
 - [Architecture](docs/architecture.md)
 - [Project Repos](docs/project-repos.md)
+- [Runtime Adapters](docs/runtime-adapters.md)
 - [Workspace Tree](docs/workspace-tree.md)
 - [Governance](docs/governance.md)
 - [Oliver-Local Repo Operations](docs/oliver-local-repo-operations.md)
