@@ -57,6 +57,7 @@ codebase-onboarding/
 context-budget/
 devextreme/
 e2e-testing/
+full-qa-standard/
 security-review/
 supabase/
 supabase-postgres-best-practices/
