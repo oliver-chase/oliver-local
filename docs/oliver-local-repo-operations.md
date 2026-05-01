@@ -66,6 +66,6 @@ Acceptance Criteria:
 ## History and Cleanliness Policy
 
 - Active docs describe current state only.
-- Historical context belongs in `docs/archive/` with concise index entries.
+- Archive material stays in `docs/archive/` with concise index entries.
 - Do not duplicate shared workflow docs into project repos.
-- Do not introduce legacy phrasing into active docs.
+- Active docs describe current system behavior only.
