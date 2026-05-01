@@ -30,9 +30,9 @@ Applies to:
 
 ## Governance Gates
 
-- Policy: `/Users/oliver/oliver-local/docs/governance.md`
-- Runner: `/Users/oliver/oliver-local/scripts/run-governance-gates.sh`
-- Hook installer: `/Users/oliver/oliver-local/scripts/install-governance-hook.sh`
+- Policy: `~/oliver-local/docs/governance.md`
+- Runner: `~/oliver-local/scripts/run-governance-gates.sh`
+- Hook installer: `~/oliver-local/scripts/install-governance-hook.sh`
 
 ## Workflow Index
 

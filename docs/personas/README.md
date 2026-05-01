@@ -4,7 +4,7 @@ Canonical persona workspace locations:
 
 - `cmo` -> `docs/personas/cmo/`
 - `marketing` -> `docs/personas/marketing/`
-- `sdr` -> `/Users/oliver/projects/v-two-sdr`
+- `sdr` -> `~/projects/v-two-sdr`
 
 Rules:
 

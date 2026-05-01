@@ -7,4 +7,4 @@
 - Canonical stories paths: `~/projects/oliver-app-main/.github/user-stories/oliver-app`, `~/projects/oliver-app-main/.github/oliver-app/modules/*`
 - Canonical tech-debt path: `~/projects/oliver-app-main/src/tech-debt`
 
-One-sentence summary: Local promotion worktree of `oliver-app` used to stage and validate branch batches before main integration.
+One-sentence summary: Local promotion worktree of `oliver-app` for staging and validating branch batches before main integration.

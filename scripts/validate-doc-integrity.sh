@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="/Users/oliver"
-REPOS=(
-  "$ROOT/projects/oliver-app"
-  "$ROOT/projects/tesknota"
-  "$ROOT/projects/v-two-sdr"
-  "$ROOT/projects/fallow"
-)
+ROOT="$HOME"
+OLIVER_LOCAL_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+MAP="$OLIVER_LOCAL_ROOT/shared/repo-map.json"
 
 FORBIDDEN_PATTERNS=(
-  '/Users/oliver/.codex/skills'
-  '/Users/oliver/.claude/skills'
-  '/Users/oliver/oliver-local/skills'
+  "$HOME/.codex/skills"
+  "$HOME/.claude/skills"
+  "$HOME/oliver-local/skills"
+  '~/.codex/skills'
+  '~/.claude/skills'
+  '~/oliver-local/skills'
   'story-lifecycle-gate'
   'oliver-local-reconciliation-2026-04-24.md'
   'STATE-AUDIT-2026-04-22.md'
@@ -32,7 +31,10 @@ echo "Root: $ROOT"
 echo
 
 fail=0
-for repo in "${REPOS[@]}"; do
+while IFS= read -r repo; do
+  if [[ "$repo" == "~"* ]]; then
+    repo="${repo/#\~/$HOME}"
+  fi
   echo "=== $repo"
   if [[ ! -d "$repo" ]]; then
     echo "missing repo path"
@@ -55,7 +57,7 @@ for repo in "${REPOS[@]}"; do
     fi
   done
   echo
- done
+done < <(jq -r '.repos[].path' "$MAP")
 
 if [[ $fail -ne 0 ]]; then
   echo "Result: FAIL"

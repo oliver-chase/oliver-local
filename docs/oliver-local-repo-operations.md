@@ -1,7 +1,7 @@
 # Oliver-Local Repo Operations
 
 Status: Active
-Scope: Full `/Users/oliver` orchestration system (git root: `~/oliver-local`)
+Scope: Full `~` orchestration system (git root: `~/oliver-local`)
 
 ## Purpose
 
@@ -19,9 +19,9 @@ This repository exists to version the orchestration system and guardrails used a
   - `~/oliver-local/contracts/SHARED_ORCHESTRATION.md`
   - `~/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
 - Machine-level aliases point to those contract files:
-  - `/Users/oliver/AGENT_SHARED_STRUCTURE.md`
-  - `/Users/oliver/SHARED_ORCHESTRATION.md`
-  - `/Users/oliver/AGENT_SYSTEM_MANIFEST.json`
+  - `~/AGENT_SHARED_STRUCTURE.md`
+  - `~/SHARED_ORCHESTRATION.md`
+  - `~/AGENT_SYSTEM_MANIFEST.json`
 
 ## What Gets Pushed
 
@@ -41,8 +41,8 @@ Do not treat runtime state as product code. Do not add project feature code here
 From `~/oliver-local`, run:
 
 ```bash
-/Users/oliver/oliver-local/scripts/run-governance-gates.sh
-/Users/oliver/oliver-local/scripts/scan-secrets.sh /Users/oliver/oliver-local
+~/oliver-local/scripts/run-governance-gates.sh
+~/oliver-local/scripts/scan-secrets.sh ~/oliver-local
 ```
 
 Commit only if both pass.

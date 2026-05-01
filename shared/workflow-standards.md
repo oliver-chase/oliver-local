@@ -29,7 +29,7 @@ All product repos live under `~/projects/`.
 
 ## Orchestration Rules
 
-- Keep `.claude` and `.codex` runtime state separate.
+- Keep `.claude`, `.codex`, and `.agents` runtime state separate.
 - Keep shared standards in one place (`~/oliver-local/shared/*`).
 - Keep shared skills in one place (`~/oliver-local/skills/*`).
 - Do not duplicate product workflow docs into runtime folders.

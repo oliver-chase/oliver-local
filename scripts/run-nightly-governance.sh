@@ -2,7 +2,9 @@
 set -euo pipefail
 
 STAMP="$(date '+%Y-%m-%d %H:%M:%S %Z')"
-REPORT_DIR="/Users/oliver/oliver-local/docs/runtime-verification"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+MAP="$ROOT/shared/repo-map.json"
+REPORT_DIR="$ROOT/docs/runtime-verification"
 REPORT_FILE="$REPORT_DIR/governance-status.md"
 LOG_FILE="/tmp/oliver-governance-nightly.log"
 
@@ -16,11 +18,10 @@ mkdir -p "$REPORT_DIR"
 
   echo "## Cleanup"
   echo
-  for repo in \
-    /Users/oliver/projects/oliver-app \
-    /Users/oliver/projects/tesknota \
-    /Users/oliver/projects/v-two-sdr \
-    /Users/oliver/projects/fallow; do
+  while IFS= read -r repo; do
+    if [[ "$repo" == "~"* ]]; then
+      repo="${repo/#\~/$HOME}"
+    fi
     removed=0
     for d in test-results playwright-report; do
       if [[ -d "$repo/$d" ]]; then
@@ -29,13 +30,13 @@ mkdir -p "$REPORT_DIR"
       fi
     done
     echo "- $(basename "$repo"): removed $removed runtime artifact dirs"
-  done
+  done < <(jq -r '.repos[].path' "$MAP")
 
   echo
   echo "## Gate Results"
   echo
 
-  if /Users/oliver/oliver-local/scripts/run-governance-gates.sh; then
+  if "$ROOT/scripts/run-governance-gates.sh"; then
     echo "- Overall: PASS"
   else
     echo "- Overall: FAIL"

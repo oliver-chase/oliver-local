@@ -2,6 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+HOME_ROOT="$HOME"
 FAILURES=0
 
 pass() {
@@ -17,6 +18,8 @@ resolve_path() {
   local p="$1"
   if [[ "$p" = /* ]]; then
     printf "%s" "$p"
+  elif [[ "$p" == "~"* ]]; then
+    printf "%s" "${p/#\~/$HOME_ROOT}"
   else
     printf "%s/%s" "$ROOT" "$p"
   fi
@@ -43,21 +46,21 @@ else
   fail "settings.json is runtime-local, not tracked in oliver-local"
 fi
 
-if jq -e '.permissions.defaultMode == "bypassPermissions" or .skipDangerousModePermissionPrompt == true' /Users/oliver/.claude/settings.json >/dev/null; then
+if [[ -f "$HOME_ROOT/.claude/settings.json" ]] && jq -e '.permissions.defaultMode == "bypassPermissions" or .skipDangerousModePermissionPrompt == true' "$HOME_ROOT/.claude/settings.json" >/dev/null; then
   fail ".claude settings avoid bypass-permission defaults"
 else
   pass ".claude settings avoid bypass-permission defaults"
 fi
 
 # 2) oliver-local alias should resolve to this repo root.
-if [[ -d "/Users/oliver/oliver-local" ]]; then
+if [[ -d "$HOME_ROOT/oliver-local" ]]; then
   pass "oliver-local root exists"
 else
   fail "oliver-local root exists"
 fi
 
 for alias_name in AGENT_SHARED_STRUCTURE.md SHARED_ORCHESTRATION.md AGENT_SYSTEM_MANIFEST.json; do
-  if [[ -L "/Users/oliver/$alias_name" ]]; then
+  if [[ -L "$HOME_ROOT/$alias_name" ]]; then
     pass "machine-level alias present: $alias_name"
   else
     fail "machine-level alias present: $alias_name"
@@ -70,35 +73,35 @@ else
   fail "shared skills stored in oliver-local"
 fi
 
-if [[ ! -d "/Users/oliver/.claude/.git" ]]; then
+if [[ ! -d "$HOME_ROOT/.claude/.git" ]]; then
   pass ".claude is not a separate shared-system git checkout"
 else
   fail ".claude is not a separate shared-system git checkout"
 fi
 
-if [[ "$(readlink /Users/oliver/.claude/skills 2>/dev/null || true)" = "/Users/oliver/oliver-local/skills" ]]; then
+if [[ "$(readlink "$HOME_ROOT/.claude/skills" 2>/dev/null || true)" = "$ROOT/skills" ]]; then
   pass ".claude skills adapter points to oliver-local"
 else
   fail ".claude skills adapter points to oliver-local"
 fi
 
 for adapter_name in docs scripts shared personas identity; do
-  if [[ "$(readlink "/Users/oliver/.claude/$adapter_name" 2>/dev/null || true)" = "/Users/oliver/oliver-local/$adapter_name" ]]; then
+  if [[ "$(readlink "$HOME_ROOT/.claude/$adapter_name" 2>/dev/null || true)" = "$ROOT/$adapter_name" ]]; then
     pass ".claude $adapter_name adapter points to oliver-local"
   else
     fail ".claude $adapter_name adapter points to oliver-local"
   fi
 done
 
-if [[ "$(readlink /Users/oliver/.codex/skills/story-lifecycle-gate 2>/dev/null || true)" = "/Users/oliver/oliver-local/skills/story-lifecycle-gate" ]]; then
+if [[ "$(readlink "$HOME_ROOT/.codex/skills/story-lifecycle-gate" 2>/dev/null || true)" = "$ROOT/skills/story-lifecycle-gate" ]]; then
   pass ".codex story-lifecycle-gate adapter points to oliver-local"
 else
   fail ".codex story-lifecycle-gate adapter points to oliver-local"
 fi
 
 for runtime in .claude .codex .agents; do
-  readme="/Users/oliver/$runtime/README.md"
-  orchestration="/Users/oliver/$runtime/ORCHESTRATION.md"
+  readme="$HOME_ROOT/$runtime/README.md"
+  orchestration="$HOME_ROOT/$runtime/ORCHESTRATION.md"
   if [[ -f "$readme" ]] && rg -q 'Runtime Adapter|runtime adapter' "$readme" && rg -q '~/oliver-local' "$readme"; then
     pass "$runtime README documents local runtime adapter"
   else
@@ -143,7 +146,8 @@ else
 fi
 
 while IFS= read -r repo_path; do
-  if [[ -d "$repo_path" ]]; then
+  repo_resolved="$(resolve_path "$repo_path")"
+  if [[ -d "$repo_resolved" ]]; then
     pass "repo path exists: $repo_path"
   else
     fail "repo path exists: $repo_path"

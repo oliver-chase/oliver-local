@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 FAIL=0
 
 pass() { echo "PASS $1"; }
@@ -24,22 +25,22 @@ check_max_lines() {
 }
 
 # Root runtime docs
-check_max_lines "/Users/oliver/oliver-local/README.md" 140 "root doc"
-check_max_lines "/Users/oliver/oliver-local/CLAUDE.md" 140 "root doc"
-check_max_lines "/Users/oliver/oliver-local/ORCHESTRATION.md" 140 "root doc"
+check_max_lines "$ROOT/README.md" 140 "root doc"
+check_max_lines "$ROOT/CLAUDE.md" 140 "root doc"
+check_max_lines "$ROOT/ORCHESTRATION.md" 140 "root doc"
 
 # Core workspace pointer docs
-check_max_lines "/Users/oliver/oliver-local/docs/architecture.md" 220 "workspace pointer doc"
-check_max_lines "/Users/oliver/oliver-local/docs/workspace-tree.md" 220 "workspace pointer doc"
-check_max_lines "/Users/oliver/oliver-local/docs/project-repos.md" 220 "workspace pointer doc"
-check_max_lines "/Users/oliver/oliver-local/docs/tooling-inventory.md" 220 "workspace pointer doc"
-check_max_lines "/Users/oliver/oliver-local/docs/governance.md" 220 "workspace pointer doc"
-check_max_lines "/Users/oliver/oliver-local/docs/document-length-policy.md" 220 "workspace pointer doc"
+check_max_lines "$ROOT/docs/architecture.md" 220 "workspace pointer doc"
+check_max_lines "$ROOT/docs/workspace-tree.md" 220 "workspace pointer doc"
+check_max_lines "$ROOT/docs/project-repos.md" 220 "workspace pointer doc"
+check_max_lines "$ROOT/docs/tooling-inventory.md" 220 "workspace pointer doc"
+check_max_lines "$ROOT/docs/governance.md" 220 "workspace pointer doc"
+check_max_lines "$ROOT/docs/document-length-policy.md" 220 "workspace pointer doc"
 
 # Shared standards
-check_max_lines "/Users/oliver/oliver-local/shared/workflow-standards.md" 240 "shared standard"
-check_max_lines "/Users/oliver/oliver-local/shared/workflows/README.md" 240 "shared workflow index"
-check_max_lines "/Users/oliver/oliver-local/shared/workflows/story-lifecycle-sop.md" 260 "workflow sop"
+check_max_lines "$ROOT/shared/workflow-standards.md" 240 "shared standard"
+check_max_lines "$ROOT/shared/workflows/README.md" 240 "shared workflow index"
+check_max_lines "$ROOT/shared/workflows/story-lifecycle-sop.md" 260 "workflow sop"
 
 if [[ "$FAIL" -ne 0 ]]; then
   echo "Doc length check: FAIL"

@@ -1,30 +1,30 @@
 {
   "version": 1,
   "shared_contract": {
-    "structure": "/Users/oliver/oliver-local/contracts/AGENT_SHARED_STRUCTURE.md",
-    "orchestration": "/Users/oliver/oliver-local/contracts/SHARED_ORCHESTRATION.md",
-    "project_hygiene": "/Users/oliver/oliver-local/contracts/PROJECT_HYGIENE_STANDARD.md"
+    "structure": "~/oliver-local/contracts/AGENT_SHARED_STRUCTURE.md",
+    "orchestration": "~/oliver-local/contracts/SHARED_ORCHESTRATION.md",
+    "project_hygiene": "~/oliver-local/contracts/PROJECT_HYGIENE_STANDARD.md"
   },
   "runtime_entries": {
-    "claude": "/Users/oliver/.claude/ORCHESTRATION.md",
-    "codex": "/Users/oliver/.codex/ORCHESTRATION.md",
-    "agents": "/Users/oliver/.agents/ORCHESTRATION.md"
+    "claude": "~/.claude/ORCHESTRATION.md",
+    "codex": "~/.codex/ORCHESTRATION.md",
+    "agents": "~/.agents/ORCHESTRATION.md"
   },
-  "contracts_root": "/Users/oliver/oliver-local/contracts",
+  "contracts_root": "~/oliver-local/contracts",
   "shared_workflows": {
-    "standards": "/Users/oliver/oliver-local/shared/workflow-standards.md",
-    "index": "/Users/oliver/oliver-local/shared/workflows/README.md"
+    "standards": "~/oliver-local/shared/workflow-standards.md",
+    "index": "~/oliver-local/shared/workflows/README.md"
   },
-  "shared_skills_root": "/Users/oliver/oliver-local/skills",
+  "shared_skills_root": "~/oliver-local/skills",
   "shared_skill_adapters": {
-    "claude": "/Users/oliver/.claude/skills",
-    "codex_story_lifecycle_gate": "/Users/oliver/.codex/skills/story-lifecycle-gate"
+    "claude": "~/.claude/skills",
+    "codex_story_lifecycle_gate": "~/.codex/skills/story-lifecycle-gate"
   },
   "product_roots": [
-    "/Users/oliver/projects/oliver-app",
-    "/Users/oliver/projects/tesknota",
-    "/Users/oliver/projects/v-two-sdr",
-    "/Users/oliver/projects/fallow"
+    "~/projects/oliver-app",
+    "~/projects/tesknota",
+    "~/projects/v-two-sdr",
+    "~/projects/fallow"
   ],
-  "system_root": "/Users/oliver/oliver-local"
+  "system_root": "~/oliver-local"
 }

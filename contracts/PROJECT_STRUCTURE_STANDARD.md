@@ -46,6 +46,37 @@ Define one locked folder/file contract for backlog, epics, user stories, and lif
 4. Story files: execution-level acceptance criteria and evidence updates.
 5. Index files: registry navigation and lifecycle visibility; they must not become the active backlog queue.
 
+## Locked Path Map (Managed Repos)
+
+Use these canonical locations exactly; do not create parallel backlog systems.
+
+1. `oliver-app` / `oliver-app-dev` / `oliver-app-main` / `oliver-app-staging`
+- Backlog source: `.github/user-stories/oliver-app/backlog/<module>/README.md`
+- Story artifacts: `.github/oliver-app/modules/<module>/*.md`
+- Story index: `.github/user-stories/_index.md` and `.github/user-stories/oliver-app/_index.md`
+- Acceptance evidence: in story artifacts + repo execution docs/tests
+
+2. `tesknota`
+- Backlog source: `docs/product/03-backlog-user-stories.md`
+- Story catalog: `docs/product/07-execution-status.md`
+- Story artifacts: `.github/user-stories/tesknota/US-TSK-*.md`
+- Story index: `.github/user-stories/_index.md` and `.github/user-stories/tesknota/_index.md`
+- Acceptance evidence: story files + `docs/product/07-execution-status.md`
+
+3. `v-two-sdr`
+- Backlog source: `docs/SDR_EXECUTION_BACKLOG.md`
+- Story catalog: `docs/SDR_EPICS_USER_STORIES.md`
+- Acceptance matrix: `docs/SDR_ACCEPTANCE_TEST_MATRIX.md`
+- Story artifacts: `.github/user-stories/v-two-sdr/US-SDR-*.md`
+- Story index: `.github/user-stories/_index.md` and `.github/user-stories/v-two-sdr/_index.md`
+
+4. `fallow`
+- Backlog source: `docs/v2/EXECUTION_BACKLOG.md`
+- Story catalog: `docs/v2/EPICS_USER_STORIES.md`
+- Acceptance matrix: `docs/v2/ACCEPTANCE_TEST_MATRIX.md`
+- Story artifacts: `.github/user-stories/fallow/US-FAL-*.md`
+- Story index: `.github/user-stories/_index.md` and `.github/user-stories/fallow/_index.md`
+
 ## Allowed Repo Profiles
 
 ### Profile A: Split Planning + Module Artifact Roots (`oliver-app` family)
@@ -77,6 +108,13 @@ Define one locked folder/file contract for backlog, epics, user stories, and lif
 7. `.github/user-stories/_index.md`
 8. project story folder index and story files
 9. acceptance test matrix file declared by the contract
+
+## Story Path Flow
+
+1. Intake or reprioritization updates the active backlog source only.
+2. Execution updates the story artifact file (`US-*`) and keeps story ID stable.
+3. Verification updates acceptance evidence (story file and matrix/execution doc when defined by profile).
+4. Completion updates `_index.md` status and removes done items from active backlog queues.
 
 ## Enforcement
 

@@ -5,7 +5,7 @@
   "company": "Organization",
   "status": "planned",
   "trigger_keyword": "Marketing",
-  "workspace": "/Users/oliver/oliver-local/docs/personas/marketing",
+  "workspace": "~/oliver-local/docs/personas/marketing",
   "allowed_tools": [
     "web_search",
     "write",
@@ -27,9 +27,9 @@
       "claude_code"
     ],
     "shared_data": {
-      "content_calendar": "/Users/oliver/oliver-local/docs/personas/marketing/content-calendar.md",
-      "seo_targets": "/Users/oliver/oliver-local/docs/personas/marketing/seo-targets.md",
-      "assets": "/Users/oliver/oliver-local/docs/personas/marketing/assets/"
+      "content_calendar": "~/oliver-local/docs/personas/marketing/content-calendar.md",
+      "seo_targets": "~/oliver-local/docs/personas/marketing/seo-targets.md",
+      "assets": "~/oliver-local/docs/personas/marketing/assets/"
     }
   },
   "skill": "skills/marketing/SKILL.md",

@@ -2,15 +2,15 @@
 
 Status: Active
 
-`oliver-local` means the full local orchestration system at `/Users/oliver`, not only `.claude`.
+`oliver-local` means the full local orchestration system at `~`, not only `.claude`.
 
 ## Scope Layers
 
-- System root: `/Users/oliver`
-- Control-plane repo checkout: `/Users/oliver/oliver-local`
-- Codex runtime: `/Users/oliver/.codex`
-- Agents runtime adapter: `/Users/oliver/.agents`
-- Product repos: `/Users/oliver/projects/*`
+- System root: `~`
+- Control-plane repo checkout: `~/oliver-local`
+- Codex runtime: `~/.codex`
+- Agents runtime adapter: `~/.agents`
+- Product repos: `~/projects/*`
 
 ## Source-of-Truth Rules
 
@@ -18,8 +18,8 @@ Status: Active
   - `~/oliver-local/contracts/AGENT_SHARED_STRUCTURE.md`
   - `~/oliver-local/contracts/SHARED_ORCHESTRATION.md`
   - `~/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
-- Persona definitions are canonical in one place (`/Users/oliver/oliver-local/personas/*`).
-- Shared skills are canonical in one place (`/Users/oliver/oliver-local/skills/*`).
+- Persona definitions are canonical in one place (`~/oliver-local/personas/*`).
+- Shared skills are canonical in one place (`~/oliver-local/skills/*`).
 - Runtime skill adapters, when needed, point into `~/oliver-local/skills`.
 - Any persona references outside canonical location are pointers only.
 - `~/.claude` shared-facing directories are pointers into `~/oliver-local`; active duplicate copies are not allowed.

@@ -3,7 +3,7 @@
   "repos": [
     {
       "name": "oliver-app",
-      "path": "/Users/oliver/projects/oliver-app",
+      "path": "~/projects/oliver-app",
       "required_paths": [
         "README.md",
         "CLAUDE.md",
@@ -31,7 +31,7 @@
     },
     {
       "name": "oliver-app-dev",
-      "path": "/Users/oliver/projects/oliver-app-dev",
+      "path": "~/projects/oliver-app-dev",
       "required_paths": [
         "README.md",
         "CLAUDE.md",
@@ -59,7 +59,7 @@
     },
     {
       "name": "oliver-app-main",
-      "path": "/Users/oliver/projects/oliver-app-main",
+      "path": "~/projects/oliver-app-main",
       "required_paths": [
         "README.md",
         "CLAUDE.md",
@@ -87,7 +87,7 @@
     },
     {
       "name": "oliver-app-staging",
-      "path": "/Users/oliver/projects/oliver-app-staging",
+      "path": "~/projects/oliver-app-staging",
       "required_paths": [
         "README.md",
         "CLAUDE.md",
@@ -115,7 +115,7 @@
     },
     {
       "name": "tesknota",
-      "path": "/Users/oliver/projects/tesknota",
+      "path": "~/projects/tesknota",
       "required_paths": [
         "README.md",
         "CLAUDE.md",
@@ -140,7 +140,7 @@
     },
     {
       "name": "v-two-sdr",
-      "path": "/Users/oliver/projects/v-two-sdr",
+      "path": "~/projects/v-two-sdr",
       "required_paths": [
         "README.md",
         "CLAUDE.md",
@@ -167,7 +167,7 @@
     },
     {
       "name": "fallow",
-      "path": "/Users/oliver/projects/fallow",
+      "path": "~/projects/fallow",
       "required_paths": [
         "README.md",
         "CLAUDE.md",

@@ -1,13 +1,23 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-RULES="/Users/oliver/oliver-local/shared/project-structure-rules.json"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+RULES="$ROOT/shared/project-structure-rules.json"
 TMP="/tmp/structure-check"
 mkdir -p "$TMP"
 FAIL=0
 
 pass() { echo "PASS $1"; }
 fail() { echo "FAIL $1"; FAIL=1; }
+
+expand_home() {
+  local p="$1"
+  if [[ "$p" == "~"* ]]; then
+    printf "%s" "${p/#\~/$HOME}"
+  else
+    printf "%s" "$p"
+  fi
+}
 
 SHARED_WORKFLOW_FILENAMES=(
   "workflow-standards.md"
@@ -21,7 +31,7 @@ SHARED_WORKFLOW_FILENAMES=(
 
 while read -r repo; do
   name="$(jq -r '.name' <<<"$repo")"
-  path="$(jq -r '.path' <<<"$repo")"
+  path="$(expand_home "$(jq -r '.path' <<<"$repo")")"
   echo "=== structure: $name ($path)"
 
   if [[ ! -d "$path" ]]; then

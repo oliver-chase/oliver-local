@@ -2,16 +2,24 @@
 set -euo pipefail
 
 TARGET_REPO="${1:-}"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+MAP="$ROOT/shared/repo-map.json"
+expand_home() {
+  local p="$1"
+  if [[ "$p" == "~"* ]]; then
+    printf "%s" "${p/#\~/$HOME}"
+  else
+    printf "%s" "$p"
+  fi
+}
 
 if [[ -n "$TARGET_REPO" ]]; then
   REPOS=("$TARGET_REPO")
 else
-  REPOS=(
-    "/Users/oliver/projects/oliver-app"
-    "/Users/oliver/projects/tesknota"
-    "/Users/oliver/projects/v-two-sdr"
-    "/Users/oliver/projects/fallow"
-  )
+  REPOS=()
+  while IFS= read -r repo_path; do
+    REPOS+=("$repo_path")
+  done < <(jq -r '.repos[].path' "$MAP")
 fi
 
 FAIL=0
@@ -70,7 +78,7 @@ audit_repo() {
   echo "=== auditing $repo"
 
   case "$name" in
-    oliver-app)
+    oliver-app|oliver-app-dev|oliver-app-main|oliver-app-staging)
       check_file "$repo" "README.md"
       check_file "$repo" "CLAUDE.md"
       check_file "$repo" "AGENTS.md"
@@ -111,14 +119,17 @@ audit_repo() {
       ;;
   esac
 
-  scan_forbidden_refs "$repo" "/Users/oliver/.codex/skills"
-  scan_forbidden_refs "$repo" "/Users/oliver/.claude/skills"
-  scan_forbidden_refs "$repo" "/Users/oliver/oliver-local/skills"
+  scan_forbidden_refs "$repo" "$HOME/.codex/skills"
+  scan_forbidden_refs "$repo" "$HOME/.claude/skills"
+  scan_forbidden_refs "$repo" "$HOME/oliver-local/skills"
+  scan_forbidden_refs "$repo" "~/.codex/skills"
+  scan_forbidden_refs "$repo" "~/.claude/skills"
+  scan_forbidden_refs "$repo" "~/oliver-local/skills"
   scan_forbidden_refs "$repo" "story-lifecycle-gate"
 }
 
 for repo in "${REPOS[@]}"; do
-  audit_repo "$repo"
+  audit_repo "$(expand_home "$repo")"
   echo
  done
 

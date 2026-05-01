@@ -15,15 +15,14 @@ Contains shared agent operating rules, workspace maps, persona/skill metadata, a
 ## 3. Runtime Layer
 
 Locations:
-- Runtime state in `.claude`, `.codex`, and `.agents`
-- `~/.codex` runtime state
+- Runtime state in `~/.claude`, `~/.codex`, and `~/.agents`
 
 Runtime state is intentionally separate from product repositories.
 
 ## 4. Tooling Layer
 
 Locations:
-- `~/.agents` for local shared skill packs
+- `~/.agents` for runtime-local adapter state and external runtime skills
 - `~/oliver-local/skills` for canonical shared skills
 - `~/references` for upstream templates/reference repos
 - `~/dotfiles` for machine configuration

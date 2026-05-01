@@ -1,9 +1,9 @@
 {
-  "workspaceRoot": "/Users/oliver/projects",
+  "workspaceRoot": "~/projects",
   "repos": [
     {
       "name": "tesknota",
-      "path": "/Users/oliver/projects/tesknota",
+      "path": "~/projects/tesknota",
       "owner": "oliver-chase",
       "repo": "tesknota",
       "stack": ["typescript", "nextjs", "supabase"],
@@ -11,7 +11,7 @@
     },
     {
       "name": "oliver-app",
-      "path": "/Users/oliver/projects/oliver-app",
+      "path": "~/projects/oliver-app",
       "owner": "oliver-chase",
       "repo": "oliver-app",
       "stack": ["typescript", "nextjs", "supabase"],
@@ -19,7 +19,7 @@
     },
     {
       "name": "oliver-app-dev",
-      "path": "/Users/oliver/projects/oliver-app-dev",
+      "path": "~/projects/oliver-app-dev",
       "owner": "oliver-chase",
       "repo": "oliver-app",
       "stack": ["typescript", "nextjs", "supabase"],
@@ -27,7 +27,7 @@
     },
     {
       "name": "oliver-app-main",
-      "path": "/Users/oliver/projects/oliver-app-main",
+      "path": "~/projects/oliver-app-main",
       "owner": "oliver-chase",
       "repo": "oliver-app",
       "stack": ["typescript", "nextjs", "supabase"],
@@ -35,7 +35,7 @@
     },
     {
       "name": "oliver-app-staging",
-      "path": "/Users/oliver/projects/oliver-app-staging",
+      "path": "~/projects/oliver-app-staging",
       "owner": "oliver-chase",
       "repo": "oliver-app",
       "stack": ["typescript", "nextjs", "supabase"],
@@ -43,7 +43,7 @@
     },
     {
       "name": "v-two-sdr",
-      "path": "/Users/oliver/projects/v-two-sdr",
+      "path": "~/projects/v-two-sdr",
       "owner": "oliver-chase",
       "repo": "v-two-sdr",
       "stack": ["javascript"],
@@ -51,7 +51,7 @@
     },
     {
       "name": "fallow",
-      "path": "/Users/oliver/projects/fallow",
+      "path": "~/projects/fallow",
       "owner": "oliver-chase",
       "repo": "fallow",
       "stack": ["javascript", "html", "css"],

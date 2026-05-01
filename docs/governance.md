@@ -7,13 +7,13 @@ This policy prevents documentation and structure drift across project repositori
 Run before commit (workspace-wide):
 
 ```bash
-/Users/oliver/oliver-local/scripts/run-governance-gates.sh
+~/oliver-local/scripts/run-governance-gates.sh
 ```
 
 Run for one repo only:
 
 ```bash
-/Users/oliver/oliver-local/scripts/run-governance-gates.sh /Users/oliver/projects/<repo>
+~/oliver-local/scripts/run-governance-gates.sh ~/projects/<repo>
 ```
 
 ## Nightly Task
@@ -21,14 +21,14 @@ Run for one repo only:
 Nightly cleanup + governance run:
 
 ```bash
-/Users/oliver/oliver-local/scripts/run-nightly-governance.sh
+~/oliver-local/scripts/run-nightly-governance.sh
 ```
 
 Status report output:
-- `/Users/oliver/oliver-local/docs/runtime-verification/governance-status.md`
+- `~/oliver-local/docs/runtime-verification/governance-status.md`
 
 launchd task file:
-- `/Users/oliver/Library/LaunchAgents/com.oliver.governance-nightly.plist`
+- `~/Library/LaunchAgents/com.oliver.governance-nightly.plist`
 
 ## What Is Enforced
 
@@ -36,9 +36,9 @@ launchd task file:
 - Repo structure contracts exist and align with `contracts/PROJECT_STRUCTURE_STANDARD.md`.
 - Forbidden retired snapshot documents are absent in repos where inactive.
 - Forbidden runtime-coupled references are absent from active docs:
-  - `/Users/oliver/.codex/skills`
-  - `/Users/oliver/.claude/skills`
-  - `/Users/oliver/oliver-local/skills`
+  - `~/.codex/skills`
+  - `~/.claude/skills`
+  - `~/oliver-local/skills`
   - `story-lifecycle-gate`
 - Project backlog file placement stays inside approved roots.
 - Cross-repo structure/doc integrity checks remain green.
@@ -59,9 +59,9 @@ launchd task file:
 Install governance hooks in all project repos:
 
 ```bash
-/Users/oliver/oliver-local/scripts/install-governance-hook.sh
+~/oliver-local/scripts/install-governance-hook.sh
 ```
 
 Each repo hook executes repo-scoped governance gates before commit.
 
-- Oliver-local repo operations: `/Users/oliver/oliver-local/docs/oliver-local-repo-operations.md`
+- Oliver-local repo operations: `~/oliver-local/docs/oliver-local-repo-operations.md`

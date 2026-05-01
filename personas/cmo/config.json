@@ -5,7 +5,7 @@
   "company": "Organization",
   "status": "planned",
   "trigger_keyword": "CMO",
-  "workspace": "/Users/oliver/oliver-local/docs/personas/cmo",
+  "workspace": "~/oliver-local/docs/personas/cmo",
   "allowed_tools": [
     "web_search",
     "write",
@@ -27,9 +27,9 @@
       "claude_code"
     ],
     "shared_data": {
-      "brand_guide": "/Users/oliver/oliver-local/docs/personas/cmo/brand-guide.md",
-      "positioning": "/Users/oliver/oliver-local/docs/personas/cmo/positioning.md",
-      "campaigns": "/Users/oliver/oliver-local/docs/personas/cmo/campaigns/"
+      "brand_guide": "~/oliver-local/docs/personas/cmo/brand-guide.md",
+      "positioning": "~/oliver-local/docs/personas/cmo/positioning.md",
+      "campaigns": "~/oliver-local/docs/personas/cmo/campaigns/"
     }
   },
   "skill": "skills/cmo/SKILL.md",

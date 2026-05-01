@@ -11,7 +11,7 @@ from="$2"
 to="$3"
 
 # Protected identifiers/paths that must never be mass-replaced.
-deny='v-two-sdr|/Users/oliver/projects/v-two-sdr|/Users/oliver/projects/oliver-app|/Users/oliver/projects/tesknota|/Users/oliver/projects/fallow|repo-map\.json|project-structure-rules\.json'
+deny='v-two-sdr|projects/v-two-sdr|projects/oliver-app|projects/tesknota|projects/fallow|repo-map\.json|project-structure-rules\.json'
 
 if echo "$from $to" | rg -qi "$deny"; then
   echo "FAIL protected identifier/path in replace args"

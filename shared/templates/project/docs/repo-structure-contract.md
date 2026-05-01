@@ -46,6 +46,8 @@ Declare repo-specific canonical paths and keep them synchronized with story file
    - Profile B: `.github/user-stories/<project>/US-*.md`
 5. Root index source: `.github/user-stories/_index.md`
 
+All placeholder tokens are invalid in committed files. Replace each with a concrete project path before merge.
+
 ## Branch Lifecycle Contract
 
 1. `development`: unstarted and in-progress story housing.

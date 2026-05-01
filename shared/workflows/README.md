@@ -18,3 +18,6 @@ System-level references:
 
 Hygiene policy updates that affect project templates are tracked by:
 - `~/oliver-local/shared/workflow-standards.md`
+
+Runtime adapter context for Claude, Codex, and Agents stays in:
+- `~/oliver-local/docs/runtime-adapters.md`

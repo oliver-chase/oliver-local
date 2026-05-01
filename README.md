@@ -1,20 +1,20 @@
 # oliver-local
 
-Canonical orchestration system for `/Users/oliver` (oliver-local).
+Canonical orchestration system for the local home workspace (`~`).
 
-`oliver-local` represents the full local orchestration system rooted at `/Users/oliver`.
+`oliver-local` represents the full local orchestration system rooted at `~`.
 `~/oliver-local` is the shared orchestration system root for this machine.
 
 ## Shared System
 
-- Oliver-local repo operations: `/Users/oliver/oliver-local/docs/oliver-local-repo-operations.md`
+- Oliver-local repo operations: `~/oliver-local/docs/oliver-local-repo-operations.md`
 - Canonical contracts: `contracts/*`, including:
   - `contracts/PROJECT_HYGIENE_STANDARD.md`
   - `contracts/PROJECT_STRUCTURE_STANDARD.md`
 - Machine-level aliases:
-  - `/Users/oliver/AGENT_SHARED_STRUCTURE.md`
-  - `/Users/oliver/SHARED_ORCHESTRATION.md`
-  - `/Users/oliver/AGENT_SYSTEM_MANIFEST.json`
+  - `~/AGENT_SHARED_STRUCTURE.md`
+  - `~/SHARED_ORCHESTRATION.md`
+  - `~/AGENT_SYSTEM_MANIFEST.json`
 
 ## Runtime Entries
 
@@ -46,7 +46,7 @@ Those files explain what each local runtime folder is, what state may live there
 ## Workspace Model
 
 ```text
-/Users/oliver
+~
 |- .claude
 |- .codex
 |- .agents

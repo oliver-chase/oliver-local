@@ -3,10 +3,10 @@
 ## Current State
 - Repository uses multiple git worktrees sharing one `.git` directory.
 - Active mappings observed:
-  - `/Users/oliver/projects/oliver-app` -> `main`
-  - `/Users/oliver/projects/oliver-app-dev` -> `development`
-  - `/Users/oliver/projects/oliver-app-main` -> `promote-main-epics`
-  - `/Users/oliver/projects/oliver-app-staging` -> `promote-staging-epics`
+  - `~/projects/oliver-app` -> `main`
+  - `~/projects/oliver-app-dev` -> `development`
+  - `~/projects/oliver-app-main` -> `promote-main-epics`
+  - `~/projects/oliver-app-staging` -> `promote-staging-epics`
 - Constraint: a branch can only be checked out in one worktree at a time.
 
 ## Branch Uniformity Rules

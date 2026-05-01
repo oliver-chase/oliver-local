@@ -1,10 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="/Users/oliver/oliver-local"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MAP="$ROOT/shared/repo-map.json"
 MANIFEST="$ROOT/shared/project-bootstrap-manifest.json"
 OVERWRITE_NON_STRICT="${OVERWRITE_NON_STRICT:-0}"
+
+expand_home() {
+  local p="$1"
+  if [[ "$p" == "~"* ]]; then
+    printf "%s" "${p/#\~/$HOME}"
+  else
+    printf "%s" "$p"
+  fi
+}
 
 sync_repo() {
   local repo_path="$1"
@@ -35,7 +44,7 @@ sync_repo() {
 
 jq -c '.repos[]' "$MAP" | while read -r repo; do
   name="$(jq -r '.name' <<<"$repo")"
-  path="$(jq -r '.path' <<<"$repo")"
+  path="$(expand_home "$(jq -r '.path' <<<"$repo")")"
   if [[ ! -d "$path" ]]; then
     echo "skip missing repo: $name ($path)"
     continue

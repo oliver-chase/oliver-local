@@ -17,5 +17,5 @@ Purpose: keep active docs concise, scannable, and non-duplicative.
 
 ## Enforcement
 
-- Gate script: `/Users/oliver/oliver-local/scripts/validate-doc-lengths.sh`
-- Included in: `/Users/oliver/oliver-local/scripts/run-governance-gates.sh`
+- Gate script: `~/oliver-local/scripts/validate-doc-lengths.sh`
+- Included in: `~/oliver-local/scripts/run-governance-gates.sh`

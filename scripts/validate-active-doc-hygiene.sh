@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+MAP="$ROOT/shared/repo-map.json"
 FAIL=0
 TMP="/tmp/active-doc-hygiene-hits.txt"
 
@@ -33,15 +35,14 @@ scan_root() {
   fi
 }
 
-scan_root "/Users/oliver/oliver-local/docs"
-scan_root "/Users/oliver/projects/oliver-app/README.md"
-scan_root "/Users/oliver/projects/oliver-app/CLAUDE.md"
-scan_root "/Users/oliver/projects/tesknota/README.md"
-scan_root "/Users/oliver/projects/tesknota/CLAUDE.md"
-scan_root "/Users/oliver/projects/v-two-sdr/README.md"
-scan_root "/Users/oliver/projects/v-two-sdr/CLAUDE.md"
-scan_root "/Users/oliver/projects/fallow/README.md"
-scan_root "/Users/oliver/projects/fallow/CLAUDE.md"
+scan_root "$ROOT/docs"
+while IFS= read -r repo_path; do
+  if [[ "$repo_path" == "~"* ]]; then
+    repo_path="${repo_path/#\~/$HOME}"
+  fi
+  [[ -f "$repo_path/README.md" ]] && scan_root "$repo_path/README.md"
+  [[ -f "$repo_path/CLAUDE.md" ]] && scan_root "$repo_path/CLAUDE.md"
+done < <(jq -r '.repos[].path' "$MAP")
 
 if [[ "$FAIL" -ne 0 ]]; then
   echo "Active doc hygiene: FAIL"

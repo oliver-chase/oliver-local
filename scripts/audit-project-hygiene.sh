@@ -1,10 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="/Users/oliver/oliver-local"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MAP="$ROOT/shared/repo-map.json"
 MANIFEST="$ROOT/shared/project-bootstrap-manifest.json"
 FAIL=0
+
+expand_home() {
+  local p="$1"
+  if [[ "$p" == "~"* ]]; then
+    printf "%s" "${p/#\~/$HOME}"
+  else
+    printf "%s" "$p"
+  fi
+}
 
 check_repo() {
   local repo_name="$1"
@@ -47,7 +56,7 @@ check_repo() {
 
 while read -r repo; do
   name="$(jq -r '.name' <<<"$repo")"
-  path="$(jq -r '.path' <<<"$repo")"
+  path="$(expand_home "$(jq -r '.path' <<<"$repo")")"
   if [[ ! -d "$path" ]]; then
     echo "FAIL missing repo: $name ($path)"
     FAIL=1

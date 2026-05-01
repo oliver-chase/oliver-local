@@ -1,9 +1,9 @@
 # Workspace Tree
 
-Current live structure for `/Users/oliver`.
+Current live structure for `~`.
 
 ```text
-/Users/oliver
+~
 |- oliver-local/               shared orchestration repo
 |- .claude                     Claude runtime adapter + state
 |- .codex                      Codex runtime adapter + state
