@@ -8,25 +8,19 @@
         "README.md",
         "CLAUDE.md",
         "AGENTS.md",
-        "docs/repo-structure-contract.md",
         "docs/MODULE_CONTEXT.md",
         "docs/MODULE_INSTRUCTIONS.md",
-        ".github/oliver-app/modules",
-        ".github/user-stories/README.md",
-        ".github/user-stories/_index.md",
-        ".github/user-stories/oliver-app",
-        ".github/user-stories/oliver-app/README.md",
-        ".github/user-stories/oliver-app/_index.md",
-        "src/tech-debt"
+        "docs/modules/README.md",
+        "docs/modules/campaigns.md",
+        "docs/modules/hub.md",
+        "src/modules/registry.ts"
       ],
       "forbidden_backlog_globs": [
         "docs/*backlog*.md",
         "src/*backlog*.md"
       ],
       "allowed_backlog_roots": [
-        ".github/oliver-app/modules",
-        ".github/user-stories/oliver-app",
-        "src/tech-debt"
+        "docs/user-stories"
       ]
     },
     {
@@ -34,17 +28,11 @@
       "path": "~/projects/tesknota",
       "required_paths": [
         "README.md",
-        "CLAUDE.md",
         "AGENTS.md",
+        "ARCHITECTURE.md",
         "docs/repo-structure-contract.md",
-        "docs/product/03-backlog-user-stories.md",
-        "docs/product/07-execution-status.md",
-        ".github/user-stories",
-        ".github/user-stories/README.md",
-        ".github/user-stories/_index.md",
-        ".github/user-stories/tesknota/README.md",
-        ".github/user-stories/tesknota/_index.md",
-        "docs/tech-debt"
+        "docs/design-system.md",
+        "app/globals.css"
       ],
       "forbidden_backlog_globs": [
         "docs/*backlog*.md"
