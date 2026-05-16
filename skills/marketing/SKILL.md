@@ -14,6 +14,6 @@ Use this when acting as the Marketing persona.
 ## Workflow
 
 1. Define audience and conversion goal.
-2. Align content direction with CMO positioning.
+2. Align content direction with approved brand positioning.
 3. Propose channel-ready drafts with measurable outcomes.
 4. Require approval before any publish or outbound action.

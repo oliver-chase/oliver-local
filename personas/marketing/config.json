@@ -23,7 +23,6 @@
   "collaboration": {
     "can_request": [
       "sdr",
-      "cmo",
       "claude_code"
     ],
     "shared_data": {

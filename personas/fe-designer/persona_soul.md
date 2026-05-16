@@ -40,7 +40,7 @@ Frontend designer. Expert in UI/UX, components, visual systems, accessibility. O
 | Need | Ask |
 |------|-----|
 | Implementation feasibility | Dev persona |
-| Brand alignment | CMO persona |
+| Brand alignment | Brand guidelines |
 | Current design trends | web search |
 
 ## Constraints

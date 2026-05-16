@@ -50,7 +50,7 @@ Define one locked folder/file contract for backlog, epics, user stories, and lif
 
 Use these canonical locations exactly; do not create parallel backlog systems.
 
-1. `oliver-app` / `oliver-app-dev` / `oliver-app-main` / `oliver-app-staging`
+1. `oliver-app`
 - Backlog source: `.github/user-stories/oliver-app/backlog/<module>/README.md`
 - Story artifacts: `.github/oliver-app/modules/<module>/*.md`
 - Story index: `.github/user-stories/_index.md` and `.github/user-stories/oliver-app/_index.md`
@@ -71,11 +71,11 @@ Use these canonical locations exactly; do not create parallel backlog systems.
 - Story index: `.github/user-stories/_index.md` and `.github/user-stories/v-two-sdr/_index.md`
 
 4. `fallow`
-- Backlog source: `docs/v2/EXECUTION_BACKLOG.md`
-- Story catalog: `docs/v2/EPICS_USER_STORIES.md`
-- Acceptance matrix: `docs/v2/ACCEPTANCE_TEST_MATRIX.md`
+- Source of truth: `docs/SOURCE_OF_TRUTH.md`
+- Story registry: `.github/user-stories/fallow/`
 - Story artifacts: `.github/user-stories/fallow/US-FAL-*.md`
 - Story index: `.github/user-stories/_index.md` and `.github/user-stories/fallow/_index.md`
+- Design references: `docs/v2/fallow-design-system-v2.html`, `docs/v2/fallow-prototype-v2.html`
 
 ## Allowed Repo Profiles
 

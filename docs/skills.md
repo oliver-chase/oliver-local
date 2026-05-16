@@ -61,7 +61,6 @@ full-qa-standard/
 security-review/
 supabase/
 supabase-postgres-best-practices/
-cmo/
 marketing/
 work-outreach/
 story-lifecycle-gate/

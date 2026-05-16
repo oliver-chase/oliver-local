@@ -31,7 +31,6 @@ Claude Code tools: Read, Write, Edit, Bash, Glob, Grep, WebFetch, WebSearch, Age
 | SDR | "SDR" | B2B outreach | active |
 | Architect | "arch" | System design | active |
 | Tester | "test" | TDD, coverage | active |
-| CMO | "CMO" | Brand, campaigns | active |
 | Marketing | "marketing" | Content, SEO | active |
 
 **How to activate:**

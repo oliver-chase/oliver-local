@@ -78,7 +78,7 @@ audit_repo() {
   echo "=== auditing $repo"
 
   case "$name" in
-    oliver-app|oliver-app-dev|oliver-app-main|oliver-app-staging)
+    oliver-app)
       check_file "$repo" "README.md"
       check_file "$repo" "CLAUDE.md"
       check_file "$repo" "AGENTS.md"
@@ -105,8 +105,9 @@ audit_repo() {
     fallow)
       check_file "$repo" "README.md"
       check_file "$repo" "CLAUDE.md"
-      check_file "$repo" "docs/v2/README.md"
-      check_file "$repo" "docs/v2/EXECUTION_BACKLOG.md"
+      check_file "$repo" "docs/SOURCE_OF_TRUTH.md"
+      check_file "$repo" "docs/v2/fallow-design-system-v2.html"
+      check_file "$repo" "docs/v2/fallow-prototype-v2.html"
       check_absent "$repo" "docs/v2/LEGACY_DOC_AUDIT.md"
       check_absent "$repo" "docs/PRODUCT_ROADMAP.md"
       check_absent "$repo" "docs/ROADMAP.md"

@@ -77,15 +77,14 @@
         "CLAUDE.md",
         "AGENTS.md",
         "docs/repo-structure-contract.md",
-        "docs/v2/README.md",
-        "docs/v2/EXECUTION_BACKLOG.md",
-        "docs/v2/EPICS_USER_STORIES.md",
+        "docs/SOURCE_OF_TRUTH.md",
+        "docs/v2/fallow-design-system-v2.html",
+        "docs/v2/fallow-prototype-v2.html",
         ".github/user-stories",
         ".github/user-stories/README.md",
         ".github/user-stories/_index.md",
         ".github/user-stories/fallow/README.md",
-        ".github/user-stories/fallow/_index.md",
-        "docs/tech-debt"
+        ".github/user-stories/fallow/_index.md"
       ],
       "forbidden_backlog_globs": [
         "docs/*ROADMAP*.md",
@@ -95,7 +94,7 @@
         "docs/v2/*LEGACY_DOC_AUDIT*.md"
       ],
       "allowed_backlog_roots": [
-        "docs/v2"
+        ".github/user-stories"
       ]
     }
   ]

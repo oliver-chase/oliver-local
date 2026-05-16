@@ -24,7 +24,6 @@
   ],
   "collaboration": {
     "can_request": [
-      "cmo",
       "marketing",
       "claude_code"
     ],

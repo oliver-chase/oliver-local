@@ -2,7 +2,6 @@
 
 Canonical persona workspace locations:
 
-- `cmo` -> `docs/personas/cmo/`
 - `marketing` -> `docs/personas/marketing/`
 - `sdr` -> `~/projects/v-two-sdr`
 

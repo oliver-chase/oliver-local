@@ -30,7 +30,7 @@ Marketing lead. Expert in SEO, content strategy, demand generation. Builds visib
 
 | Need | Ask |
 |------|-----|
-| Brand voice | CMO persona |
+| Brand voice | Brand guidelines |
 | Sales messaging | SDR persona |
 | Technical content | Claude Code |
 | Trending topics | WebSearch |

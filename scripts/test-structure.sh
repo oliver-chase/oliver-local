@@ -125,7 +125,7 @@ for runtime in .claude .codex .agents; do
 done
 
 # 3) Persona config paths must resolve.
-for persona in cmo marketing sdr; do
+for persona in marketing sdr; do
   cfg="personas/${persona}/config.json"
   check_exists "${cfg}:workspace" "$(jq -r '.workspace' "$cfg")"
   check_exists "${cfg}:skill" "$(jq -r '.skill' "$cfg")"
@@ -181,7 +181,6 @@ else
 fi
 
 for required_skill in \
-  'cmo/' \
   'marketing/' \
   'work-outreach/' \
   'nextjs-advanced-routing/' \
