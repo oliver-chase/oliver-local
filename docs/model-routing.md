@@ -60,6 +60,28 @@ If the target is Claude Code, Claude Cowork, or Codex, the action is a human han
 
 If the target is Gemini CLI, Ollama, Dify, or Budibase, the action can be an adapter invocation inside the active session.
 
+## Model Strength Inside A Runtime
+
+Tool/runtime routing and model strength are separate decisions.
+
+After choosing the runtime, choose the cheapest model tier that can do the work:
+
+| Runtime | Cheap | Balanced | Strong | Deep / Max |
+|---|---|---|---|---|
+| Codex | `gpt-5.4-mini` + low effort | `gpt-5.4` + medium | `gpt-5.5` + high | `gpt-5.5` + xhigh |
+| Claude | `haiku` + low | `sonnet` + medium | `sonnet` + high | `opus` + xhigh/max |
+| Gemini CLI | `flash-lite` | `auto` | `pro` | `pro` |
+| Ollama | small local model | mid local model | large local model if installed | not preferred unless privacy/offline dominates |
+
+Escalate model tier for:
+- security-sensitive work;
+- multi-file refactors;
+- architecture decisions;
+- repeated failure;
+- ambiguous requirements.
+
+De-escalate after the hard reasoning phase when the task becomes mechanical.
+
 ## Practical Use
 
 For local installs, keep a small evaluator or checklist that emits:
