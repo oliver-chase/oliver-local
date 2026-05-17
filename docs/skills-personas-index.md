@@ -22,10 +22,12 @@ Purpose: route to useful capabilities without loading full files by default.
 
 ## Core Skill Families
 - `gstack` -> `skills/gstack/SKILL.md`
-  - Use for browser QA, product/design reviews, shipping, canary checks, security review, retrospectives, and plan review.
+  - Optional workflow overlay, not an app dependency or startup layer.
+  - Use after repo-native scripts/docs for browser QA, product/design reviews, shipping, canary checks, security review, retrospectives, and plan review.
   - Load subskills such as `gstack/qa`, `gstack/review`, `gstack/ship`, or `gstack/autoplan` only when invoked.
   - Large generated family. Never load gstack as a startup default.
 - `nextjs-*` -> `skills/nextjs-*/SKILL.md`
+  - Active project repos include Next.js apps, so keep these available.
   - Use for Next.js App Router, server/client components, routing, cookies, pathname/search params, and scaffolding.
   - Large reference family. Load the narrowest matching pattern file only.
 - `openai-docs` -> `skills/openai-docs/SKILL.md`
