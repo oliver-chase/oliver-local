@@ -14,6 +14,7 @@ Switching is rules-based, scoped, and logged. It is not "always use the stronges
 | Claude Cowork | planning, summaries, handoff packaging | shell/file operations |
 | Dify | repeatable deployed workflows, UI/API automation, RAG, observability | raw credential storage without private policy |
 | Ollama/local | private summarization, classification, draft compaction, offline fallback | final code/security/deployment decisions |
+| Gemini CLI | large-context review, search-grounded research, alternate-model second opinion, scripted analysis | secret-bearing work without approval |
 | gstack | QA/review/ship/design workflow overlays | startup context or always-on mode |
 
 ## Trigger Rules

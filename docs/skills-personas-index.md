@@ -37,6 +37,9 @@ Purpose: route to useful capabilities without loading full files by default.
   - Requires approval before posting, LinkedIn automation, scraping, prospect messages, credential use, or external uploads.
   - Portable routing rules: `docs/gtm-orchestration.md`.
   - Full automation setup path: `docs/gtm-automation-setup.md`.
+- `voice-humanizer` -> `skills/voice-humanizer/SKILL.md`
+  - Use to rewrite drafts into the user's learned voice and remove AI-generated writing patterns.
+  - Store private voice examples locally; only generic voice rules belong in public `oliver-local`.
 - `skill-creator` / `skill-installer` / `plugin-creator`
   - Use for creating or installing reusable Codex/agent capabilities.
 
@@ -57,6 +60,12 @@ Purpose: route to useful capabilities without loading full files by default.
 - `story-lifecycle-gate` -> `skills/story-lifecycle-gate/SKILL.md`
 - `vercel-ai-sdk` -> `skills/vercel-ai-sdk/SKILL.md`
 - `work-outreach` -> `skills/work-outreach/SKILL.md`
+
+## Category Routing
+- Skill categories and cross-category routing: `docs/skill-taxonomy.md`.
+- Skill update/security lifecycle: `docs/skill-lifecycle-security.md`.
+- Automation platform choices: `docs/automation-platforms.md`.
+- Model/tool adapters: `docs/model-tool-adapters.md`.
 
 ## Personas
 - `architect` -> `personas/architect/persona_soul.md`
