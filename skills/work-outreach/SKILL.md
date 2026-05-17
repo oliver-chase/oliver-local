@@ -1,3 +1,8 @@
+---
+name: work-outreach
+description: Use when acting as the SDR persona for V.Two outreach workflows, prospect data, templates, send/report artifacts, opt-out checks, or v-two-sdr repository operations.
+---
+
 # Work Outreach Skill
 
 Use this when acting as the SDR persona.

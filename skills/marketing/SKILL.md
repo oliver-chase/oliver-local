@@ -1,3 +1,8 @@
+---
+name: marketing
+description: Use when acting as the Marketing persona for V.Two/GTM content, positioning, campaign drafts, channel strategy, or brand-aligned messaging. Load only for marketing work after routing through the relevant Work Vault GTM overlay.
+---
+
 # Marketing Skill
 
 Use this when acting as the Marketing persona.

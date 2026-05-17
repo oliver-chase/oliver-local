@@ -6,8 +6,10 @@ Purpose: route to useful capabilities without loading full files by default.
 - Load full skill/persona files only when the task requires them.
 - Prefer this index for routing.
 - If this index is not specific enough, use `<vault-root>/_Management/Agent Orchestration/manifests/skills_inventory.md` for the complete skill list.
+- Use `<vault-root>/_Management/Agent Orchestration/manifests/skill_optimization_audit.md` before adding, merging, or deleting skills.
 - Do not paste full skill/persona bodies into handoff docs.
 - Treat gstack as one skill family; load only the invoked gstack subskill.
+- `.md` files under `skills/` that are not named `SKILL.md` are reference playbooks, not installable/runtime skills.
 
 ## Mandatory Efficiency Layer
 - `caveman` -> `<vault-root>/_Management/Agent Orchestration/staging/private/runtime-state/.agents/skills/caveman/SKILL.md`
@@ -22,8 +24,10 @@ Purpose: route to useful capabilities without loading full files by default.
 - `gstack` -> `skills/gstack/SKILL.md`
   - Use for browser QA, product/design reviews, shipping, canary checks, security review, retrospectives, and plan review.
   - Load subskills such as `gstack/qa`, `gstack/review`, `gstack/ship`, or `gstack/autoplan` only when invoked.
+  - Large generated family. Never load gstack as a startup default.
 - `nextjs-*` -> `skills/nextjs-*/SKILL.md`
   - Use for Next.js App Router, server/client components, routing, cookies, pathname/search params, and scaffolding.
+  - Large reference family. Load the narrowest matching pattern file only.
 - `openai-docs` -> `skills/openai-docs/SKILL.md`
   - Use for current OpenAI API/product documentation.
 - `skill-creator` / `skill-installer` / `plugin-creator`
@@ -60,3 +64,5 @@ Purpose: route to useful capabilities without loading full files by default.
 - Use `personas/sdr/config.json` for SDR workspace pointers.
 - For project-specific context, load the project repo or `Oliver/<Project>` notes, not all personas.
 - For token pressure, load `skills/context-budget/SKILL.md` before loading broad skill families.
+- For env/auth/secrets/public-release work, load `skills/security-review/SKILL.md`.
+- For story/backlog hygiene, load `skills/story-lifecycle-gate/SKILL.md`.
