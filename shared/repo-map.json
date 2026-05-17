@@ -15,6 +15,20 @@
         "frontend",
         "mobile",
         "deploy"
+      ],
+      "approvedStrictVariances": [
+        {
+          "target": ".github/workflows/qa-hygiene.yml",
+          "reason": "Preserves Playwright Chromium install and stable dev server env required by Tesknota runtime contracts."
+        },
+        {
+          "target": ".github/workflows/governance-secrets-gate.yml",
+          "reason": "Adds docs path ignores and requires AGENTS.md because this repo has both Claude and Codex entry files."
+        },
+        {
+          "target": "scripts/check-structure-contract.mjs",
+          "reason": "Uses project-specific current-state surface checks that are stricter than the generic story-only template."
+        }
       ]
     },
     {
@@ -46,6 +60,16 @@
         "outreach",
         "automation",
         "deploy"
+      ],
+      "approvedStrictVariances": [
+        {
+          "target": ".github/workflows/qa-hygiene.yml",
+          "reason": "Keeps docs and oliver-app path ignores to avoid unnecessary SDR automation CI spend."
+        },
+        {
+          "target": ".github/workflows/governance-secrets-gate.yml",
+          "reason": "Keeps docs and oliver-app path ignores to avoid unnecessary SDR automation governance runs."
+        }
       ]
     },
     {
@@ -62,6 +86,20 @@
         "frontend",
         "ui",
         "experimentation"
+      ],
+      "approvedStrictVariances": [
+        {
+          "target": ".github/workflows/qa-hygiene.yml",
+          "reason": "Manual-only workflow preserves the repo billing constraint documented in release-gates.yml."
+        },
+        {
+          "target": ".github/workflows/governance-secrets-gate.yml",
+          "reason": "Manual-only workflow preserves the repo billing constraint documented in release-gates.yml."
+        },
+        {
+          "target": ".github/workflows/dependency-review.yml",
+          "reason": "Manual-only workflow preserves the repo billing constraint documented in release-gates.yml."
+        }
       ]
     }
   ]

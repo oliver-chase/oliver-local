@@ -21,6 +21,7 @@ expand_home() {
 check_repo() {
   local repo_name="$1"
   local repo_path="$2"
+  local repo_json="$3"
 
   echo "=== audit: $repo_name ==="
 
@@ -47,6 +48,10 @@ check_repo() {
     if [[ "$mode" == "strict" ]]; then
       if cmp -s "$src" "$dst"; then
         echo "PASS file(strict): $dstRel"
+      elif jq -e --arg target "$dstRel" '.approvedStrictVariances // [] | any(.target == $target)' <<<"$repo_json" >/dev/null; then
+        local reason
+        reason="$(jq -r --arg target "$dstRel" '.approvedStrictVariances[] | select(.target == $target) | .reason' <<<"$repo_json")"
+        echo "PASS variance(strict): $dstRel - $reason"
       else
         echo "FAIL drift(strict): $dstRel"
         FAIL=1
@@ -65,7 +70,7 @@ while read -r repo; do
     FAIL=1
     continue
   fi
-  check_repo "$name" "$path"
+  check_repo "$name" "$path" "$repo"
 done < <(jq -c '.repos[]' "$MAP")
 
 if [[ "$FAIL" -ne 0 ]]; then
