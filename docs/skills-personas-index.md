@@ -66,6 +66,7 @@ Purpose: route to useful capabilities without loading full files by default.
 - Skill update/security lifecycle: `docs/skill-lifecycle-security.md`.
 - Automation platform choices: `docs/automation-platforms.md`.
 - Model/tool adapters: `docs/model-tool-adapters.md`.
+- Optional local runtime setup: `docs/local-runtime-setup.md`.
 
 ## Personas
 - `architect` -> `personas/architect/persona_soul.md`
