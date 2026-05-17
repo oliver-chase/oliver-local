@@ -12,6 +12,8 @@ This is the portable orchestration skill. It may point to a local GTM workspace,
 
 Public-safe rules live in `docs/gtm-orchestration.md`.
 
+Full setup path lives in `docs/gtm-automation-setup.md`.
+
 ## Canonical Workspace
 `<vault-root>/Work Vault/02 - GTM`
 
@@ -25,6 +27,7 @@ Start with:
 Use these only when installed locally and the task needs the pattern:
 - `staging/private/reference-sources/gtm/ai-marketing-skills`
 - `staging/private/reference-sources/gtm/OpenOutreach`
+- `staging/private/reference-sources/automation/dify`
 - `Work Vault/02 - GTM/_Marketing Prompts`
 - `Work Vault/02 - GTM/_Skills`
 
@@ -66,6 +69,14 @@ Outputs:
 ### Automation Mode
 Use only after explicit approval for external tool actions.
 
+If the user says "set up all GTM automations," follow `docs/gtm-automation-setup.md`:
+1. inventory local GTM sources;
+2. produce an automation map;
+3. classify workflows by risk;
+4. create candidate specs;
+5. ask approval before external/credentialed automation;
+6. implement approved workflows only.
+
 Allowed after approval:
 - schedule or draft internal content artifacts;
 - run local scripts against approved files;
@@ -80,6 +91,7 @@ Requires separate explicit approval:
 - posting to LinkedIn or company pages;
 - uploading contact data to third-party services;
 - using OpenOutreach or similar automation.
+- deploying Dify or configuring model/API credentials.
 
 ## Required Guardrails
 - No public post without user approval.
@@ -123,5 +135,12 @@ From `OpenOutreach`, prefer:
 - rate-limit awareness;
 - local data ownership;
 - human approval before account automation.
+
+From `Dify`, prefer:
+- visual workflow/API surface for repeatable automations;
+- RAG over local GTM docs when approved;
+- model/provider switching for deployed workflows;
+- logs and observability for production workflows;
+- app APIs for integration with local scripts.
 
 Do not copy third-party code into active projects unless the user explicitly asks for implementation.

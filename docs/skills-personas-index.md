@@ -36,6 +36,7 @@ Purpose: route to useful capabilities without loading full files by default.
   - Use for V.Two GTM content ops, LinkedIn draft workflows, SEO/GEO, outbound planning, and marketing automation.
   - Requires approval before posting, LinkedIn automation, scraping, prospect messages, credential use, or external uploads.
   - Portable routing rules: `docs/gtm-orchestration.md`.
+  - Full automation setup path: `docs/gtm-automation-setup.md`.
 - `skill-creator` / `skill-installer` / `plugin-creator`
   - Use for creating or installing reusable Codex/agent capabilities.
 

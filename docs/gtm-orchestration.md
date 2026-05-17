@@ -9,9 +9,11 @@ This file is public-safe. It must not contain campaign notes, private contacts, 
 - `personas/gtm-operator/persona_soul.md`
 - `personas/marketing/persona_soul.md`
 - `personas/sdr/persona_soul.md`
+- `docs/gtm-automation-setup.md`
+- `docs/model-routing.md`
 
 ## Local-Only Pieces
-Each install may have its own local GTM workspace. For Kiana's Vault, that workspace is:
+Each install may have its own local GTM workspace. In this Vault pattern, that workspace is:
 
 `Work Vault/02 - GTM`
 
@@ -69,8 +71,12 @@ Requires explicit approval:
 Reference only; do not auto-run:
 - `ericosiu/ai-marketing-skills`: content ops, outbound, SEO, growth experiments, revenue intelligence, privacy/safety patterns.
 - `eracle/OpenOutreach`: self-hosted LinkedIn lead discovery, qualification, CRM state, and follow-up architecture.
+- `langgenius/dify`: deployed AI workflow layer for workflow UI, APIs, RAG, model/provider management, observability, and repeatable automation.
 
 Use these as patterns, not as startup context.
+
+## Setup Command Intent
+When the user says "set up all GTM automations," follow `docs/gtm-automation-setup.md`.
 
 ## Required Output Contract
 Every GTM deliverable should state:
