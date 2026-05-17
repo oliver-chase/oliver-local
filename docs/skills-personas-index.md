@@ -5,6 +5,7 @@ Purpose: route to useful capabilities without loading full files by default.
 ## Load Rule
 - Load full skill/persona files only when the task requires them.
 - Prefer this index for routing.
+- If this index is not specific enough, use `<vault-root>/_Management/Agent Orchestration/manifests/skills_inventory.md` for the complete skill list.
 - Do not paste full skill/persona bodies into handoff docs.
 - Treat gstack as one skill family; load only the invoked gstack subskill.
 
