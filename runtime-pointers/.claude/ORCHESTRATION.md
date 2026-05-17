@@ -9,10 +9,10 @@
 - Skill/persona index: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/docs/skills-personas-index.md`
 
 Startup baseline:
-- Read `<vault-root>/_Management/Agent Orchestration/ORCHESTRATION_MASTER.md`.
+- Read `<vault-root>/_Management/Agent Orchestration/AGENT_START.md`.
 - Caveman brevity is always on.
 - Progressive disclosure is always on.
 - Security/write policy is always on for env, auth, Git, publish, or file movement work.
-- Do not preload all skills. Use the skill/persona index, then load the smallest matching `SKILL.md`.
+- Do not preload all skills or policies. Use the context index, then load the smallest matching file.
 
 Claude runtime files stay in `~/.claude`. Canonical shared orchestration assets live in `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`.
