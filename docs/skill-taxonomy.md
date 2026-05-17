@@ -21,6 +21,8 @@ Examples:
 - `codebase-onboarding`
 - `gstack`
 - `cavecrew`
+- HyperAgents pattern
+- Superpowers pattern
 
 ### Development
 - implementation;
@@ -61,6 +63,7 @@ Examples:
 - `voice-humanizer`
 - `caveman-compress`
 - `context-mode` pattern
+- Skill Seekers pattern
 
 ### Marketing And GTM
 - campaigns;
@@ -104,6 +107,19 @@ Examples:
 - Codex auth;
 - Dify model providers;
 - MCP/tool bridges.
+- OmniRoute pattern
+- cc-switch pattern
+
+### Browser Automation
+- browser testing;
+- authenticated browser workflows;
+- web research and interaction;
+- approval-gated browser agents.
+
+Examples:
+- browser-use pattern
+
+Browser automation against logged-in accounts requires explicit approval.
 
 ## Routing Rule
 When a task crosses categories, load the smallest set:

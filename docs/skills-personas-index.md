@@ -67,6 +67,7 @@ Purpose: route to useful capabilities without loading full files by default.
 - Automation platform choices: `docs/automation-platforms.md`.
 - Model/tool adapters: `docs/model-tool-adapters.md`.
 - Optional local runtime setup: `docs/local-runtime-setup.md`.
+- Standard external skill/orchestration references: `docs/standard-skill-sources.md`.
 
 ## Personas
 - `architect` -> `personas/architect/persona_soul.md`
