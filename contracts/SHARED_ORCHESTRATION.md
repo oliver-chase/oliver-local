@@ -5,7 +5,7 @@ Single source of truth for cross-agent orchestration on this machine.
 ## Scope
 
 Applies to:
-- Shared system root (`<vault-root>/_Management/Agent Orchestration/repos/oliver-local`)
+- Shared system root (`<vault-root>/Oliver/_Project Repos/oliver-local`)
 - Claude runtime (`~/.claude`)
 - Codex runtime (`~/.codex`)
 - Agents runtime (`~/.agents`)
@@ -13,32 +13,32 @@ Applies to:
 ## Canonical Structure
 
 - Product repos: `<vault-root>/Oliver/_Project Repos/*`
-- Shared structure contract: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/contracts/AGENT_SHARED_STRUCTURE.md`
-- Shared orchestration core: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/contracts/SHARED_ORCHESTRATION.md`
-- Shared machine-readable manifest: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
+- Shared structure contract: `<vault-root>/Oliver/_Project Repos/oliver-local/contracts/AGENT_SHARED_STRUCTURE.md`
+- Shared orchestration core: `<vault-root>/Oliver/_Project Repos/oliver-local/contracts/SHARED_ORCHESTRATION.md`
+- Shared machine-readable manifest: `<vault-root>/Oliver/_Project Repos/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
 
 ## Shared Rules
 
 - Product behavior/process docs live in each product repo.
-- Cross-project orchestration standards live in `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/shared/*`.
+- Cross-project orchestration standards live in `<vault-root>/Oliver/_Project Repos/oliver-local/shared/*`.
 - Runtime state in `.claude`, `.codex`, and `.agents` is not product source-of-truth.
 - Do not duplicate product workflow docs into runtime folders.
 - Claude, Codex, and other agent runtimes must execute from the same canonical workflow set:
-  - `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/shared/workflow-standards.md`
-  - `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/shared/workflows/*`
+  - `<vault-root>/Oliver/_Project Repos/oliver-local/shared/workflow-standards.md`
+  - `<vault-root>/Oliver/_Project Repos/oliver-local/shared/workflows/*`
 - Project repos must reference shared workflows; they must not create duplicate copies of shared SOP/workflow docs.
 
 ## Governance Gates
 
-- Policy: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/docs/governance.md`
-- Runner: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/run-governance-gates.sh`
-- Hook installer: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/install-governance-hook.sh`
+- Policy: `<vault-root>/Oliver/_Project Repos/oliver-local/docs/governance.md`
+- Runner: `<vault-root>/Oliver/_Project Repos/oliver-local/scripts/run-governance-gates.sh`
+- Hook installer: `<vault-root>/Oliver/_Project Repos/oliver-local/scripts/install-governance-hook.sh`
 
 ## Workflow Index
 
 Canonical workflow standards and procedures:
-- `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/shared/workflow-standards.md`
-- `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/shared/workflows/README.md`
+- `<vault-root>/Oliver/_Project Repos/oliver-local/shared/workflow-standards.md`
+- `<vault-root>/Oliver/_Project Repos/oliver-local/shared/workflows/README.md`
 
 ## Runtime-Specific Entry Files
 

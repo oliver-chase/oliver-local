@@ -13,7 +13,7 @@ Each runtime folder must contain a README and an ORCHESTRATION entry:
 - `~/.agents/README.md`
 - `~/.agents/ORCHESTRATION.md`
 
-These files must point agents back to `<vault-root>/_Management/Agent Orchestration/repos/oliver-local` for shared contracts, workflows, scripts, personas, identity, and skills.
+These files must point agents back to `<vault-root>/Oliver/_Project Repos/oliver-local` for shared contracts, workflows, scripts, personas, identity, and skills.
 
 ## Tracked Runtime Pointer Copies
 
@@ -30,13 +30,13 @@ The tracked copies document the intended runtime adapter context for Git review.
 
 ## Ownership
 
-- Shared orchestration source of truth: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`.
+- Shared orchestration source of truth: `<vault-root>/Oliver/_Project Repos/oliver-local`.
 - Claude runtime state: `~/.claude`.
 - Codex runtime state: `~/.codex`.
 - Agent runtime state: `~/.agents`.
 
-Runtime-local config, auth, logs, sessions, cache, and memory stay in runtime folders. Shared instructions and shared skills stay in `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`.
+Runtime-local config, auth, logs, sessions, cache, and memory stay in runtime folders. Shared instructions and shared skills stay in `<vault-root>/Oliver/_Project Repos/oliver-local`.
 
 ## Guardrail
 
-`scripts/test-structure.sh` fails if a runtime README or ORCHESTRATION file is missing, stops pointing to `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`, or drifts from the tracked copy in `runtime-pointers/*`.
+`scripts/test-structure.sh` fails if a runtime README or ORCHESTRATION file is missing, stops pointing to `<vault-root>/Oliver/_Project Repos/oliver-local`, or drifts from the tracked copy in `runtime-pointers/*`.

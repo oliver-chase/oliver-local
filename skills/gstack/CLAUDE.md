@@ -195,8 +195,8 @@ silent failures that come from not understanding the cross-component flow.
 
 ## Shared install awareness
 
-On this machine, gstack is owned by `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills/gstack`.
-`~/.claude/skills` is an adapter symlink to `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills`, so edits in
+On this machine, gstack is owned by `<vault-root>/Oliver/_Project Repos/oliver-local/skills/gstack`.
+`~/.claude/skills` is an adapter symlink to `<vault-root>/Oliver/_Project Repos/oliver-local/skills`, so edits in
 this directory affect active Claude Code skill usage immediately.
 
 This is useful for rapid iteration, but risky during large refactors where
@@ -487,13 +487,13 @@ Repeat for each skill: `gstack-openclaw-ceo-review`, `gstack-openclaw-investigat
 
 ## Updating the active skill
 
-The active skill lives at `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills/gstack`. After making changes:
+The active skill lives at `<vault-root>/Oliver/_Project Repos/oliver-local/skills/gstack`. After making changes:
 
-1. Commit shared-orchestration changes from `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`.
+1. Commit shared-orchestration changes from `<vault-root>/Oliver/_Project Repos/oliver-local`.
 2. Rebuild from the gstack directory if generated assets changed:
-   `cd <vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills/gstack && bun run build`
+   `cd <vault-root>/Oliver/_Project Repos/oliver-local/skills/gstack && bun run build`
 3. Run the oliver-local governance gates before relying on the updated skill:
-   `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/run-governance-gates.sh`
+   `<vault-root>/Oliver/_Project Repos/oliver-local/scripts/run-governance-gates.sh`
 
 Do not run `git fetch` or `git reset` inside `~/.claude/skills/gstack`; it is not
 an independent Git checkout on this machine.

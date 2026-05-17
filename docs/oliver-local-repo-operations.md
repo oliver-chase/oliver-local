@@ -1,7 +1,7 @@
 # Oliver-Local Repo Operations
 
 Status: Active
-Scope: Full `~` orchestration system (git root: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`)
+Scope: Full `~` orchestration system (git root: `<vault-root>/Oliver/_Project Repos/oliver-local`)
 
 ## Purpose
 
@@ -9,15 +9,15 @@ This repository exists to version the orchestration system and guardrails used a
 
 ## System Boundaries
 
-- Git repo root: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`
+- Git repo root: `<vault-root>/Oliver/_Project Repos/oliver-local`
 - Shared-system scope includes runtime integrations for:
   - `~/.claude` (runtime adapter)
   - `~/.codex`
   - `~/.agents`
 - Authoritative shared contracts:
-  - `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/contracts/AGENT_SHARED_STRUCTURE.md`
-  - `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/contracts/SHARED_ORCHESTRATION.md`
-  - `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
+  - `<vault-root>/Oliver/_Project Repos/oliver-local/contracts/AGENT_SHARED_STRUCTURE.md`
+  - `<vault-root>/Oliver/_Project Repos/oliver-local/contracts/SHARED_ORCHESTRATION.md`
+  - `<vault-root>/Oliver/_Project Repos/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
 - Machine-level aliases point to those contract files:
   - `~/AGENT_SHARED_STRUCTURE.md`
   - `~/SHARED_ORCHESTRATION.md`
@@ -38,11 +38,11 @@ Do not treat runtime state as product code. Do not add project feature code here
 
 ## Required Guardrails Before Commit
 
-From `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`, run:
+From `<vault-root>/Oliver/_Project Repos/oliver-local`, run:
 
 ```bash
-<vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/run-governance-gates.sh
-<vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/scan-secrets.sh <vault-root>/_Management/Agent Orchestration/repos/oliver-local
+<vault-root>/Oliver/_Project Repos/oliver-local/scripts/run-governance-gates.sh
+<vault-root>/Oliver/_Project Repos/oliver-local/scripts/scan-secrets.sh <vault-root>/Oliver/_Project Repos/oliver-local
 ```
 
 Commit only if both pass.

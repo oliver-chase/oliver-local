@@ -34,7 +34,7 @@ Claude Code tools: Read, Write, Edit, Bash, Glob, Grep, WebFetch, WebSearch, Age
 | Marketing | "marketing" | Content, SEO | active |
 
 **How to activate:**
-1. Read: <vault-root>/_Management/Agent Orchestration/repos/oliver-local/personas/<name>/persona_soul.md
+1. Read: <vault-root>/Oliver/_Project Repos/oliver-local/personas/<name>/persona_soul.md
 2. Read: relevant skill via Skill tool
 3. Execute as persona
 4. Bring results back

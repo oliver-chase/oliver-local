@@ -7,13 +7,13 @@ This policy prevents documentation and structure drift across project repositori
 Run before commit (workspace-wide):
 
 ```bash
-<vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/run-governance-gates.sh
+<vault-root>/Oliver/_Project Repos/oliver-local/scripts/run-governance-gates.sh
 ```
 
 Run for one repo only:
 
 ```bash
-<vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/run-governance-gates.sh <vault-root>/Oliver/_Project Repos/<repo>
+<vault-root>/Oliver/_Project Repos/oliver-local/scripts/run-governance-gates.sh <vault-root>/Oliver/_Project Repos/<repo>
 ```
 
 ## Nightly Task
@@ -21,11 +21,11 @@ Run for one repo only:
 Nightly cleanup + governance run:
 
 ```bash
-<vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/run-nightly-governance.sh
+<vault-root>/Oliver/_Project Repos/oliver-local/scripts/run-nightly-governance.sh
 ```
 
 Status report output:
-- `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/docs/runtime-verification/governance-status.md`
+- `<vault-root>/Oliver/_Project Repos/oliver-local/docs/runtime-verification/governance-status.md`
 
 launchd task file:
 - `~/Library/LaunchAgents/com.oliver.governance-nightly.plist`
@@ -38,7 +38,7 @@ launchd task file:
 - Forbidden runtime-coupled references are absent from active docs:
   - `~/.codex/skills`
   - `~/.claude/skills`
-  - `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills`
+  - `<vault-root>/Oliver/_Project Repos/oliver-local/skills`
   - `story-lifecycle-gate`
 - Project backlog file placement stays inside approved roots.
 - Cross-repo structure/doc integrity checks remain green.
@@ -52,16 +52,16 @@ launchd task file:
 - Canonical skills inventory: `docs/skills.md`
 - Shared workflows must not hardcode runtime-specific skill file paths; use workflow trigger names instead.
 - Shared SOP/workflow docs must not be copied into project repos; projects reference canonical shared workflow docs.
-- Runtime adapters may point to `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills`, but project repos must not.
+- Runtime adapters may point to `<vault-root>/Oliver/_Project Repos/oliver-local/skills`, but project repos must not.
 
 ## Pre-commit Hook Installation
 
 Install governance hooks in all project repos:
 
 ```bash
-<vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/install-governance-hook.sh
+<vault-root>/Oliver/_Project Repos/oliver-local/scripts/install-governance-hook.sh
 ```
 
 Each repo hook executes repo-scoped governance gates before commit.
 
-- Oliver-local repo operations: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/docs/oliver-local-repo-operations.md`
+- Oliver-local repo operations: `<vault-root>/Oliver/_Project Repos/oliver-local/docs/oliver-local-repo-operations.md`

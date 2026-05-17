@@ -2,7 +2,7 @@
 set -euo pipefail
 
 OLIVER_LOCAL_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VAULT_ROOT="$(cd "$OLIVER_LOCAL_ROOT/../../../.." && pwd)"
+VAULT_ROOT="$(cd "$OLIVER_LOCAL_ROOT/../../.." && pwd)"
 MAP="$OLIVER_LOCAL_ROOT/shared/repo-map.json"
 
 FORBIDDEN_PATTERNS=(
@@ -11,7 +11,7 @@ FORBIDDEN_PATTERNS=(
   "$HOME/oliver-local/skills"
   '~/.codex/skills'
   '~/.claude/skills'
-  '<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills'
+  '<vault-root>/Oliver/_Project Repos/oliver-local/skills'
   'story-lifecycle-gate'
   'oliver-local-reconciliation-2026-04-24.md'
   'STATE-AUDIT-2026-04-22.md'

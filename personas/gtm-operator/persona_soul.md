@@ -59,7 +59,7 @@ Use for requests involving:
 1. `Work Vault/02 - GTM/CLAUDE.md`
 2. `Work Vault/02 - GTM/CLAUDE_GTM.md`
 3. `Work Vault/02 - GTM/_GTM.md`
-4. `repos/oliver-local/skills/gtm-automation/SKILL.md`
+4. `Oliver/_Project Repos/oliver-local/skills/gtm-automation/SKILL.md`
 
 ## Portability
 

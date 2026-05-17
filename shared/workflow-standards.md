@@ -30,8 +30,8 @@ All product repos live under `<vault-root>/Oliver/_Project Repos/`.
 ## Orchestration Rules
 
 - Keep `.claude`, `.codex`, and `.agents` runtime state separate.
-- Keep shared standards in one place (`<vault-root>/_Management/Agent Orchestration/repos/oliver-local/shared/*`).
-- Keep shared skills in one place (`<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills/*`).
+- Keep shared standards in one place (`<vault-root>/Oliver/_Project Repos/oliver-local/shared/*`).
+- Keep shared skills in one place (`<vault-root>/Oliver/_Project Repos/oliver-local/skills/*`).
 - Do not duplicate product workflow docs into runtime folders.
 - Do not duplicate shared SOP/workflow files into project repos; reference canonical shared workflows instead.
 - Treat live machine layout as source of truth over stale cached paths.
@@ -51,6 +51,6 @@ Testing applies to all code work. Follow `shared/workflows/testing-rules.md`.
 ## Cross-Repo Quality Baseline
 
 - Canonical managed quality files live in `shared/templates/project`.
-- Sync all mapped repos: `bash <vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/sync-project-hygiene.sh`.
-- Audit strict-file drift: `bash <vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/audit-project-hygiene.sh`.
+- Sync all mapped repos: `bash <vault-root>/Oliver/_Project Repos/oliver-local/scripts/sync-project-hygiene.sh`.
+- Audit strict-file drift: `bash <vault-root>/Oliver/_Project Repos/oliver-local/scripts/audit-project-hygiene.sh`.
 - Policy: a managed-file change in one repo is invalid unless the canonical template is updated and re-synced to all repos.

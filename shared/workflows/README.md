@@ -11,13 +11,13 @@ Canonical workflow procedure index.
 - `project standardization` -> `project-standardization-lifecycle.md`
 
 System-level references:
-- `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/contracts/SHARED_ORCHESTRATION.md`
-- `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
-- `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/contracts/PROJECT_HYGIENE_STANDARD.md`
-- `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/contracts/PROJECT_STRUCTURE_STANDARD.md`
+- `<vault-root>/Oliver/_Project Repos/oliver-local/contracts/SHARED_ORCHESTRATION.md`
+- `<vault-root>/Oliver/_Project Repos/oliver-local/contracts/AGENT_SYSTEM_MANIFEST.json`
+- `<vault-root>/Oliver/_Project Repos/oliver-local/contracts/PROJECT_HYGIENE_STANDARD.md`
+- `<vault-root>/Oliver/_Project Repos/oliver-local/contracts/PROJECT_STRUCTURE_STANDARD.md`
 
 Hygiene policy updates that affect project templates are tracked by:
-- `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/shared/workflow-standards.md`
+- `<vault-root>/Oliver/_Project Repos/oliver-local/shared/workflow-standards.md`
 
 Runtime adapter context for Claude, Codex, and Agents stays in:
-- `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/docs/runtime-adapters.md`
+- `<vault-root>/Oliver/_Project Repos/oliver-local/docs/runtime-adapters.md`

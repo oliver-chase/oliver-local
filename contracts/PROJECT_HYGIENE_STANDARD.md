@@ -48,7 +48,7 @@ Scope: All repositories, modules, and workstreams
 1. Real credentials, tokens, API keys, service-role keys, webhook secrets, private keys, and local auth files stay in ignored local env or provider secret stores.
 2. Concrete project URLs and public anon keys stay in ignored local env unless there is a documented reason they must be public.
 3. `.env.local` is the local holding area during rotation; examples in git show variable names and placeholders only.
-4. Runtime adapter settings and auth state are never committed to `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`.
+4. Runtime adapter settings and auth state are never committed to `<vault-root>/Oliver/_Project Repos/oliver-local`.
 
 ## Required discoverability hygiene
 1. Provide one backlog root per module with quick commands for listing stories, epics, and unassigned entries.
@@ -56,11 +56,11 @@ Scope: All repositories, modules, and workstreams
 3. Define a single orchestration command named `qa:hygiene` in each repo package scripts that runs all required story/epic/test hygiene gates for that repo.
 
 ## Required shared quality baseline hygiene
-1. Shared CI/QA policy files are canonicalized in `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/shared/templates/project`.
+1. Shared CI/QA policy files are canonicalized in `<vault-root>/Oliver/_Project Repos/oliver-local/shared/templates/project`.
 2. Managed files must stay byte-identical across all repos where they are marked strict in `shared/project-bootstrap-manifest.json`.
 3. Any change to one managed file requires changing the canonical template first, then syncing every mapped repo.
-4. Cross-repo sync command: `bash <vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/sync-project-hygiene.sh`.
-5. Cross-repo drift audit command: `bash <vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/audit-project-hygiene.sh`.
+4. Cross-repo sync command: `bash <vault-root>/Oliver/_Project Repos/oliver-local/scripts/sync-project-hygiene.sh`.
+5. Cross-repo drift audit command: `bash <vault-root>/Oliver/_Project Repos/oliver-local/scripts/audit-project-hygiene.sh`.
 
 ## Enforcement checklist (pre-push)
 1. Story linked and AC/evidence/test-plan complete.

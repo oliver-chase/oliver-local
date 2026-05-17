@@ -129,7 +129,7 @@ audit_repo() {
   scan_forbidden_refs "$repo" "$HOME/oliver-local/skills"
   scan_forbidden_refs "$repo" "~/.codex/skills"
   scan_forbidden_refs "$repo" "~/.claude/skills"
-  scan_forbidden_refs "$repo" "<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills"
+  scan_forbidden_refs "$repo" "<vault-root>/Oliver/_Project Repos/oliver-local/skills"
   scan_forbidden_refs "$repo" "story-lifecycle-gate"
 }
 
