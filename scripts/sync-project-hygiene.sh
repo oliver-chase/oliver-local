@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VAULT_ROOT="$(cd "$ROOT/../../../../../.." && pwd)"
+VAULT_ROOT="$(cd "$ROOT/../../../.." && pwd)"
 MAP="$ROOT/shared/repo-map.json"
 MANIFEST="$ROOT/shared/project-bootstrap-manifest.json"
 OVERWRITE_NON_STRICT="${OVERWRITE_NON_STRICT:-0}"

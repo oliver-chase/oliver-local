@@ -26,5 +26,5 @@ It is **not** where feature/product code for `oliver-app`, `v-two-sdr`, `fallow`
 
 ## Canonical local path relationship
 
-- Working tree root: `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local`
-- Canonical command alias: `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local`
+- Working tree root: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`
+- Canonical command alias: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`

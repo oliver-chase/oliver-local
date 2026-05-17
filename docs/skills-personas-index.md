@@ -8,6 +8,15 @@ Purpose: route to useful capabilities without loading full files by default.
 - Do not paste full skill/persona bodies into handoff docs.
 - Treat gstack as one skill family; load only the invoked gstack subskill.
 
+## Mandatory Efficiency Layer
+- `caveman` -> `<vault-root>/_Management/Agent Orchestration/staging/private/runtime-state/.agents/skills/caveman/SKILL.md`
+  - Upstream: `https://github.com/JuliusBrussee/caveman`
+  - Apply concise, no-filler technical communication at startup.
+  - Load full Caveman skill files only for explicit Caveman commands or workflows.
+- `caveman-commit`, `caveman-review`, `caveman-compress`, `caveman-stats`, `cavecrew`
+  - Available under `staging/private/runtime-state/.agents/skills/`.
+  - Use only when the task invokes that specialized workflow.
+
 ## Core Skill Families
 - `gstack` -> `skills/gstack/SKILL.md`
   - Use for browser QA, product/design reviews, shipping, canary checks, security review, retrospectives, and plan review.

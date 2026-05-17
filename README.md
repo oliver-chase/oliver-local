@@ -3,11 +3,11 @@
 Canonical orchestration system for the local home workspace (`~`).
 
 `oliver-local` represents the full local orchestration system rooted at `~`.
-`<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local` is the shared orchestration system root for this machine.
+`<vault-root>/_Management/Agent Orchestration/repos/oliver-local` is the shared orchestration system root for this machine.
 
 ## Shared System
 
-- Oliver-local repo operations: `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/docs/oliver-local-repo-operations.md`
+- Oliver-local repo operations: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/docs/oliver-local-repo-operations.md`
 - Canonical contracts: `contracts/*`, including:
   - `contracts/PROJECT_HYGIENE_STANDARD.md`
   - `contracts/PROJECT_STRUCTURE_STANDARD.md`
@@ -35,7 +35,7 @@ Git-tracked copies of the local runtime README and ORCHESTRATION files live in `
 - `runtime-pointers/.agents/README.md`
 - `runtime-pointers/.agents/ORCHESTRATION.md`
 
-Those files explain what each local runtime folder is, what state may live there, and why shared instructions point back to `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local`. `scripts/test-structure.sh` checks that the live runtime files match these tracked copies.
+Those files explain what each local runtime folder is, what state may live there, and why shared instructions point back to `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`. `scripts/test-structure.sh` checks that the live runtime files match these tracked copies.
 
 ## Governance Gates
 
@@ -60,8 +60,8 @@ Those files explain what each local runtime folder is, what state may live there
 ## Ownership Rules
 
 - Product code/docs live in `<vault-root>/Oliver/_Project Repos/*`.
-- Cross-project orchestration standards live in `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/shared/*`.
-- Shared skills live in `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills/*`.
+- Cross-project orchestration standards live in `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/shared/*`.
+- Shared skills live in `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills/*`.
 - Runtime folders (`.claude`, `.codex`, `.agents`) are adapters and runtime state, not shared-system source-of-truth.
 - `references`, `dotfiles`, and `claude-push` are support workspaces; they are not shared orchestration roots.
 - Concrete service URLs, tokens, personal profile details, device identifiers, and runtime-only settings stay in local env/runtime files, not Git.
@@ -83,6 +83,6 @@ Those files explain what each local runtime folder is, what state may live there
 For `oliver-local` sync/reconciliation changes, run:
 
 ```bash
-bash <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/scripts/check-doc-config-impact.sh
-bash <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/scripts/test-structure.sh
+bash <vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/check-doc-config-impact.sh
+bash <vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts/test-structure.sh
 ```

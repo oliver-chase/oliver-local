@@ -8,7 +8,7 @@ Contains application code, app-specific docs, migrations, tests, and deploy logi
 
 ## 2. Orchestration Layer
 
-Location: `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local` (shared system root)
+Location: `<vault-root>/_Management/Agent Orchestration/repos/oliver-local` (shared system root)
 
 Contains shared agent operating rules, workspace maps, persona/skill metadata, and workflow standards.
 
@@ -23,13 +23,13 @@ Runtime state is intentionally separate from product repositories.
 
 Locations:
 - `~/.agents` for runtime-local adapter state and external runtime skills
-- `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills` for canonical shared skills
+- `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills` for canonical shared skills
 - `~/references` for upstream templates/reference repos
 - `~/dotfiles` for machine configuration
 
 ## Operating Contract
 
 - Do not duplicate project source trees into orchestration folders.
-- Keep cross-project standards in `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/shared/*` once, then reference them.
-- Keep shared skills in `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills/*` once, then reference them from runtime adapters.
+- Keep cross-project standards in `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/shared/*` once, then reference them.
+- Keep shared skills in `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills/*` once, then reference them from runtime adapters.
 - Keep project-specific instructions inside each project repo.

@@ -3,7 +3,7 @@ set -euo pipefail
 
 TARGET_REPO="${1:-}"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VAULT_ROOT="$(cd "$ROOT/../../../../../.." && pwd)"
+VAULT_ROOT="$(cd "$ROOT/../../../.." && pwd)"
 MAP="$ROOT/shared/repo-map.json"
 expand_path() {
   local p="$1"
@@ -129,7 +129,7 @@ audit_repo() {
   scan_forbidden_refs "$repo" "$HOME/oliver-local/skills"
   scan_forbidden_refs "$repo" "~/.codex/skills"
   scan_forbidden_refs "$repo" "~/.claude/skills"
-  scan_forbidden_refs "$repo" "<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills"
+  scan_forbidden_refs "$repo" "<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills"
   scan_forbidden_refs "$repo" "story-lifecycle-gate"
 }
 

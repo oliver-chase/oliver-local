@@ -2,12 +2,12 @@
 
 ## Active Core Runtimes
 
-- `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local`: shared orchestration root.
+- `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`: shared orchestration root.
 - `.claude`: Claude runtime adapter + state.
 - `.codex`: Codex runtime adapter + state.
 - `.agents`: agent-runtime adapters + state.
 
-`~/.claude` must not be a separate Git checkout for shared orchestration. Its shared-facing directories are adapter links into `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local`.
+`~/.claude` must not be a separate Git checkout for shared orchestration. Its shared-facing directories are adapter links into `<vault-root>/_Management/Agent Orchestration/repos/oliver-local`.
 
 ## Product Repositories
 
@@ -25,7 +25,7 @@
 
 ## Not Source Of Truth For Product Features
 
-- `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/docs/*` (workspace pointers/standards only)
+- `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/docs/*` (workspace pointers/standards only)
 - `~/.codex/*` (runtime state)
 - `~/.claude/*` runtime artifacts outside pointer files
 - `~/.agents/*` runtime artifacts outside pointer files
@@ -38,17 +38,17 @@ Tracked context for runtime adapter README/ORCHESTRATION files lives in `docs/ru
   - `~/.claude/README.md`
   - `~/.codex/README.md`
   - `~/.agents/README.md`
-- `~/.claude/docs` -> `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/docs`
-- `~/.claude/scripts` -> `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/scripts`
-- `~/.claude/shared` -> `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/shared`
-- `~/.claude/personas` -> `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/personas`
-- `~/.claude/identity` -> `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/identity`
-- `~/.claude/skills` -> `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills`
-- `~/.codex/skills/story-lifecycle-gate` -> `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills/story-lifecycle-gate`
+- `~/.claude/docs` -> `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/docs`
+- `~/.claude/scripts` -> `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/scripts`
+- `~/.claude/shared` -> `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/shared`
+- `~/.claude/personas` -> `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/personas`
+- `~/.claude/identity` -> `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/identity`
+- `~/.claude/skills` -> `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills`
+- `~/.codex/skills/story-lifecycle-gate` -> `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills/story-lifecycle-gate`
 
 ## Duplication Policy
 
 - Product behavior/process docs: keep in each product repo.
-- Cross-project agent rules: keep in `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/shared/*`.
-- Shared skills/tools: keep in `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills/*`.
+- Cross-project agent rules: keep in `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/shared/*`.
+- Shared skills/tools: keep in `<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills/*`.
 - Do not maintain duplicate copies of the same process document across both locations.

@@ -2,7 +2,7 @@
 
 Updated 2026-04-24.
 
-`<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills` is the canonical shared skill layer for this system. Runtime adapters reference these shared skills.
+`<vault-root>/_Management/Agent Orchestration/repos/oliver-local/skills` is the canonical shared skill layer for this system. Runtime adapters reference these shared skills.
 
 Use `docs/skills-personas-index.md` as the default routing surface. Load full skill files only when the task requires them.
 

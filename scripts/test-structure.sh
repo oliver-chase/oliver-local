@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 HOME_ROOT="$HOME"
-VAULT_ROOT="$(cd "$ROOT/../../../../../.." && pwd)"
+VAULT_ROOT="$(cd "$ROOT/../../../.." && pwd)"
 FAILURES=0
 
 pass() {
@@ -56,7 +56,7 @@ else
 fi
 
 # 2) shared system root should resolve inside the Vault.
-if [[ "$ROOT" == "$VAULT_ROOT/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local" ]]; then
+if [[ "$ROOT" == "$VAULT_ROOT/_Management/Agent Orchestration/repos/oliver-local" ]]; then
   pass "oliver-local root is Vault-first"
 else
   fail "oliver-local root is Vault-first"
@@ -85,12 +85,12 @@ fi
 for runtime in .claude .codex .agents; do
   readme="$ROOT/runtime-pointers/$runtime/README.md"
   orchestration="$ROOT/runtime-pointers/$runtime/ORCHESTRATION.md"
-  if [[ -f "$readme" ]] && rg -q 'Runtime Adapter|runtime adapter' "$readme" && rg -q '<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local' "$readme"; then
+  if [[ -f "$readme" ]] && rg -q 'Runtime Adapter|runtime adapter' "$readme" && rg -q '<vault-root>/_Management/Agent Orchestration/repos/oliver-local' "$readme"; then
     pass "$runtime tracked README documents runtime adapter"
   else
     fail "$runtime tracked README documents runtime adapter"
   fi
-  if [[ -f "$orchestration" ]] && rg -q '<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local' "$orchestration"; then
+  if [[ -f "$orchestration" ]] && rg -q '<vault-root>/_Management/Agent Orchestration/repos/oliver-local' "$orchestration"; then
     pass "$runtime tracked ORCHESTRATION points to oliver-local"
   else
     fail "$runtime tracked ORCHESTRATION points to oliver-local"

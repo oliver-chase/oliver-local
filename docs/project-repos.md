@@ -13,6 +13,8 @@ Product implementation lives in `<vault-root>/Oliver/_Project Repos/*`. This rep
 
 - [oliver-local](projects/oliver-local.md)
 
+Local orchestration repos live directly under `<vault-root>/_Management/Agent Orchestration/repos/*` to avoid unnecessary `workspace/repos/orchestration` nesting.
+
 ## Local Utility (Non-Git)
 
 - `<vault-root>/Oliver/_Project Repos/prompt-lint`
