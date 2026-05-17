@@ -32,6 +32,10 @@ Purpose: route to useful capabilities without loading full files by default.
   - Large reference family. Load the narrowest matching pattern file only.
 - `openai-docs` -> `skills/openai-docs/SKILL.md`
   - Use for current OpenAI API/product documentation.
+- `gtm-automation` -> `skills/gtm-automation/SKILL.md`
+  - Use for V.Two GTM content ops, LinkedIn draft workflows, SEO/GEO, outbound planning, and marketing automation.
+  - Requires approval before posting, LinkedIn automation, scraping, prospect messages, credential use, or external uploads.
+  - Portable routing rules: `docs/gtm-orchestration.md`.
 - `skill-creator` / `skill-installer` / `plugin-creator`
   - Use for creating or installing reusable Codex/agent capabilities.
 
@@ -58,6 +62,7 @@ Purpose: route to useful capabilities without loading full files by default.
 - `dev` -> `personas/dev/persona_soul.md`
 - `fe-designer` -> `personas/fe-designer/persona_soul.md`
 - `marketing` -> `personas/marketing/persona_soul.md`
+- `gtm-operator` -> `personas/gtm-operator/persona_soul.md`
 - `sdr` -> `personas/sdr/persona_soul.md`
 - `tester` -> `personas/tester/persona_soul.md`
 
