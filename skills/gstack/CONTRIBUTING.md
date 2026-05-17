@@ -4,9 +4,9 @@ Thanks for wanting to make gstack better. Whether you're fixing a typo in a skil
 
 ## Quick start
 
-gstack skills are Markdown files that Claude Code discovers from a `skills/` directory. On this machine they live at `~/oliver-local/skills/gstack`, with `~/.claude/skills` acting as an adapter symlink. When you're developing gstack itself, edits in the shared checkout take effect instantly without copying or deploying anything.
+gstack skills are Markdown files that Claude Code discovers from a `skills/` directory. On this machine they live at `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills/gstack`, with `~/.claude/skills` acting as an adapter symlink. When you're developing gstack itself, edits in the shared checkout take effect instantly without copying or deploying anything.
 
-For a standalone upstream checkout, dev mode symlinks your repo into a local `.claude/skills/` directory so Claude Code reads skills straight from your checkout. For this Oliver-local install, work directly in `~/oliver-local/skills/gstack`.
+For a standalone upstream checkout, dev mode symlinks your repo into a local `.claude/skills/` directory so Claude Code reads skills straight from your checkout. For this Oliver-local install, work directly in `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills/gstack`.
 
 ```bash
 git clone <repo> && cd gstack
@@ -342,7 +342,7 @@ individual top-level directories (`qa/SKILL.md`, `ship/SKILL.md`, etc.), not thr
 the `gstack/` directory itself. Run `./setup` to create them:
 
 ```bash
-cd ~/oliver-local/skills/gstack && bun install && bun run build && ./setup
+cd <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills/gstack && bun install && bun run build && ./setup
 ```
 
 Setup will ask whether you want short names (`/qa`) or namespaced (`/gstack-qa`).
@@ -356,7 +356,7 @@ call picks it up immediately. No restart needed.
 
 ### Going back to the stable shared install
 
-Remove any project-local gstack symlink. Claude Code falls back to the shared install at `~/oliver-local/skills/gstack`:
+Remove any project-local gstack symlink. Claude Code falls back to the shared install at `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills/gstack`:
 
 ```bash
 rm .claude/skills/gstack
@@ -388,8 +388,8 @@ bun install && bun run build && ./setup
 ```
 
 This does not apply to the Oliver-local shared install on this machine. Here,
-active gstack files live at `~/oliver-local/skills/gstack` and are committed from
-`~/oliver-local`.
+active gstack files live at `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills/gstack` and are committed from
+`<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local`.
 
 ## Community PR triage (wave process)
 

@@ -4,7 +4,7 @@ Use this workflow when the user asks to sync, reconcile, or refresh `oliver-loca
 
 ## Scope
 
-`oliver-local` is the shared orchestration repo at `~/oliver-local`, not an app repo.
+`oliver-local` is the shared orchestration repo at `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local`, not an app repo.
 
 This workflow keeps these files aligned with the live machine state:
 
@@ -23,21 +23,21 @@ This workflow keeps these files aligned with the live machine state:
 1. Confirm repo health.
 
 ```bash
-git -C ~/oliver-local status --short --branch
-test -d ~/oliver-local
+git -C <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local status --short --branch
+test -d <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local
 ```
 
 2. Run structure drift checks.
 
 ```bash
-bash ~/oliver-local/scripts/test-structure.sh
+bash <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/scripts/test-structure.sh
 ```
 
 3. Reconcile local repo inventory against disk.
 
 ```bash
-ls -1 ~/projects
-jq -r '.repos[].name + " -> " + .path' ~/oliver-local/shared/repo-map.json
+ls -1 <vault-root>/Oliver/_Project Repos
+jq -r '.repos[].name + " -> " + .path' <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/shared/repo-map.json
 ```
 
 4. If inventory drift exists:
@@ -50,8 +50,8 @@ jq -r '.repos[].name + " -> " + .path' ~/oliver-local/shared/repo-map.json
 5. Run impact + structure checks.
 
 ```bash
-bash ~/oliver-local/scripts/check-doc-config-impact.sh
-bash ~/oliver-local/scripts/test-structure.sh
+bash <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/scripts/check-doc-config-impact.sh
+bash <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/scripts/test-structure.sh
 ```
 
 6. Commit only sync-scope files.
@@ -61,12 +61,12 @@ bash ~/oliver-local/scripts/test-structure.sh
 Example:
 
 ```bash
-git -C ~/oliver-local add shared/repo-map.json docs README.md CLAUDE.md shared/workflow-standards.md
-git -C ~/oliver-local commit -m "docs: sync oliver-local repo map and workflow metadata"
+git -C <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local add shared/repo-map.json docs README.md CLAUDE.md shared/workflow-standards.md
+git -C <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local commit -m "docs: sync oliver-local repo map and workflow metadata"
 ```
 
 7. Push `main` immediately.
 
 ```bash
-git -C ~/oliver-local push origin main
+git -C <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local push origin main
 ```

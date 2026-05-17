@@ -2,13 +2,16 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+VAULT_ROOT="$(cd "$ROOT/../../../../../.." && pwd)"
 MAP="$ROOT/shared/repo-map.json"
 MANIFEST="$ROOT/shared/project-bootstrap-manifest.json"
 FAIL=0
 
 expand_home() {
   local p="$1"
-  if [[ "$p" == "~"* ]]; then
+  if [[ "$p" == "<vault-root>"* ]]; then
+    printf "%s" "${p/#<vault-root>/$VAULT_ROOT}"
+  elif [[ "$p" == "~"* ]]; then
     printf "%s" "${p/#\~/$HOME}"
   else
     printf "%s" "$p"

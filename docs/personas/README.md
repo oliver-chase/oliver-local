@@ -3,7 +3,9 @@
 Canonical persona workspace locations:
 
 - `marketing` -> `docs/personas/marketing/`
-- `sdr` -> `~/projects/v-two-sdr`
+- `sdr` -> `<vault-root>/Oliver/_Project Repos/v-two-sdr`
+
+Use `docs/skills-personas-index.md` as the lean routing surface. Load full persona files only when a task requires that role.
 
 Rules:
 

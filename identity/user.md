@@ -21,7 +21,7 @@
 
 ## Projects
 
-All in `~/projects/`. See each project's CLAUDE.md for context.
+All in `<vault-root>/Oliver/_Project Repos/`. See each project's CLAUDE.md for context.
 
 ---
 

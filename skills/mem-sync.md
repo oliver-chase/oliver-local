@@ -11,7 +11,7 @@ Cleans and syncs all memory and startup structures so a fresh session can orient
 
 | File | Purpose | Max length |
 |------|---------|-----------|
-| `~/oliver-local/CLAUDE.md` | Shared operating rules | ~160 lines |
+| `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/CLAUDE.md` | Shared operating rules | ~160 lines |
 | `~/.claude/CLAUDE.md` | Claude runtime adapter pointer rules | ~80 lines |
 | `~/.claude/projects/-Users-oliver/memory/MEMORY.md` | Claude runtime memory index | ~130 lines |
 | `~/.claude/projects/-Users-oliver/memory/*.md` | Claude runtime memory files | ~30 lines each |
@@ -21,9 +21,9 @@ Cleans and syncs all memory and startup structures so a fresh session can orient
 ## Steps
 
 ### 1. Shared and runtime startup docs
-- `~/oliver-local/CLAUDE.md` must describe shared operating rules only.
-- `~/.claude/CLAUDE.md` must describe Claude runtime adapter behavior only and point back to `~/oliver-local`.
-- Project tables or repo inventories belong in `~/oliver-local/docs/project-repos.md` and `~/oliver-local/shared/repo-map.json`.
+- `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/CLAUDE.md` must describe shared operating rules only.
+- `~/.claude/CLAUDE.md` must describe Claude runtime adapter behavior only and point back to `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local`.
+- Project tables or repo inventories belong in `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/docs/project-repos.md` and `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/shared/repo-map.json`.
 - No startup doc may describe `~/.claude` as the shared-system source of truth.
 
 ### 2. Global MEMORY.md index
@@ -48,15 +48,15 @@ Cleans and syncs all memory and startup structures so a fresh session can orient
 ### 5. Cross-check
 ```bash
 # Verify repo names in shared repo map match actual remotes
-jq -r '.repos[].path' ~/oliver-local/shared/repo-map.json
-git -C ~/projects/tesknota remote get-url origin
+jq -r '.repos[].path' <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/shared/repo-map.json
+git -C <vault-root>/Oliver/_Project Repos/tesknota remote get-url origin
 ```
 
 ### 6. Update "Last Updated" timestamp in MEMORY.md index
 
 ### 7. Commit
 If in a project repo: `git add` only doc files, commit as `docs: sync memory and startup files`.
-If shared orchestration files changed: commit from `~/oliver-local`.
+If shared orchestration files changed: commit from `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local`.
 Do not commit from `~/.claude`; it is runtime adapter/state.
 
 ## Signs memory needs syncing

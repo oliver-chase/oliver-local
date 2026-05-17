@@ -23,7 +23,7 @@ Current live structure for `~`.
 
 - `oliver-local` is the shared orchestration checkout.
 - `.claude`, `.codex`, and `.agents` are sibling runtimes with separate state.
-- Project source-of-truth lives only in `~/projects/*` repositories.
+- Project source-of-truth lives only in `<vault-root>/Oliver/_Project Repos/*` repositories.
 - `references` is read-only reference material unless explicitly promoted into a project or shared skill.
 - `dotfiles` is machine configuration, not orchestration policy.
 - `claude-push` is helper automation for Claude permission notifications, not a shared orchestration root.

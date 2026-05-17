@@ -1,6 +1,6 @@
 # Project Repos
 
-Product implementation lives in `~/projects/*`. This repo stores pointers only.
+Product implementation lives in `<vault-root>/Oliver/_Project Repos/*`. This repo stores pointers only.
 
 ## Active Product Repos
 
@@ -15,4 +15,4 @@ Product implementation lives in `~/projects/*`. This repo stores pointers only.
 
 ## Local Utility (Non-Git)
 
-- `~/projects/prompt-lint`
+- `<vault-root>/Oliver/_Project Repos/prompt-lint`

@@ -3,10 +3,13 @@ set -euo pipefail
 
 TARGET_REPO="${1:-}"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+VAULT_ROOT="$(cd "$ROOT/../../../../../.." && pwd)"
 MAP="$ROOT/shared/repo-map.json"
-expand_home() {
+expand_path() {
   local p="$1"
-  if [[ "$p" == "~"* ]]; then
+  if [[ "$p" == "<vault-root>"* ]]; then
+    printf "%s" "${p/#<vault-root>/$VAULT_ROOT}"
+  elif [[ "$p" == "~"* ]]; then
     printf "%s" "${p/#\~/$HOME}"
   else
     printf "%s" "$p"
@@ -89,8 +92,9 @@ audit_repo() {
       check_file "$repo" "README.md"
       check_file "$repo" "CLAUDE.md"
       check_file "$repo" "AGENTS.md"
-      check_file "$repo" "docs/product/03-backlog-user-stories.md"
-      check_file "$repo" "docs/product/07-execution-status.md"
+      check_file "$repo" "ARCHITECTURE.md"
+      check_file "$repo" "docs/design-system.md"
+      check_file "$repo" "docs/product/README.md"
       ;;
     v-two-sdr)
       check_file "$repo" "README.md"
@@ -125,12 +129,12 @@ audit_repo() {
   scan_forbidden_refs "$repo" "$HOME/oliver-local/skills"
   scan_forbidden_refs "$repo" "~/.codex/skills"
   scan_forbidden_refs "$repo" "~/.claude/skills"
-  scan_forbidden_refs "$repo" "~/oliver-local/skills"
+  scan_forbidden_refs "$repo" "<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills"
   scan_forbidden_refs "$repo" "story-lifecycle-gate"
 }
 
 for repo in "${REPOS[@]}"; do
-  audit_repo "$(expand_home "$repo")"
+  audit_repo "$(expand_path "$repo")"
   echo
  done
 

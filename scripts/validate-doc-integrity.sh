@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="$HOME"
 OLIVER_LOCAL_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+VAULT_ROOT="$(cd "$OLIVER_LOCAL_ROOT/../../../../../.." && pwd)"
 MAP="$OLIVER_LOCAL_ROOT/shared/repo-map.json"
 
 FORBIDDEN_PATTERNS=(
@@ -11,7 +11,7 @@ FORBIDDEN_PATTERNS=(
   "$HOME/oliver-local/skills"
   '~/.codex/skills'
   '~/.claude/skills'
-  '~/oliver-local/skills'
+  '<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills'
   'story-lifecycle-gate'
   'oliver-local-reconciliation-2026-04-24.md'
   'STATE-AUDIT-2026-04-22.md'
@@ -27,14 +27,23 @@ FORBIDDEN_PATTERNS=(
 )
 
 echo "Doc integrity scan"
-echo "Root: $ROOT"
+echo "Vault root: $VAULT_ROOT"
 echo
+
+expand_path() {
+  local p="$1"
+  if [[ "$p" == "<vault-root>"* ]]; then
+    printf "%s" "${p/#<vault-root>/$VAULT_ROOT}"
+  elif [[ "$p" == "~"* ]]; then
+    printf "%s" "${p/#\~/$HOME}"
+  else
+    printf "%s" "$p"
+  fi
+}
 
 fail=0
 while IFS= read -r repo; do
-  if [[ "$repo" == "~"* ]]; then
-    repo="${repo/#\~/$HOME}"
-  fi
+  repo="$(expand_path "$repo")"
   echo "=== $repo"
   if [[ ! -d "$repo" ]]; then
     echo "missing repo path"

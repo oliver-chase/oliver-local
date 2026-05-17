@@ -3,7 +3,7 @@
   "repos": [
     {
       "name": "oliver-app",
-      "path": "~/projects/oliver-app",
+      "path": "<vault-root>/Oliver/_Project Repos/oliver-app",
       "required_paths": [
         "README.md",
         "CLAUDE.md",
@@ -25,7 +25,7 @@
     },
     {
       "name": "tesknota",
-      "path": "~/projects/tesknota",
+      "path": "<vault-root>/Oliver/_Project Repos/tesknota",
       "required_paths": [
         "README.md",
         "AGENTS.md",
@@ -44,7 +44,7 @@
     },
     {
       "name": "v-two-sdr",
-      "path": "~/projects/v-two-sdr",
+      "path": "<vault-root>/Oliver/_Project Repos/v-two-sdr",
       "required_paths": [
         "README.md",
         "CLAUDE.md",
@@ -71,7 +71,7 @@
     },
     {
       "name": "fallow",
-      "path": "~/projects/fallow",
+      "path": "<vault-root>/Oliver/_Project Repos/fallow",
       "required_paths": [
         "README.md",
         "CLAUDE.md",

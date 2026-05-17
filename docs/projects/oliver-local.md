@@ -19,12 +19,12 @@ It is **not** where feature/product code for `oliver-app`, `v-two-sdr`, `fallow`
 
 ## Where product repos live
 
-- `~/projects/oliver-app`
-- `~/projects/v-two-sdr`
-- `~/projects/fallow`
-- `~/projects/tesknota`
+- `<vault-root>/Oliver/_Project Repos/oliver-app`
+- `<vault-root>/Oliver/_Project Repos/v-two-sdr`
+- `<vault-root>/Oliver/_Project Repos/fallow`
+- `<vault-root>/Oliver/_Project Repos/tesknota`
 
 ## Canonical local path relationship
 
-- Working tree root: `~/oliver-local`
-- Canonical command alias: `~/oliver-local`
+- Working tree root: `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local`
+- Canonical command alias: `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local`

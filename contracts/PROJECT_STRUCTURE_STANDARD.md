@@ -2,7 +2,7 @@
 
 Status: Active
 Effective Date: 2026-05-01
-Scope: All project repositories under `~/projects/*`
+Scope: All project repositories under `<vault-root>/Oliver/_Project Repos/*`
 
 ## Purpose
 
@@ -120,5 +120,5 @@ Use these canonical locations exactly; do not create parallel backlog systems.
 
 1. Run the repo's structure gate (`npm run check:structure` or `npm run check-stories`, depending on profile).
 2. `npm run qa:hygiene` in each repo.
-3. `~/oliver-local/scripts/check-project-structure.sh` for cross-repo shape checks.
+3. `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/scripts/check-project-structure.sh` for cross-repo shape checks.
 4. Contract drift in `docs/repo-structure-contract.md` is a blocker.

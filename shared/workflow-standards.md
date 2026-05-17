@@ -25,13 +25,13 @@ If a trigger term conflicts with active repo docs, surface the conflict before c
 
 ## Repo Location
 
-All product repos live under `~/projects/`.
+All product repos live under `<vault-root>/Oliver/_Project Repos/`.
 
 ## Orchestration Rules
 
 - Keep `.claude`, `.codex`, and `.agents` runtime state separate.
-- Keep shared standards in one place (`~/oliver-local/shared/*`).
-- Keep shared skills in one place (`~/oliver-local/skills/*`).
+- Keep shared standards in one place (`<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/shared/*`).
+- Keep shared skills in one place (`<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills/*`).
 - Do not duplicate product workflow docs into runtime folders.
 - Do not duplicate shared SOP/workflow files into project repos; reference canonical shared workflows instead.
 - Treat live machine layout as source of truth over stale cached paths.
@@ -45,12 +45,12 @@ Testing applies to all code work. Follow `shared/workflows/testing-rules.md`.
 - `development`: unstarted and in-progress story housing.
 - `staging`: completed work that is ready for QA validation.
 - `main`: production-ready promotions only.
-- This lifecycle is mandatory across all project repos under `~/projects/`.
+- This lifecycle is mandatory across all project repos under `<vault-root>/Oliver/_Project Repos/`.
 - Change-one/change-all rule: if any repo lifecycle wording changes, update this file and the managed template files in the same governance cycle.
 
 ## Cross-Repo Quality Baseline
 
 - Canonical managed quality files live in `shared/templates/project`.
-- Sync all mapped repos: `bash ~/oliver-local/scripts/sync-project-hygiene.sh`.
-- Audit strict-file drift: `bash ~/oliver-local/scripts/audit-project-hygiene.sh`.
+- Sync all mapped repos: `bash <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/scripts/sync-project-hygiene.sh`.
+- Audit strict-file drift: `bash <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/scripts/audit-project-hygiene.sh`.
 - Policy: a managed-file change in one repo is invalid unless the canonical template is updated and re-synced to all repos.

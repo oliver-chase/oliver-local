@@ -2,7 +2,9 @@
 
 Updated 2026-04-24.
 
-`~/oliver-local/skills` is the canonical shared skill layer for this system. Runtime adapters reference these shared skills.
+`<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/skills` is the canonical shared skill layer for this system. Runtime adapters reference these shared skills.
+
+Use `docs/skills-personas-index.md` as the default routing surface. Load full skill files only when the task requires them.
 
 Workflow trigger routing is defined separately in `shared/workflows/*.md`.
 If a plain-language trigger term and a skill alias collide (for example, `qa`), pause and surface the conflict before proceeding.

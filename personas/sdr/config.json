@@ -4,7 +4,7 @@
   "role": "Sales Development Representative",
   "company": "Organization",
   "status": "active",
-  "workspace": "~/projects/v-two-sdr",
+  "workspace": "<vault-root>/Oliver/_Project Repos/v-two-sdr",
   "allowed_tools": [
     "web_search",
     "write",
@@ -28,11 +28,11 @@
       "claude_code"
     ],
     "shared_data": {
-      "prospects": "~/projects/v-two-sdr/prospects.json",
-      "templates": "~/projects/v-two-sdr/outreach/templates.md",
-      "sends": "~/projects/v-two-sdr/outreach/sends.json",
-      "opt_outs": "~/projects/v-two-sdr/outreach/opt-outs.json",
-      "weekly_reports": "~/projects/v-two-sdr/outreach/weekly-reports.json"
+      "prospects": "<vault-root>/Oliver/_Project Repos/v-two-sdr/prospects.json",
+      "templates": "<vault-root>/Oliver/_Project Repos/v-two-sdr/outreach/templates.md",
+      "sends": "<vault-root>/Oliver/_Project Repos/v-two-sdr/outreach/sends.json",
+      "opt_outs": "<vault-root>/Oliver/_Project Repos/v-two-sdr/outreach/opt-outs.json",
+      "weekly_reports": "<vault-root>/Oliver/_Project Repos/v-two-sdr/outreach/weekly-reports.json"
     }
   },
   "skill": "skills/work-outreach/SKILL.md",

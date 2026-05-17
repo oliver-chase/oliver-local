@@ -4,7 +4,7 @@ Use this when acting as the SDR persona.
 
 ## Workspace
 
-Canonical workspace: `~/projects/v-two-sdr`
+Canonical workspace: `<vault-root>/Oliver/_Project Repos/v-two-sdr`
 
 ## Required Sources
 

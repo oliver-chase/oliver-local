@@ -2,9 +2,9 @@
 
 ## Runtime Boundary
 
-- `~/oliver-local` is the shared orchestration system root.
+- `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local` is the shared orchestration system root.
 - `~/.codex` is separate runtime state; do not treat it as a project repo.
-- Product implementation always happens in `~/projects/*` repos.
+- Product implementation always happens in `<vault-root>/Oliver/_Project Repos/*` repos.
 
 ## Execution Rules
 
@@ -20,7 +20,7 @@
 
 ## Workspace Sync Rules (`oliver-local`)
 
-When changing workspace structure or standards in `~/oliver-local`:
+When changing workspace structure or standards in `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local`:
 
 1. Update these canonical docs when relevant:
 - `README.md`
@@ -32,8 +32,8 @@ When changing workspace structure or standards in `~/oliver-local`:
 
 2. Run checks:
 ```bash
-bash ~/oliver-local/scripts/check-doc-config-impact.sh
-bash ~/oliver-local/scripts/test-structure.sh
+bash <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/scripts/check-doc-config-impact.sh
+bash <vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/scripts/test-structure.sh
 ```
 
 3. Commit only sync-scope files.

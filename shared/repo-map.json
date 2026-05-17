@@ -1,37 +1,68 @@
 {
-  "workspaceRoot": "~/projects",
+  "workspaceRoot": "<vault-root>/Oliver/_Project Repos",
   "repos": [
     {
       "name": "tesknota",
-      "path": "~/projects/tesknota",
+      "path": "<vault-root>/Oliver/_Project Repos/tesknota",
       "owner": "oliver-chase",
       "repo": "tesknota",
-      "stack": ["typescript", "nextjs", "supabase"],
-      "focus": ["frontend", "mobile", "deploy"]
+      "stack": [
+        "typescript",
+        "nextjs",
+        "supabase"
+      ],
+      "focus": [
+        "frontend",
+        "mobile",
+        "deploy"
+      ]
     },
     {
       "name": "oliver-app",
-      "path": "~/projects/oliver-app",
+      "path": "<vault-root>/Oliver/_Project Repos/oliver-app",
       "owner": "oliver-chase",
       "repo": "oliver-app",
-      "stack": ["typescript", "nextjs", "supabase"],
-      "focus": ["ops", "frontend", "migration", "deploy"]
+      "stack": [
+        "typescript",
+        "nextjs",
+        "supabase"
+      ],
+      "focus": [
+        "ops",
+        "frontend",
+        "migration",
+        "deploy"
+      ]
     },
     {
       "name": "v-two-sdr",
-      "path": "~/projects/v-two-sdr",
+      "path": "<vault-root>/Oliver/_Project Repos/v-two-sdr",
       "owner": "oliver-chase",
       "repo": "v-two-sdr",
-      "stack": ["javascript"],
-      "focus": ["outreach", "automation", "deploy"]
+      "stack": [
+        "javascript"
+      ],
+      "focus": [
+        "outreach",
+        "automation",
+        "deploy"
+      ]
     },
     {
       "name": "fallow",
-      "path": "~/projects/fallow",
+      "path": "<vault-root>/Oliver/_Project Repos/fallow",
       "owner": "oliver-chase",
       "repo": "fallow",
-      "stack": ["javascript", "html", "css"],
-      "focus": ["frontend", "ui", "experimentation"]
+      "stack": [
+        "javascript",
+        "html",
+        "css"
+      ],
+      "focus": [
+        "frontend",
+        "ui",
+        "experimentation"
+      ]
     }
   ]
 }

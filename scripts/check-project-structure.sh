@@ -2,6 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+VAULT_ROOT="$(cd "$ROOT/../../../../../.." && pwd)"
 RULES="$ROOT/shared/project-structure-rules.json"
 TMP="/tmp/structure-check"
 mkdir -p "$TMP"
@@ -12,7 +13,9 @@ fail() { echo "FAIL $1"; FAIL=1; }
 
 expand_home() {
   local p="$1"
-  if [[ "$p" == "~"* ]]; then
+  if [[ "$p" == "<vault-root>"* ]]; then
+    printf "%s" "${p/#<vault-root>/$VAULT_ROOT}"
+  elif [[ "$p" == "~"* ]]; then
     printf "%s" "${p/#\~/$HOME}"
   else
     printf "%s" "$p"

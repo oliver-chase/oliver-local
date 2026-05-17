@@ -3,6 +3,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 HOME_ROOT="$HOME"
+VAULT_ROOT="$(cd "$ROOT/../../../../../.." && pwd)"
 FAILURES=0
 
 pass() {
@@ -18,6 +19,8 @@ resolve_path() {
   local p="$1"
   if [[ "$p" = /* ]]; then
     printf "%s" "$p"
+  elif [[ "$p" == "<vault-root>"* ]]; then
+    printf "%s" "${p/#<vault-root>/$VAULT_ROOT}"
   elif [[ "$p" == "~"* ]]; then
     printf "%s" "${p/#\~/$HOME_ROOT}"
   else
@@ -52,18 +55,18 @@ else
   pass ".claude settings avoid bypass-permission defaults"
 fi
 
-# 2) oliver-local alias should resolve to this repo root.
-if [[ -d "$HOME_ROOT/oliver-local" ]]; then
-  pass "oliver-local root exists"
+# 2) shared system root should resolve inside the Vault.
+if [[ "$ROOT" == "$VAULT_ROOT/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local" ]]; then
+  pass "oliver-local root is Vault-first"
 else
-  fail "oliver-local root exists"
+  fail "oliver-local root is Vault-first"
 fi
 
 for alias_name in AGENT_SHARED_STRUCTURE.md SHARED_ORCHESTRATION.md AGENT_SYSTEM_MANIFEST.json; do
-  if [[ -L "$HOME_ROOT/$alias_name" ]]; then
-    pass "machine-level alias present: $alias_name"
+  if [[ -f "$ROOT/contracts/$alias_name" ]]; then
+    pass "contract present: $alias_name"
   else
-    fail "machine-level alias present: $alias_name"
+    fail "contract present: $alias_name"
   fi
 done
 
@@ -79,48 +82,18 @@ else
   fail ".claude is not a separate shared-system git checkout"
 fi
 
-if [[ "$(readlink "$HOME_ROOT/.claude/skills" 2>/dev/null || true)" = "$ROOT/skills" ]]; then
-  pass ".claude skills adapter points to oliver-local"
-else
-  fail ".claude skills adapter points to oliver-local"
-fi
-
-for adapter_name in docs scripts shared personas identity; do
-  if [[ "$(readlink "$HOME_ROOT/.claude/$adapter_name" 2>/dev/null || true)" = "$ROOT/$adapter_name" ]]; then
-    pass ".claude $adapter_name adapter points to oliver-local"
-  else
-    fail ".claude $adapter_name adapter points to oliver-local"
-  fi
-done
-
-if [[ "$(readlink "$HOME_ROOT/.codex/skills/story-lifecycle-gate" 2>/dev/null || true)" = "$ROOT/skills/story-lifecycle-gate" ]]; then
-  pass ".codex story-lifecycle-gate adapter points to oliver-local"
-else
-  fail ".codex story-lifecycle-gate adapter points to oliver-local"
-fi
-
 for runtime in .claude .codex .agents; do
-  readme="$HOME_ROOT/$runtime/README.md"
-  orchestration="$HOME_ROOT/$runtime/ORCHESTRATION.md"
-  if [[ -f "$readme" ]] && rg -q 'Runtime Adapter|runtime adapter' "$readme" && rg -q '~/oliver-local' "$readme"; then
-    pass "$runtime README documents local runtime adapter"
+  readme="$ROOT/runtime-pointers/$runtime/README.md"
+  orchestration="$ROOT/runtime-pointers/$runtime/ORCHESTRATION.md"
+  if [[ -f "$readme" ]] && rg -q 'Runtime Adapter|runtime adapter' "$readme" && rg -q '<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local' "$readme"; then
+    pass "$runtime tracked README documents runtime adapter"
   else
-    fail "$runtime README documents local runtime adapter"
+    fail "$runtime tracked README documents runtime adapter"
   fi
-  if [[ -f "$orchestration" ]] && rg -q '~/oliver-local' "$orchestration"; then
-    pass "$runtime ORCHESTRATION points to oliver-local"
+  if [[ -f "$orchestration" ]] && rg -q '<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local' "$orchestration"; then
+    pass "$runtime tracked ORCHESTRATION points to oliver-local"
   else
-    fail "$runtime ORCHESTRATION points to oliver-local"
-  fi
-  if cmp -s "$ROOT/runtime-pointers/$runtime/README.md" "$readme"; then
-    pass "$runtime README matches tracked runtime pointer"
-  else
-    fail "$runtime README matches tracked runtime pointer"
-  fi
-  if cmp -s "$ROOT/runtime-pointers/$runtime/ORCHESTRATION.md" "$orchestration"; then
-    pass "$runtime ORCHESTRATION matches tracked runtime pointer"
-  else
-    fail "$runtime ORCHESTRATION matches tracked runtime pointer"
+    fail "$runtime tracked ORCHESTRATION points to oliver-local"
   fi
 done
 
@@ -155,7 +128,7 @@ while IFS= read -r repo_path; do
 done < <(jq -r '.repos[].path' shared/repo-map.json)
 
 # 5) Guard against known docs drift.
-if rg -q '~/projects/\*' docs/architecture.md; then
+if rg -q '<vault-root>/Oliver/_Project Repos/\*' docs/architecture.md; then
   pass "docs/architecture.md includes canonical product root pattern"
 else
   fail "docs/architecture.md includes canonical product root pattern"

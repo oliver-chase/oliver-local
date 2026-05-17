@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+from pathlib import Path
 import sys
 import urllib.error
 
@@ -34,7 +35,7 @@ def _request(url: str) -> bytes:
 def _shared_skills_root() -> str:
     return os.environ.get(
         "OLIVER_LOCAL_SKILLS",
-        os.path.expanduser("~/oliver-local/skills"),
+        str(Path(__file__).resolve().parents[3] / "skills"),
     )
 
 

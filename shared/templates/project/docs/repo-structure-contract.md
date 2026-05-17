@@ -4,8 +4,8 @@ Status: Active
 
 ## Canonical Contract Sources
 
-1. `~/oliver-local/contracts/PROJECT_HYGIENE_STANDARD.md`
-2. `~/oliver-local/contracts/PROJECT_STRUCTURE_STANDARD.md`
+1. `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/contracts/PROJECT_HYGIENE_STANDARD.md`
+2. `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/contracts/PROJECT_STRUCTURE_STANDARD.md`
 
 ## Profile
 
@@ -53,7 +53,7 @@ All placeholder tokens are invalid in committed files. Replace each with a concr
 1. `development`: unstarted and in-progress story housing.
 2. `staging`: completed work ready for QA validation.
 3. `main`: production-ready promotions only.
-4. Source-of-truth link: `~/oliver-local/shared/workflow-standards.md`.
+4. Source-of-truth link: `<vault-root>/_Management/Agent Orchestration/workspace/repos/orchestration/oliver-local/shared/workflow-standards.md`.
 5. Change-one/change-all:
 - If this lifecycle changes in a project repo, update this template and re-sync managed repos in the same governance cycle.
 
