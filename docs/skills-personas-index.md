@@ -12,12 +12,12 @@ Purpose: route to useful capabilities without loading full files by default.
 - `.md` files under `skills/` that are not named `SKILL.md` are reference playbooks, not installable/runtime skills.
 
 ## Mandatory Efficiency Layer
-- `caveman` -> `<vault-root>/_Management/Agent Orchestration/staging/private/runtime-state/.agents/skills/caveman/SKILL.md`
+- `caveman` -> `<private-runtime-state>/.agents/skills/caveman/SKILL.md`
   - Upstream: `https://github.com/JuliusBrussee/caveman`
   - Apply concise, no-filler technical communication at startup.
   - Load full Caveman skill files only for explicit Caveman commands or workflows.
 - `caveman-commit`, `caveman-review`, `caveman-compress`, `caveman-stats`, `cavecrew`
-  - Available under `staging/private/runtime-state/.agents/skills/`.
+  - Available under the local private runtime-state skill directory after install.
   - Use only when the task invokes that specialized workflow.
 
 ## Core Skill Families

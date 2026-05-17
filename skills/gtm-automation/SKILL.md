@@ -25,9 +25,9 @@ Start with:
 
 ## Reference Sources
 Use these only when installed locally and the task needs the pattern:
-- `staging/private/reference-sources/gtm/ai-marketing-skills`
-- `staging/private/reference-sources/gtm/OpenOutreach`
-- `staging/private/reference-sources/automation/dify`
+- `<private-reference-sources>/gtm/ai-marketing-skills`
+- `<private-reference-sources>/gtm/OpenOutreach`
+- `<private-reference-sources>/automation/dify`
 - `Work Vault/02 - GTM/_Marketing Prompts`
 - `Work Vault/02 - GTM/_Skills`
 

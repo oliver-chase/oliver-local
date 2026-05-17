@@ -52,7 +52,7 @@ Use for:
 - dashboards;
 - lightweight operations UI.
 
-Budibase is useful when a human review surface is needed for automations, especially social posting, outbound, source-drain review, or project-cleanup queues.
+Budibase is useful when a human review surface is needed for automations, especially social posting, outbound, source review, or project-cleanup queues.
 
 ## Update Model
 Runtime adapters follow the same lifecycle as skills:
