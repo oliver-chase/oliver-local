@@ -17,6 +17,23 @@ Switching is rules-based, scoped, and logged. It is not "always use the stronges
 | Gemini CLI | large-context review, search-grounded research, alternate-model second opinion, scripted analysis | secret-bearing work without approval |
 | gstack | QA/review/ship/design workflow overlays | startup context or always-on mode |
 
+## Runtime Classes
+
+Human-operated runtimes:
+- Codex
+- Claude Code
+- Claude Cowork
+
+These do not silently switch into each other. If the current runtime is wrong, the agent should update handoff and tell the user where to continue.
+
+Callable adapters:
+- Gemini CLI
+- Ollama/local
+- Dify
+- Budibase
+
+These can be invoked by the active runtime when installed and policy allows it. Adapter output is advisory unless explicitly promoted by the workflow.
+
 ## Trigger Rules
 
 Switch or recommend switch only when:
@@ -38,6 +55,10 @@ The router is the orchestration control plane:
 - logged decisions.
 
 Codex can execute the routing decision when it is the active agent, but it should not silently switch accounts/models/tools without the policy trail.
+
+If the target is Claude Code, Claude Cowork, or Codex, the action is a human handoff.
+
+If the target is Gemini CLI, Ollama, Dify, or Budibase, the action can be an adapter invocation inside the active session.
 
 ## Practical Use
 
