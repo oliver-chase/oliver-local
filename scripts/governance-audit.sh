@@ -3,7 +3,7 @@ set -euo pipefail
 
 TARGET_REPO="${1:-}"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VAULT_ROOT="$(cd "$ROOT/../../../.." && pwd)"
+VAULT_ROOT="$(cd "$ROOT/../../.." && pwd)"
 MAP="$ROOT/shared/repo-map.json"
 expand_path() {
   local p="$1"

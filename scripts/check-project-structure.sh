@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VAULT_ROOT="$(cd "$ROOT/../../../.." && pwd)"
+VAULT_ROOT="$(cd "$ROOT/../../.." && pwd)"
 RULES="$ROOT/shared/project-structure-rules.json"
 TMP="/tmp/structure-check"
 mkdir -p "$TMP"
