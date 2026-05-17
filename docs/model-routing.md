@@ -84,7 +84,7 @@ De-escalate after the hard reasoning phase when the task becomes mechanical.
 
 ## Practical Use
 
-For local installs, keep a small evaluator or checklist that emits:
+For local installs, users work in natural language. Agents run the evaluator/checklist internally and emit:
 - active tool/model;
 - required operation;
 - trigger;
